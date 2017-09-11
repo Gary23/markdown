@@ -1,8 +1,5 @@
 # IScroll-5的文档
 
-@(常用插件)
-
-
 ---
 
 title: IScroll-5的文档
