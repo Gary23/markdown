@@ -1,7 +1,12 @@
 # bbc的js
 
-@(工作)
+---
 
+title: bbc的js
+date: 2017-09-11 17:26:21
+tags: bbc
+
+---
 
 ## 工具类函数 tools.js
 
@@ -51,53 +56,14 @@ function substitute(string, object) {
 }
 
 var config = {
-	data : {value : '123',text:'abc'},
-	template : '<label>{text}</label><input type="text" value="{value}"/>'
+    data : {value : '123',text:'abc'},
+    template : '<label>{text}</label><input type="text" value="{value}"/>'
 };
 
 var s = substitute(config.template,config.data);
 
 console.log(s);
 // 打印: <label>abc</label><input type="text" value="123"/>
-```
-
-### 解析JS代码
-
-函数： evalScripts(string, content, execScript)
-
-作用： 解析文本中js代码，并可以立即执行，应该是接收到一段html文档，内部包含script标签包含的js代码，这个方法可以获取script标签的js代码并执行。
-
-参数： 
-
-- string：要解析的字符串 
-
-- content：解析后的字符串插入到此dom元素(不需要可以传null) 
-
-- execScript：是否立即执行JS代码
-
-返回值： (String)解析后的字符串(html代码)，script标签的内容不会返回
-
-```js
-function evalScripts(string, content, execScript){
-    if(!string) return;
-    var scripts = '';
-    var text = string.replace(/<script[^>]*>([\s\S]*?)<\/script>/gi, function(){
-		// arguments[1]是去掉<script>后的js语句
-        scripts += arguments[1] + '\n';
-        return '';
-	});
-	// execScript为true则内容为空否则内容是js代码
-	$(content).html(execScript ? text : string);
-	// $.globalEval()会立即在全局执行一段js代码。
-    execScript && $.globalEval(scripts);
-    return text;
-}
-
-var str = '<script>alert(1);<\/script>';
-
-evalScripts(str,'script',true);
-
-// 在页面打印 1
 ```
 
 ### 页面最大 z-index
@@ -121,12 +87,12 @@ function maxZindex(scope, increase) {
     var max = 0;
     if(scope.length) {
         var pos = scope.filter(function(i,el){
-			// 如果el不是一个dom对象，或者是'script', 'link', 'base', 'style'中的一个就没必要去管
-	        if(!isElement(el) || ['script', 'link', 'base', 'style'].indexOf(el.tagName.toLowerCase()) > -1) return;
-			// 判断el有没有'absolute','relative','fixed'中的一个属性
+            // 如果el不是一个dom对象，或者是'script', 'link', 'base', 'style'中的一个就没必要去管
+            if(!isElement(el) || ['script', 'link', 'base', 'style'].indexOf(el.tagName.toLowerCase()) > -1) return;
+            // 判断el有没有'absolute','relative','fixed'中的一个属性
             return ['absolute','relative','fixed'].indexOf($(el).css('position')) > -1;
-		});
-		// 获取有定位的元素中最大的z-index值
+        });
+        // 获取有定位的元素中最大的z-index值
         if(pos.length) {
             for(var i=0, j=pos.length;i<j;i++) {
                 var z = pos.eq(i).css('z-index');
@@ -134,8 +100,8 @@ function maxZindex(scope, increase) {
             }
         }
     }
-	if(increase) max += parseInt(increase);
-	// z-index的最大值是2147483647
+    if(increase) max += parseInt(increase);
+    // z-index的最大值是2147483647
     return Math.min(max, 2147483647);
 }
 
@@ -166,19 +132,19 @@ console.log(maxZ);     // 假如页面中的div元素定位最高为100，那么
 
 ```js
 function dataOptions1(element, prefix){
-	if(!prefix) return false;
-	// prefix参数的值为select
-	// 这里通过data后，像data-select-time会被解析为selectTime，去取消-改为驼峰
+    if(!prefix) return false;
+    // prefix参数的值为select
+    // 这里通过data后，像data-select-time会被解析为selectTime，去取消-改为驼峰
     var data = $(element).data(),
         out = {}, inkey,
         replace = new RegExp('^' + prefix.toLowerCase() + '([A-Z])');
-	// replace是为了获取驼峰写法/select([A-Z])/
-	prefix = new RegExp('^' + prefix.toLowerCase());
+    // replace是为了获取驼峰写法/select([A-Z])/
+    prefix = new RegExp('^' + prefix.toLowerCase());
     for (var key in data) {
-		// 匹配所有带有select的属性，key现在是驼峰写法selectT
+        // 匹配所有带有select的属性，key现在是驼峰写法selectT
         if (prefix.test(key)){	
             inkey = key.replace(replace, function(_, a){
-				// 将selectT替换为小写t
+                // 将selectT替换为小写t
                 return a.toLowerCase();		
             });
             out[inkey] = data[key];
@@ -305,14 +271,14 @@ function countdown(element, options){
 
 ```html
 <style>
-	.test{
-		margin: 10px;
-		padding: 10px 20px;
-		border: 2px solid #000;
-	}
+    .test{
+        margin: 10px;
+        padding: 10px 20px;
+        border: 2px solid #000;
+    }
 </style>
 <div class="test" data-select-time="3000" data-select-name="box">
-	1111111111111111
+1111111111111111
 </div>
 ```
 
@@ -331,16 +297,16 @@ $.fn.patch = function (type) {
         y: 0
     };
 
-	// 这里遍历2次（x、y）
+    // 这里遍历2次（x、y）
     $.each({x: ['left', 'right'], y: ['top', 'bottom']}, function(p1, p2) {
-		// 这里遍历2次（['left', 'right']和['top', 'bottom']）
-		$.each(p2, function(i, p) {
+        // 这里遍历2次（['left', 'right']和['top', 'bottom']）
+        $.each(p2, function(i, p) {
             try {
-				// 遍历三次（'margin', 'padding', 'border'），或者是1次（参数）
+                // 遍历三次（'margin', 'padding', 'border'），或者是1次（参数）
                 $.each(args, function(i, arg) {
-					// ['margin', 'padding', 'border']的left、right、top、bottom
-					arg += '-' + p;		
-					// 如果是border只需要获取width就行，因为border 有很多其他属性
+                    // ['margin', 'padding', 'border']的left、right、top、bottom
+                    arg += '-' + p;		
+                    // 如果是border只需要获取width就行，因为border 有很多其他属性
                     if (arg.indexOf('border') == 0) arg += '-width';
                     _return[p1] += parseInt(el.css(arg)) || 0;
                 });

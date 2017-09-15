@@ -1,7 +1,12 @@
 # bbc的css
 
-@(工作)
+---
 
+title: bbc的css
+date: 2017-09-15 13:09:11
+tags: bbc
+
+---
 
 ## css文件
 
