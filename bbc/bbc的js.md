@@ -1,8 +1,8 @@
-# bbc的js
+# bbc的tool.js
 
 ---
 
-title: bbc的js
+title: bbc的tool.js
 date: 2017-09-11 17:26:21
 tags: bbc
 
@@ -33,6 +33,19 @@ function isElement(dom) {
 }
 ```
 
+使用isElement：
+
+```html
+<div id="box"></div>
+```
+
+```js
+var box = document.getElementById('box');
+var flag = isElement($('#box'));   // true
+var falg1 = isElement(box);    // true
+var flag2 = isElement('#box')   // false
+```
+
 ### 模板字符替换
 
 函数： substitute(string, object)
@@ -54,7 +67,11 @@ function substitute(string, object) {
         return (object[name] != null) ? object[name] : '';
     });
 }
+```
 
+使用substitute：
+
+```js
 var config = {
     data : {value : '123',text:'abc'},
     template : '<label>{text}</label><input type="text" value="{value}"/>'
@@ -105,6 +122,11 @@ function maxZindex(scope, increase) {
     return Math.min(max, 2147483647);
 }
 
+```
+
+使用maxZindex：
+
+```js
 var maxZ = maxZindex('div',10);
 
 console.log(maxZ);     // 假如页面中的div元素定位最高为100，那么会打印110
@@ -123,12 +145,6 @@ console.log(maxZ);     // 假如页面中的div元素定位最高为100，那么
 - prefix: 必需，前缀，在 data- 后面、要获取的配置项名前面。
 
 返回值： (JSON)最终配置项
-
-```html
-<div class="test" data-select-time="3000" data-select-name="box">
-	1111111111111111
-</div>
-```
 
 ```js
 function dataOptions1(element, prefix){
@@ -152,14 +168,23 @@ function dataOptions1(element, prefix){
     }
     return out;
 }
+```
 
+使用dataOptions1：
+
+```html
+<div class="test" data-select-time="3000" data-select-name="box">
+	1111111111111111
+</div>
+```
+
+```js
 var obj = dataOptions1('.test','select')
 
 console.log(obj)
 
 // 打印 { name: "box",time: 3000 }
 ```
-
 
 ### 倒计时时钟
 
@@ -257,6 +282,18 @@ function countdown(element, options){
 }
 ```
 
+使用countdown：
+
+```js
+countdown($('#box'),{
+    start: 6000,
+    secondOnly: false,
+    callback: function(){
+        // do something;
+    }
+})
+```
+
 ### 获取元素的内补或外补
 
 函数： $.fn.patch(type)
@@ -268,19 +305,6 @@ function countdown(element, options){
 - type：获取哪一部分样式，可以为padding、margin、border，不传参数是三个都获取。
 
 返回值： (JSON)根据type计算出的最终结果{x:number, y:number}，x是left+right，y是top+bottom
-
-```html
-<style>
-    .test{
-        margin: 10px;
-        padding: 10px 20px;
-        border: 2px solid #000;
-    }
-</style>
-<div class="test" data-select-time="3000" data-select-name="box">
-1111111111111111
-</div>
-```
 
 ```js
 $.fn.patch = function (type) {
@@ -315,7 +339,24 @@ $.fn.patch = function (type) {
     });
     return _return;
 };
+```
 
+使用patch：
+
+```html
+<style>
+    .test{
+        margin: 10px;
+        padding: 10px 20px;
+        border: 2px solid #000;
+    }
+</style>
+<div class="test" data-select-time="3000" data-select-name="box">
+1111111111111111
+</div>
+```
+
+```js
 var result =  $('.test').patch()
 
 console.log(result);	
@@ -330,11 +371,170 @@ console.log(result);
 
 作用： 根据9个方位由一个dom定位到另一个dom上的位置
 
-参数： - options：配置项的JSON直接量，包括： - relative：要定位到的元素，默认为body - x：定位dom的x轴的位置，默认为中心 - y：定位dom的y轴的位置，默认为中心
+参数： - options：配置项的JSON直接量，包括： - relative：调用元素的父元素，默认为body - x：定位dom的x轴的位置，默认为center，可选left、right - y：定位dom的y轴的位置，默认为center，可选top、bottom  - pos：定位方式，可选absolute和fixed，默认absolute  - offset：设置偏移量，默认是 0。
 
 返回值： (DOM)自身
 
+```js
 
+//双dom9点定位，支持绝对定位和固定定位
+$.fn.locate = function (options) {
+    options = $.extend({
+        relative: document.body, // 应该是父元素
+        x: 'center', //left center right
+        y: 'center',  // top center riht
+        pos: 'absolute', // 定位方式
+        //top center bottom
+        offset: { //偏移量
+            x: 0,
+            y: 0
+        }
+    }, options);
 
+    var left,
+        top,
+        x,
+        y,
+        offset = options.offset,
+        el = $(options.relative),   // el是父元素
+        $this = $(this).css('position', options.pos),   // 调用元素的定位方式
+        h = $this.height(),     // 调用元素的高度
+        w = $this.width(),      // 调用元素的宽度
+        // innerHeight不含边框和外边距
+        elH = (el.is('body') ? $('body') : el).innerHeight(),       // 判断父元素是不是body，获取父元素的高度
+        elW = el.innerWidth();      // 获取父元素的宽度
 
+    // 绝对定位
+    if (options.pos === 'absolute') {
+        //left定位
+        switch (options.x) { 
+            case 0:
+            case 'left':
+                x = 0;
+                break;
+            case 'right':
+                x = elW - w;
+                break;
+            default:
+                x = parseInt((elW - w) / 2); // 默认居中
+                break;
+        }
 
+        // top定位
+        switch (options.y) { 
+            case 0:
+            case 'top':
+                y = 0;
+                break;
+            case 'bottom':
+                y = elH - h;
+                break;
+            default:
+                y = parseInt((elH - h) / 2);
+                break;
+        }
+        // 定位的数值加上父元素的边距  el.scrollLeft()???
+        left = Math.max(0, Math.floor(x + (el.offset() ? el.offset().left : 0) + el.scrollLeft()));
+
+        top = Math.max(0, Math.floor(y + (el.offset() ? el.offset().top : 0) + el.scrollTop()));
+
+        if ($.isPlainObject(offset)) {
+            left += offset.x || 0;
+            top += offset.y || 0;
+        }
+
+        $this.css({
+            left: left,
+            top: top
+        });
+    // 固定定位只能居中
+    } else if (options.pos === 'fixed') {
+        left = '50%';
+        top = '50%';
+
+        $this.css({
+            left: left,
+            top: top,
+            marginLeft: -w / 2,
+            marginTop: -h / 2
+        });
+    }
+    return this;
+};
+```
+
+### 数组some方法
+
+函数： Array.some(fn, thisArg)
+
+作用： 为不支持数组some方法的浏览器增加some方法，使得回调中执行的结果只要有一个为真值，就返回true，否则为false。它只对数组中的非空元素执行指定的函数，没有赋值或者已经删除的元素将被忽略。 some 不会改变原有数组。
+
+参数： - fn：要对每个数组元素执行的回调函数，此函数可以有三个参数：当前元素，当前元素的索引和当前的数组对象。 - thisArg：在执行回调函数时定义的this对象。如果没有定义或者为null，那么将会使用全局对象。
+
+返回值： (Boolean)根据执行结果返回true或false
+
+```js
+
+if (!Array.prototype.some) {
+    Array.prototype.some = function(fn, thisArg) {
+        var i = 0, n = this.length;
+        
+        for (; i < n; i++) {
+            // 给isBigEnough传值
+            if (i in this && fn.call(thisArg, this[i], i, this)) {
+                return true;
+            }
+        }
+        return false;
+    };
+}
+```
+
+使用some方法：
+
+```js
+function isBigEnough(element, index, array) {
+    // 这里是判断数组是否有比10大的数字
+    return (element >= 10);
+}
+var passed = [2, 5, 8, 1, 4].some(isBigEnough); 
+// false
+```
+
+### 数组every方法
+
+函数： Array.every(fn, thisArg)
+
+作用： 为不支持数组every方法的浏览器增加every方法，使得回调中执行的结果必须全部为真值，才返回true，否则为false。它只对数组中的非空元素执行指定的函数，没有赋值或者已经删除的元素将被忽略。 every 不会改变原有数组。
+
+参数： - fn：要对每个数组元素执行的回调函数，此函数可以有三个参数：当前元素，当前元素的索引和当前的数组对象。 - thisArg：在执行回调函数时定义的this对象。如果没有定义或者为null，那么将会使用全局对象。
+
+返回值： (Boolean)根据执行结果返回true或false
+
+```js
+if (!Array.prototype.every) {
+    Array.prototype.every = function(fn, thisArg) {
+        var i = 0, n = this.length;
+        for (; i < n; i++) {
+            if (i in this && !fn.call(thisArg, this[i], i, this)) {
+                return false;
+            }
+        }
+        return true;
+    };
+}
+```
+
+使用some方法：
+
+```js
+function isBigEnough(element, index, array) {
+    // 这里是判断数组的元素是否全部大于10
+    return (element >= 10);
+}
+
+var passed = [12, 5, 8, 130, 44].every(isBigEnough);
+// false
+var passed1 = [12, 54, 18, 130, 44].every(isBigEnough);
+// true
+```
