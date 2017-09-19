@@ -8,27 +8,6 @@ tags: bbc
 
 ---
 
-## css文件
-
-bbc 项目自带的样式的css文件如下：
-<{css src="stylesheets/layout.css" app="topc"}>
-<{css src="stylesheets/theme.css" app="topc"}>
-
-layout.css              
--包含所有的系统级样式及组件的样式
-
-theme.css               
--包含所有修饰性的样式，如颜色，边框，背景，字体大小等
-
-iconfonts.css           
--包含所有字体图标的样式
-
-datepicker.css          
--包含一个时间选择组件的样式
-
-fonts(文件夹)           
--包含所有的字体图标
-
 ## 全局css样式
 
 1. `html` 的背景为 `background: #FFFFFF`
