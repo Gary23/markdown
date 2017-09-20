@@ -1,8 +1,5 @@
 # hexo配置
 
-@(git和blog)
-
-
 ---
 
 title: hexo配置
