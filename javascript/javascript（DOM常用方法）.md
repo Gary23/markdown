@@ -3,7 +3,7 @@
 
 title: javascript（DOM常用方法）
 date: 2017-06-01 10:31:19
-tags: javascript笔记
+tags: javascript
 
 ---
 

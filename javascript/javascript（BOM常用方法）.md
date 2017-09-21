@@ -3,7 +3,7 @@
 
 title: javascript（BOM常用方法）
 date: 2017-06-01 17:29:52
-tags: javascript笔记
+tags: javascript
 
 ---
 

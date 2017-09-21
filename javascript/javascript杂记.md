@@ -3,7 +3,7 @@
 
 title: javascript杂记
 date: 2017-05-21 14:34:25
-tags: javascript笔记
+tags: javascript
 
 ---
 
