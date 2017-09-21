@@ -1,10 +1,9 @@
-# IScroll-5的文档
 
 ---
 
 title: IScroll-5的文档
 date: 2017-07-03 11:10:40
-tags: javascript常用插件
+tags: 常用插件
 
 ---
 
