@@ -37,7 +37,7 @@ var file = document.querySelector('.file');
 // 选择文件打开之后会触发change事件,也就是检测表单的变化，有改变就会触发
 file.onchange = function(){
 for(var k in this){
-	console.log(k + '===' + this[k]);   // 查看该dom对象的属性和值
+    console.log(k + '===' + this[k]);   // 查看该dom对象的属性和值
 }
 
 console.log(this.files);    
@@ -236,8 +236,8 @@ function error(err){
 ```js
 // 第一个函数表示成功的回调，在函数里传递一个参数，这个参数记录了地理位置信息
 navigator.geolocation.getCurrentPosition(function(position){
-	var latitude = position.coords.latitude;  // 纬度
-	var longitude = position.coords.longitude  // 纬度
+    var latitude = position.coords.latitude;  // 纬度
+    var longitude = position.coords.longitude  // 纬度
     // 查看地理信息
     console.log(position);
 
@@ -311,7 +311,7 @@ btn.onclick = function(){
 var btn = document.getElementById('btn');
 // 新增一条历史记录(后退能回到之前的地址)。
 btn.onclick = function(){
-	// 参数说明
+    // 参数说明
     history.pushState(null,'标题','./test.html');
 }
 ```

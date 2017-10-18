@@ -118,13 +118,13 @@ hack的书写顺序要从高版本往低版本写，因为css是按照顺序执�
 user-select有2个值（none表示不能选中文本，text表示可以选择文本）
 
 ```css
--moz-user-select:none;	/*火狐*/
+-moz-user-select:none;    /*火狐*/
 
--webkit-user-select:none;	/*webkit浏览器*/
+-webkit-user-select:none;    /*webkit浏览器*/
 
--ms-user-select:none;	/*IE10*/
+-ms-user-select:none;    /*IE10*/
 
--khtml-user-select:none;	/*早期浏览器*/
+-khtml-user-select:none;    /*早期浏览器*/
 
 user-select:none;
 
@@ -263,8 +263,8 @@ display: -webkit-box;
 
 ```css
 html.lock-html {
-	height: 100%;
-	overflow: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 ```
 

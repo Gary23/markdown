@@ -52,15 +52,15 @@ tags: bbc
 
 ```html
 <section class="wrap">
-	<div class="row">
-		<div class="col-16">
-			<div class="row">
-				<div class="col-4">col-4</div>
-				<div class="col-8">col-8</div>
-				<div class="col-4">col-4</div>
-			</div>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-16">
+            <div class="row">
+                <div class="col-4">col-4</div>
+                <div class="col-8">col-8</div>
+                <div class="col-4">col-4</div>
+            </div>
+        </div>
+    </div>
 </section>
 ```
 
@@ -135,29 +135,29 @@ tags: bbc
 
 ```html
 <form action="" method="post" role="form">
-	<div class="form-row">
-		<label for="for_username" class="form-label">用户名：</label>
-		<span class="form-act">
-			<input type="text" name="" value="" id="for_username">
-		</span>
-	</div>
-	<div class="form-row">
-		<label for="for_email" class="form-label">邮箱：</label>
-		<span class="form-act">
-			<input type="email" name="" value="" id="for_email">
-		</span>
-	</div>
-	<div class="form-row">
-		<label for="for_input_file" class="form-label">上传文件</label>
-		<span class="form-act">
-			<input type="file" id="for_input_file">
-		</span>
-	</div>
-	<div class="form-row-last">
-		<label class="form-act">
-			<input type="checkbox">复选框
-		</label>
-	</div>
+    <div class="form-row">
+        <label for="for_username" class="form-label">用户名：</label>
+        <span class="form-act">
+            <input type="text" name="" value="" id="for_username">
+        </span>
+    </div>
+    <div class="form-row">
+        <label for="for_email" class="form-label">邮箱：</label>
+        <span class="form-act">
+            <input type="email" name="" value="" id="for_email">
+        </span>
+    </div>
+    <div class="form-row">
+        <label for="for_input_file" class="form-label">上传文件</label>
+        <span class="form-act">
+            <input type="file" id="for_input_file">
+        </span>
+    </div>
+    <div class="form-row-last">
+        <label class="form-act">
+            <input type="checkbox">复选框
+        </label>
+    </div>
 </form>
 ```
 
@@ -177,30 +177,30 @@ tags: bbc
 
 ```html
 <form action="" method="post" role="form">
-	<div class="form-row row">
-		<label for="for_username" class="form-label col-2">用户名：</label>
-		<span class="col-5">
-			<input type="text" name="" value="" id="for_username">
-		</span>
-	</div>
-	<div class="form-row row">
-		<label for="for_email" class="form-label col-2">邮箱：</label>
-		<span class="col-5">
-			<input type="email" name="" value="" id="for_email">
-		</span>
-	</div>
-	<div class="form-row row">
-		<label for="for_input_file" class="form-label col-2">上传文件：</label>
-		<span class="col-5">
-			<input type="file" id="for_input_file">
-		</span>
-	</div>
-	<div class="form-row-last row">
-		<label for="" class="form-label col-2"></label>
-		<label class="col-5">
-			<input type="checkbox">复选框
-		</label>
-	</div>
+    <div class="form-row row">
+        <label for="for_username" class="form-label col-2">用户名：</label>
+        <span class="col-5">
+            <input type="text" name="" value="" id="for_username">
+        </span>
+    </div>
+    <div class="form-row row">
+        <label for="for_email" class="form-label col-2">邮箱：</label>
+        <span class="col-5">
+            <input type="email" name="" value="" id="for_email">
+        </span>
+    </div>
+    <div class="form-row row">
+        <label for="for_input_file" class="form-label col-2">上传文件：</label>
+        <span class="col-5">
+            <input type="file" id="for_input_file">
+        </span>
+    </div>
+    <div class="form-row-last row">
+        <label for="" class="form-label col-2"></label>
+        <label class="col-5">
+            <input type="checkbox">复选框
+        </label>
+    </div>
 </form>
 ```
 
@@ -212,10 +212,10 @@ tags: bbc
 
 ```html
 <div class="form-row">
-	<label for="for_username" class="form-label">用户名：</label>
-	<span class="form-act row input-row">
-		<input type="text" name="" value="" id="for_username" class="col-5">
-	</span>
+    <label for="for_username" class="form-label">用户名：</label>
+    <span class="form-act row input-row">
+        <input type="text" name="" value="" id="for_username" class="col-5">
+    </span>
 </div>
 ```
   
@@ -240,34 +240,34 @@ tags: bbc
 
 ```html
 <div class="checkbox">
-	<label for="">
-		<input type="checkbox" value="option1">
-		选项1,请确认
-	</label>
+    <label for="">
+        <input type="checkbox" value="option1">
+        选项1,请确认
+    </label>
 </div>
 <div class="checkbox">
-	<label for="">
-		<input type="checkbox" value="option2" disabled>
-		选项2,禁止选取
-	</label>
+    <label for="">
+        <input type="checkbox" value="option2" disabled>
+        选项2,禁止选取
+    </label>
 </div>
 <div class="radio">
-	<label for="">
-		<input type="radio" value="option1" checked name="radios">
-		选项1,默认选择
-	</label>
+    <label for="">
+        <input type="radio" value="option1" checked name="radios">
+        选项1,默认选择
+    </label>
 </div>
 <div class="radio">
-	<label for="">
-		<input type="radio" value="option2" name="radios">
-		选项,请确认
-	</label>
+    <label for="">
+        <input type="radio" value="option2" name="radios">
+        选项,请确认
+    </label>
 </div>
 <div class="radio">
-	<label for="">
-		<input type="radio" value="option3" name="radios" disabled>
-		选项1,禁止选取
-	</label>
+    <label for="">
+        <input type="radio" value="option3" name="radios" disabled>
+        选项1,禁止选取
+    </label>
 </div>
 ```
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/d9945bc0b8241f68a28945e94d2cb0e7f09a18ac8dc9cd0f2414296a9d1c3e994dbbae3526be28d9db69218af3c34c97?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-46.JPG&size=1024)
@@ -275,24 +275,24 @@ tags: bbc
 
 ```html
 <label for="" class="checkbox-inline">
-	<input type="checkbox" id="inlineCheckbox1" value="option1">选项1
+    <input type="checkbox" id="inlineCheckbox1" value="option1">选项1
 </label>
 <label for="" class="checkbox-inline">
-	<input type="checkbox" id="inlineCheckbox2" value="option2">选项2
+    <input type="checkbox" id="inlineCheckbox2" value="option2">选项2
 </label>
 <label for="" class="checkbox-inline">
-	<input type="checkbox" id="inlineCheckbox3" value="option3">选项3
+    <input type="checkbox" id="inlineCheckbox3" value="option3">选项3
 </label>
 <br>
 <br>
 <label for="" class="radio-inline">
-	<input type="radio" name="inlineRadios" id="inlineCheckbox1" value="option1">选项1
+    <input type="radio" name="inlineRadios" id="inlineCheckbox1" value="option1">选项1
 </label>
 <label for="" class="checkbox-inline">
-	<input type="radio" name="inlineRadios" id="inlineCheckbox2" value="option2">选项2
+    <input type="radio" name="inlineRadios" id="inlineCheckbox2" value="option2">选项2
 </label>
 <label for="" class="checkbox-inline">
-	<input type="radio" name="inlineRadios" id="inlineCheckbox3" value="option3">选项3
+    <input type="radio" name="inlineRadios" id="inlineCheckbox3" value="option3">选项3
 </label>
 ```
 
@@ -305,20 +305,20 @@ tags: bbc
 
 ```html
 <select class="input-xln">
-	<option>选项1</option>
-	<option>选项2</option>
-	<option>选项3</option>
-	<option>选项4</option>
-	<option>选项5</option>
+    <option>选项1</option>
+    <option>选项2</option>
+    <option>选项3</option>
+    <option>选项4</option>
+    <option>选项5</option>
 </select>
 <br>
 <br>
 <select multiple class="input-xln">
-	<option>选项1</option>
-	<option>选项2</option>
-	<option>选项3</option>
-	<option>选项4</option>
-	<option>选项5</option>
+    <option>选项1</option>
+    <option>选项2</option>
+    <option>选项3</option>
+    <option>选项4</option>
+    <option>选项5</option>
 </select>
 ```
 
@@ -335,19 +335,19 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ```html
 <div class="form-row has-success">
-	<label for="for_inputsuccess" class="form-label">输入正确</label>
-	<div class="form-act">
-		<input type="text" id="for_inputsuccess">
-		<span class="icon-checkmark caution">通过</span>
-	</div>
+    <label for="for_inputsuccess" class="form-label">输入正确</label>
+    <div class="form-act">
+        <input type="text" id="for_inputsuccess">
+        <span class="icon-checkmark caution">通过</span>
+    </div>
 </div>
 
 <div class="form-row has-error">
-	<label for="for_inputerror" class="form-label">输入错误</label>
-	<div class="form-act">
-		<input type="text" id="for_inputerror">
-		<span class="icon-alert caution">此项必填</span>
-	</div>
+    <label for="for_inputerror" class="form-label">输入错误</label>
+    <div class="form-act">
+        <input type="text" id="for_inputerror">
+        <span class="icon-alert caution">此项必填</span>
+    </div>
 </div>
 ```
 
@@ -356,23 +356,23 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ```html
 <div class="has-success">
-	<div class="checkbox-inline">
-		<label for="">
-			<input type="checkbox" class="x-chcek" id="for_checkboxsuccess" value="option1">
-			复选框通过验证
-		</label>
-	</div>
-	<span class="icon-checkmark caution">通过</span>
+    <div class="checkbox-inline">
+        <label for="">
+            <input type="checkbox" class="x-chcek" id="for_checkboxsuccess" value="option1">
+            复选框通过验证
+        </label>
+    </div>
+    <span class="icon-checkmark caution">通过</span>
 </div>
 
 <div class="has-error">
-	<div class="checkbox-inline">
-		<label for="">
-			<input type="checkbox" class="x-check" id="for_checkboxerror" value="option1">
-			复选框验证失败
-		</label>
-	</div>
-	<span class="icon-alert caution">此项必填</span>
+    <div class="checkbox-inline">
+        <label for="">
+            <input type="checkbox" class="x-check" id="for_checkboxerror" value="option1">
+            复选框验证失败
+        </label>
+    </div>
+    <span class="icon-alert caution">此项必填</span>
 </div>
 ```
 
@@ -385,19 +385,19 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
   
 ```html
 <div class="form-row">
-	<label for="for_input_user" class="form-label">输入用户名：</label>
-	<span class=" has-figure col-5">
-		<input type="text" class="input-block" id="for_input_user">
-		<i class="icon-user input-figure"></i>
-	</span>
+    <label for="for_input_user" class="form-label">输入用户名：</label>
+    <span class=" has-figure col-5">
+        <input type="text" class="input-block" id="for_input_user">
+        <i class="icon-user input-figure"></i>
+    </span>
 </div>
 
 <div class="form-row">
-	<label for="for_input_pass" class="form-label">密码：</label>
-	<span class=" has-figure col-5">
-		<input type="password" class="input-block" id="for_input_pass">
-		<i class="icon-lock input-figure"></i>
-	</span>
+    <label for="for_input_pass" class="form-label">密码：</label>
+    <span class=" has-figure col-5">
+        <input type="password" class="input-block" id="for_input_pass">
+        <i class="icon-lock input-figure"></i>
+    </span>
 </div>
 ```
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/44ebed2e4469de62730dc515f62e2d6dbc5092e1193493d25e41c2ce79380f4f20a0eb14062cf3aa012ae66a98f093a3?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-51.JPG&size=1024)
@@ -407,18 +407,18 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
   
 ```html
 <div class="form-row has-error has-figure">
-	<label class="form-label" for="for_inputerror">输入错误</label>
-	<span class="has-figure col-5">
-		<input type="text" class="input-block caution-input" id="for_inputerror">
-		<span class="icon-alert input-figure"></span>
-	</span>
+    <label class="form-label" for="for_inputerror">输入错误</label>
+    <span class="has-figure col-5">
+        <input type="text" class="input-block caution-input" id="for_inputerror">
+        <span class="icon-alert input-figure"></span>
+    </span>
 </div>
 <div class="form-row has-success has-figure">
-	<label class="form-label" for="for_inputsuccess">输入正确</label>
-	<span class="has-figure col-5">
-		<input type="text" class="input-block" id="for_inputsuccess">
-		<span class="icon-checkmark-a input-figure"></span>
-	</span>
+    <label class="form-label" for="for_inputsuccess">输入正确</label>
+    <span class="has-figure col-5">
+        <input type="text" class="input-block" id="for_inputsuccess">
+        <span class="icon-checkmark-a input-figure"></span>
+    </span>
 </div>
 ```
 
@@ -450,11 +450,11 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 用栅格系统中的列（column）包裹输入框或其任何父元素，都可很容易的为其设置宽度。
 
 ```html
-	<div class="row input-row">
-		<input type="text" class="col-3" placeholder=".col-3">
-		<input type="text" class="col-4" placeholder=".col-4">
-		<input type="text" class="col-5" placeholder=".col-5">
-	</div>
+    <div class="row input-row">
+        <input type="text" class="col-3" placeholder=".col-3">
+        <input type="text" class="col-4" placeholder=".col-4">
+        <input type="text" class="col-5" placeholder=".col-5">
+    </div>
 ```
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/721499e45b87b464ae090fd7dc863ef2bc72d946d96b127f0b3f594366b9518888df320ac0092cec95a57623b689f6b9?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-53.JPG&size=1024)
@@ -501,30 +501,30 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ```html
 <div class="input-comb">
-	<input type="text" class="input-me">
-	<span class="input-comb-addon"><i class="icon-calendar"></i></span>
+    <input type="text" class="input-me">
+    <span class="input-comb-addon"><i class="icon-calendar"></i></span>
 </div>
 <br>
 <div class="input-comb">
-	<span class="input-comb-addon">@</span>
-	<input type="text" class="input-me">
+    <span class="input-comb-addon">@</span>
+    <input type="text" class="input-me">
 </div>
 <br>
 <div class="input-comb">
-	<span class="input-comb-addon">¥</span>
-	<input type="text" class="input-me">
-	<span class="input-comb-addon"></span>
+    <span class="input-comb-addon">¥</span>
+    <input type="text" class="input-me">
+    <span class="input-comb-addon"></span>
 </div>
 <br>
 <div class="input-comb input-comb-lg">
-	<span class="input-comb-addon">¥</span>
-	<input type="text" class="input-st">
-	<span class="input-comb-addon">.00</span>
+    <span class="input-comb-addon">¥</span>
+    <input type="text" class="input-st">
+    <span class="input-comb-addon">.00</span>
 </div>
 <br>
 <div class="input-comb">
-	<input type="search" class="input-ln">
-	<button type="button" class="btn-input-comb-btn"><span><span>搜索</span></span></button>
+    <input type="search" class="input-ln">
+    <button type="button" class="btn-input-comb-btn"><span><span>搜索</span></span></button>
 </div>
 ```
 
@@ -539,107 +539,107 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ```html
 <button type="button" class="btn">
-	<span><span>确定</span></span>
+    <span><span>确定</span></span>
 </button>
 
 <a href="" class="btn">
-	<span><span>查看</span></span>
+    <span><span>查看</span></span>
 </a>
 
 <button type="button" class="btn btn-flat">
-	<span><span>确定</span></span>
+    <span><span>确定</span></span>
 </button>
 
 <a href="" class="btn btn-flat">
-	<span><span>查看</span></span>
+    <span><span>查看</span></span>
 </a>
 
 <button type="button" class="btn btn-simple">
-	<span><span>确定</span></span>
+    <span><span>确定</span></span>
 </button>
 
 <a href="" class="btn btn-simple">
-	<span><span>查看</span></span>
+    <span><span>查看</span></span>
 </a>
 
 <br><br>
 
 <button type="button" class="btn btn-primary">
-	<span><span>提交</span></span>
+    <span><span>提交</span></span>
 </button>
 
 <a href="" class="btn btn-primary">
-	<span><span>提交</span></span>
+    <span><span>提交</span></span>
 </a>
 
 <button type="button" class="btn btn-success">
-	<span><span>成功</span></span>
+    <span><span>成功</span></span>
 </button>
 
 <a href="" class="btn btn-success">
-	<span><span>成功</span></span>
+    <span><span>成功</span></span>
 </a>
 
 <button type="button" class="btn btn-info">
-	<span><span>信息</span></span>
+    <span><span>信息</span></span>
 </button>
 
 <a href="" class="btn btn-info">
-	<span><span>信息</span></span>
+    <span><span>信息</span></span>
 </a>
 
 <button type="button" class="btn btn-warning">
-	<span><span>警告</span></span>
+    <span><span>警告</span></span>
 </button>
 
 <a href="" class="btn btn-warning">
-	<span><span>警告</span></span>
+    <span><span>警告</span></span>
 </a>
 
 <button type="button" class="btn btn-danger">
-	<span><span>危险</span></span>
+    <span><span>危险</span></span>
 </button>
 
 <a href="" class="btn btn-danger">
-	<span><span>危险</span></span>
+    <span><span>危险</span></span>
 </a>
 
 <br><br>
 
 <button type="button" class="btn btn-caution">
-	<span><span>到货通知</span></span>
+    <span><span>到货通知</span></span>
 </button>
 
 <a href="" class="btn btn-caution">
-	<span><span>到货通知</span></span>
+    <span><span>到货通知</span></span>
 </a>
 
 <button type="button" class="btn btn-link">
-	<span><span>继续</span></span>
+    <span><span>继续</span></span>
 </button>
 
 <button type="button" class="btn btn-import">
-	<span><span>去付款</span></span>
+    <span><span>去付款</span></span>
 </button>
 
 <a href="" class="btn btn-import">
-	<span><span>去付款</span></span>
+    <span><span>去付款</span></span>
 </a>
 
 <button type="button" class="btn btn-major">
-	<span><span>加入购物车</span></span>
+    <span><span>加入购物车</span></span>
 </button>
 
 <a href="" class="btn btn-major">
-	<span><span>加入购物车</span></span>
+    <span><span>加入购物车</span></span>
 </a>
 
 <button type="button" class="btn btn-caution">
-	<span><span>到货通知</span></span>
+    <span><span>到货通知</span></span>
 </button>
 
 <a href="" class="btn btn-caution">
-	<span><span>到货通知</span></span>
+    <span><span>到货通知</span></span>
 </a>
 ```
 
@@ -653,27 +653,27 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ```html
 <button type="button" class="btn btn-simple btn-sm">
-	<span><span>清空购物车</span></span>
+    <span><span>清空购物车</span></span>
 </button>
 
 <a href="" class="btn btn-simple btn-sm">
-	<span><span>继续购物</span></span>
+    <span><span>继续购物</span></span>
 </a>
 
 <button type="button" class="btn btn-simple btn-lg">
-	<span><span>清空购物车</span></span>
+    <span><span>清空购物车</span></span>
 </button>
 
 <a href="" class="btn btn-simple btn-lg">
-	<span><span>继续购物</span></span>
+    <span><span>继续购物</span></span>
 </a>
 
 <button type="button" class="btn btn-simple btn-xl">
-	<span><span>清空购物车</span></span>
+    <span><span>清空购物车</span></span>
 </button>
 
 <a href="" class="btn btn-simple btn-xl">
-	<span><span>继续购物</span></span>
+    <span><span>继续购物</span></span>
 </a>
 ```
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/33245aa40b95a99b912e140e481a2440056a958b7e7838f04fef747ada50b3b409bf269f9a59db655a2458e5054f6d3b?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-58.JPG&size=1024)
@@ -725,7 +725,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ```html
 <button type="button" class="close">
-	<span aria-hidden="true">&times;</span><span class="hide">关闭</span>
+    <span aria-hidden="true">&times;</span><span class="hide">关闭</span>
 </button>
 
 <span class="caret"></span>

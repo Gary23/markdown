@@ -157,10 +157,10 @@ function dataOptions1(element, prefix){
     prefix = new RegExp('^' + prefix.toLowerCase());
     for (var key in data) {
         // 匹配所有带有select的属性，key现在是驼峰写法selectT
-        if (prefix.test(key)){	
+        if (prefix.test(key)){    
             inkey = key.replace(replace, function(_, a){
                 // 将selectT替换为小写t
-                return a.toLowerCase();		
+                return a.toLowerCase();        
             });
             out[inkey] = data[key];
         }
@@ -173,7 +173,7 @@ function dataOptions1(element, prefix){
 
 ```html
 <div class="test" data-select-time="3000" data-select-name="box">
-	1111111111111111
+    1111111111111111
 </div>
 ```
 
@@ -310,7 +310,7 @@ $.fn.patch = function (type) {
     var el = this;
     var args;
     if (type) {
-        args = $.makeArray(type);	// 将参数转换为真数组
+        args = $.makeArray(type);    // 将参数转换为真数组
     }
     else {
         args = ['margin', 'padding', 'border'];
@@ -328,7 +328,7 @@ $.fn.patch = function (type) {
                 // 遍历三次（'margin', 'padding', 'border'），或者是1次（参数）
                 $.each(args, function(i, arg) {
                     // ['margin', 'padding', 'border']的left、right、top、bottom
-                    arg += '-' + p;		
+                    arg += '-' + p;        
                     // 如果是border只需要获取width就行，因为border 有很多其他属性
                     if (arg.indexOf('border') == 0) arg += '-width';
                     _return[p1] += parseInt(el.css(arg)) || 0;
@@ -358,7 +358,7 @@ $.fn.patch = function (type) {
 ```js
 var result =  $('.test').patch()
 
-console.log(result);	
+console.log(result);    
 
 // 打印 { x: 64, y: 44}
 ```

@@ -44,14 +44,14 @@ windows要支持bash的命令才可以，所以要在windows使用要装GIT和ba
 
 ### bash常见命令
 
-**pwd（Print Working Directory）**		
+**pwd（Print Working Directory）**        
 查看当前目录
 
 **cd（Change Directory）**
 切换目录。打开e盘：cd  /e 或者 打开web文件夹： cd  web；返回上一级：cd  ..
 
 **ls（List）**
-查看当前目录下的内容。ls  -al(all list)	；		查看web文件夹下的内容：ls  web 。
+查看当前目录下的内容。ls  -al(all list) , 查看web文件夹下的内容：ls  web 。
 
 **mkdir（Make Directory）**
 创建文件夹。创建一个blog目录：mkdir  blog。

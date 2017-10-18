@@ -13,11 +13,11 @@ tags: ES6
 
 ```js
 function fun(...arg){
-	console.log(arg[0]);
-	console.log(arg[1]);
-	console.log(arg[2]);
-	console.log(arg[3]);
-	// 打印 1,2,3,undefined
+    console.log(arg[0]);
+    console.log(arg[1]);
+    console.log(arg[2]);
+    console.log(arg[3]);
+    // 打印 1,2,3,undefined
 }
 
 fun(1,2,3);
@@ -54,12 +54,12 @@ rest运算符的写法和对象扩展运算符的写法相同，使用场景稍�
 
 ```js
 function fun(first,...arg){
-	console.log(first);  // 0
-	console.log(arg.length);  // 5
+    console.log(first);  // 0
+    console.log(arg.length);  // 5
 
-	for(let val of arg){
-		console.log(val);  // 1,2,3,4,5
-	}
+    for(let val of arg){
+        console.log(val);  // 1,2,3,4,5
+    }
 }
 fun(0,1,2,3,4,5);
 ```

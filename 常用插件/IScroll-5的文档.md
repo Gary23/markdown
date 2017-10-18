@@ -27,14 +27,14 @@ tags: 常用插件
 ```html
 <div id="wrapper">
   <div id="scroller">
-	<ul>
-	  <li></li>
-	  ...
-	</ul>
-	<ul>
-	  <li></li>
-	  ...
-	</ul>
+    <ul>
+      <li></li>
+      ...
+    </ul>
+    <ul>
+      <li></li>
+      ...
+    </ul>
   </div>
 </div>
 ```
@@ -113,21 +113,21 @@ js部分
 
 ```js
 var myScroll = new IScroll('#wrapper', {
-	eventPassthrough: true,
-	scrollX: true, 
-	scrollY: false
+    eventPassthrough: true,
+    scrollX: true, 
+    scrollY: false
 });
 ```
 html部分
 
 ```html
 <div id="wrapper">
-	<div id="scroller">
-		<ul>
-			<li>11111111111</li>
+    <div id="scroller">
+        <ul>
+            <li>11111111111</li>
             ......
-		</ul>
-	</div>
+        </ul>
+    </div>
 </div>
 ```
 
@@ -135,22 +135,22 @@ css部分
 
 ```css
 #wrapper {
-	width: 100%;
-	background: #eeeeee;
-	overflow: hidden;
+    width: 100%;
+    background: #eeeeee;
+    overflow: hidden;
 }
 
 #scroller {
-	z-index: 1;
-	width: 1010px;
+    z-index: 1;
+    width: 1010px;
 }
 
 #scroller li {
-	width: 100px;
-	float: left;
-	font-size: 14px;
-	overflow: hidden;
-	text-align: center;
+    width: 100px;
+    float: left;
+    font-size: 14px;
+    overflow: hidden;
+    text-align: center;
 }
 
 ```
@@ -165,18 +165,18 @@ js部分
 
 ```js
 myScroll = new IScroll('#wrapper', {
-	scrollX: true,
-	freeScroll: true
+    scrollX: true,
+    freeScroll: true
 });
 ```
 html部分
 
 ```html
 <div id="wrapper">
-	<div id="scroller">
-		<p>111111111111111111111111111111111111</p>
-		......
-	</div>
+    <div id="scroller">
+        <p>111111111111111111111111111111111111</p>
+        ......
+    </div>
 </div>
 ```
 
@@ -184,24 +184,24 @@ css部分
 
 ```css
 #wrapper {
-	position: relative;
-	height: 200px;
-	width: 200px;
-	background: #666;
-	overflow: hidden;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background: #666;
+    overflow: hidden;
 }
 
 #scroller {
-	position: absolute;
-	z-index: 2;
-	width: 2000px;
-	background: #fff;
+    position: absolute;
+    z-index: 2;
+    width: 2000px;
+    background: #fff;
 }
 
 p {
-	font-size: 16px;
-	line-height: 1;
-	overflow: hidden;
+    font-size: 16px;
+    line-height: 1;
+    overflow: hidden;
 }
 ```
 
@@ -396,16 +396,16 @@ js部分
 
 ```js
 myScroll = new IScroll('#wrapper', {
-	startX: -359,	// 初始位置
-	startY: -85,
-	scrollY: true,	// 横向纵向可同时滚动
-	scrollX: true,
-	freeScroll: true,	
-	mouseWheel: true,
-	indicators: {		
-		el: document.getElementById('minimap'),    // 指向滚动条容器元素的引用，容器里的第一个子元素就是指示器
-		interactive: true		// 让指示器可滚动
-	}
+    startX: -359,    // 初始位置
+    startY: -85,
+    scrollY: true,    // 横向纵向可同时滚动
+    scrollX: true,
+    freeScroll: true,    
+    mouseWheel: true,
+    indicators: {        
+        el: document.getElementById('minimap'),    // 指向滚动条容器元素的引用，容器里的第一个子元素就是指示器
+        interactive: true        // 让指示器可滚动
+    }
 });
 ```
 
@@ -413,12 +413,12 @@ html部分
 
 ```html
 <div id="wrapper">
-	<div id="scroller">
-	</div>
+    <div id="scroller">
+    </div>
 </div>
 <div id="minimap">
-	<div id="minimap-indicator">
-	</div>
+    <div id="minimap-indicator">
+    </div>
 </div>
 ```
 
@@ -426,38 +426,38 @@ css部分
 
 ```css
 #wrapper {
-	position: absolute;
-	z-index: 1;
-	width: 235px;
-	height: 321px;
-	top: 0;
-	left: 0;
-	background: #555;
-	overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 235px;
+    height: 321px;
+    top: 0;
+    left: 0;
+    background: #555;
+    overflow: hidden;
 }
 #scroller {
-	position: absolute;
-	z-index: 1;
-	width: 797px;
-	height: 1087px;
-	background: url(ermine.jpg);
+    position: absolute;
+    z-index: 1;
+    width: 797px;
+    height: 1087px;
+    background: url(ermine.jpg);
 }
 #minimap {
-	position: absolute;
-	z-index: 1;
-	width: 235px;
-	height: 321px;
-	background: url(ermine.jpg);
-	background-size: 235px 321px;
-	top: 0px;
-	left: 245px;
+    position: absolute;
+    z-index: 1;
+    width: 235px;
+    height: 321px;
+    background: url(ermine.jpg);
+    background-size: 235px 321px;
+    top: 0px;
+    left: 245px;
 }
 #minimap-indicator {
-	position: absolute;
-	z-index: 1;
-	border: 1px solid #fe0;
-	box-shadow: 0 0 5px #000;
-	background: rgba(255,255,255,0.15);
+    position: absolute;
+    z-index: 1;
+    border: 1px solid #fe0;
+    box-shadow: 0 0 5px #000;
+    background: rgba(255,255,255,0.15);
 }
 ```
 
@@ -469,18 +469,18 @@ js部分
 
 ```js
 myScroll = new IScroll('#wrapper', {
-	mouseWheel: true,
-	indicators: [{
-		el: document.getElementById('starfield1'),
-		resize: false,
-		ignoreBoundaries: true,
-		speedRatioY: 0.4
-	}, {
-		el: document.getElementById('starfield2'),
-		resize: false,
-		ignoreBoundaries: true,
-		speedRatioY: 0.2
-	}]
+    mouseWheel: true,
+    indicators: [{
+        el: document.getElementById('starfield1'),
+        resize: false,
+        ignoreBoundaries: true,
+        speedRatioY: 0.4
+    }, {
+        el: document.getElementById('starfield2'),
+        resize: false,
+        ignoreBoundaries: true,
+        speedRatioY: 0.2
+    }]
 });
 ```
 
@@ -488,14 +488,14 @@ html部分
 
 ```html
 <div id="wrapper">
-	<div id="scroller">
-	</div>
+    <div id="scroller">
+    </div>
 </div>
 <div id="starfield1" class="starfield">
-	<div id="stars1"></div>
+    <div id="stars1"></div>
 </div>
 <div id="starfield2" class="starfield">
-	<div id="stars2"></div>
+    <div id="stars2"></div>
 </div>
 ```
 
@@ -503,53 +503,53 @@ css部分
 
 ```css
 #wrapper {
-	position: absolute;
-	z-index: 3;
-	width: 100%;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	overflow: hidden;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
 }
 
 #scroller {
-	position: absolute;
-	z-index: 3;
-	width: 100%;
-	height: 4000px;
-	overflow: hidden;
-	background: url(galaxies1.png);
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 4000px;
+    overflow: hidden;
+    background: url(galaxies1.png);
 }
 
 #starfield1 {
-	z-index: 2;
+    z-index: 2;
 }
 
 .starfield {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
 }
 
 .starfield div {
-	position: absolute;
-	width: 100%;
-	overflow: hidden;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
 }
 
 #stars1 {
-	z-index: 2;
-	height: 3000px;
-	background: url(galaxies2.png);
+    z-index: 2;
+    height: 3000px;
+    background: url(galaxies2.png);
 }
 
 #stars2 {
-	z-index: 1;
-	height: 2000px;
-	background: url(stars.jpg);
+    z-index: 1;
+    height: 2000px;
+    background: url(stars.jpg);
 }
 ```
 
@@ -652,11 +652,11 @@ js部分
 
 ```js
 myScroll = new IScroll('#wrapper', {
-	zoom: true,
-	scrollX: true,
-	scrollY: true,
-	mouseWheel: true,
-	wheelAction: 'zoom'
+    zoom: true,
+    scrollX: true,
+    scrollY: true,
+    mouseWheel: true,
+    wheelAction: 'zoom'
 });
 ```
 
@@ -664,10 +664,10 @@ html部分
 
 ```html
 <div id="wrapper">
-	<div id="scroller">
-		<p>111111111111111111111111111</p>
+    <div id="scroller">
+        <p>111111111111111111111111111</p>
         ......
-	</div>
+    </div>
 </div>
 ```
 
@@ -675,20 +675,20 @@ css部分
 
 ```css
 #wrapper {
-	position: absolute;
-	z-index: 1;
-	top: 50px;
-	bottom: 50px;
-	left: 50px;
-	right: 50px;
-	background: #ccc;
-	overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    background: #ccc;
+    overflow: hidden;
 }
 
 #scroller {
-	position: absolute;
-	z-index: 1;
-	width: 100%;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
 }
 ```
 

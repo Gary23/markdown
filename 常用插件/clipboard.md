@@ -20,7 +20,7 @@ var clipboard = new Clipboard('#copy');
 ```js
 // 复制成功
 clipboard.on('success', function(e) {
-	// 这里可以显示复制成功的提示
+    // 这里可以显示复制成功的提示
 });
 ```
 
@@ -29,7 +29,7 @@ clipboard.on('success', function(e) {
 ```js
 // 复制失败
 clipboard.on('error', function(e) {
-	// 复制失败的提示，复制失败时可以让用户手动复制
+    // 复制失败的提示，复制失败时可以让用户手动复制
 });
 ```
 

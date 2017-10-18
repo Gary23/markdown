@@ -168,14 +168,14 @@ ctx.fill()
 a:
 var img = document.querySelector('image');
 img.addEventListener('load',function(){
-	ctx.drawImage(img,50,50);
+    ctx.drawImage(img,50,50);
 })
 
 b:
 var img = new Image()
 img.src = '路径'
 img.'onload' = function(){
-	ctx.drawImage(img,50,50)
+    ctx.drawImage(img,50,50)
 }
 
 ```

@@ -61,9 +61,9 @@ function myBrowser(){
 
 ```js
 if (navigator.userAgent.toLowerCase().indexOf('firefox')>=0){
-	if (e.preventDefault)
-	e.preventDefault();
-	e.returnValue = false;
+    if (e.preventDefault)
+    e.preventDefault();
+    e.returnValue = false;
 }
 ```
 
@@ -168,9 +168,9 @@ for(var i = 0;i < Lis.length;i++){
 
 `$(selector).stop(stopAll,goToEnd)`
 
-stopAll	可选。规定是否停止被选元素的所有加入队列的动画。
+stopAll    可选。规定是否停止被选元素的所有加入队列的动画。
 
-goToEnd	可选。规定是否允许完成当前的动画。该参数只能在设置了 stopAll 参数时使用。
+goToEnd    可选。规定是否允许完成当前的动画。该参数只能在设置了 stopAll 参数时使用。
 
 ## 使用懒加载插件
 
@@ -191,7 +191,7 @@ html部分，一定要在外层包一个div并且设置宽高，不要用图片�
 
 ```html
 <div class="item-image">
-	<img class="imglazyload" data-original="图片地址">
+    <img class="imglazyload" data-original="图片地址">
 </div>
 ```
 

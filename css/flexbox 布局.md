@@ -210,26 +210,26 @@ flex的默认行为会在一行内容纳所有的flex项目，即使浏览器出
 
 ```html
 <ul>
-	<li style="font-size:24px;">列表项1</li>
-	<li style="font-size:24px;">列表项2</li>
-	<li style="font-size:24px;">列表项3</li>
-	<li style="font-size:24px;">列表项4</li>
-	<li style="font-size:24px;">列表项5</li>
+    <li style="font-size:24px;">列表项1</li>
+    <li style="font-size:24px;">列表项2</li>
+    <li style="font-size:24px;">列表项3</li>
+    <li style="font-size:24px;">列表项4</li>
+    <li style="font-size:24px;">列表项5</li>
 </ul>
 ```
 
 ```css
 li:nth-child(1) {
-	order: 2;
+    order: 2;
 }
 li:nth-child(2) {
-	order: 1;
+    order: 1;
 }
 li:nth-child(3) {
-	order: 3;
+    order: 3;
 }
 li:nth-child(4) {
-	order: 3;
+    order: 3;
 }
 ```
 

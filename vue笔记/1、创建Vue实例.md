@@ -23,15 +23,15 @@ Vue的核心是：允许采用简洁的模板语法、声明式的将数据渲�
 
 ```js
 var app = new Vue({
-    el: '#app',	    // 挂载元素
+    el: '#app',        // 挂载元素
     data: {        // 代理数据,这里所有数据都具有响应的功能，新添加的就没有响应功能。
-	message: 'Hello Vue'
+    message: 'Hello Vue'
     },
-    methods: {		// 定义方法，用于执行函数，key:fun的格式
-	// 可以把事件处理函数都放在这里
-	clickHandle: function(){
-	    alert('click')
-	}
+    methods: {        // 定义方法，用于执行函数，key:fun的格式
+    // 可以把事件处理函数都放在这里
+    clickHandle: function(){
+        alert('click')
+    }
     }
 })
 ```

@@ -72,7 +72,7 @@ WebGL：获取绘制立体图形的工具。
 ```js
 // 绘制矩形
 var canvas = document.getElementById('canvas')
-	ctx = canvas.getContext('2d')
+    ctx = canvas.getContext('2d')
 var x, y
 var w, h
 x = 50  // 矩形的x轴值
