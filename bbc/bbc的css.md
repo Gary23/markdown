@@ -1,8 +1,8 @@
 
 ---
 
-title: bbc的css
-date: 2017-09-15 13:09:11
+title: bbc的css  
+date: 2017-09-15 13:09:11  
 tags: bbc
 
 ---
@@ -37,7 +37,6 @@ tags: bbc
 
 7. 在 `.wrap` 下，列要使用 `.col-` ,列宽50间距10。在 `.wrap-lg` 下，列要使用 `.col-lg-` ,列宽75间距10
 
-
 ### 列偏移
 
 1. 使用 `.offset-*` 类可以将列向右侧偏移，通过增加元素左侧 `margin` 实现的。
@@ -70,7 +69,7 @@ tags: bbc
 
 1. 标题样式：HTML中提供了 `.h1` 到 `.h6` 类，为的是给内联（inline）属性的文本赋予标题的样式。
 
-2. 默认格式：全局字体大小为 12px，行高设置为 1.5。这些属性直接赋予 `<body>` 元素和所有段落元素。另外，`<p>` 元素还被设置了 1/2 行高 (9px) 的底部外边距。
+2. 默认格式：全局字体大小为 12px，行高设置为 1.5。这些属性直接赋予 `<body>` 元素和所有段落元素。另外，`<p>` 元素还被设置了 1/2 行高 \(9px\) 的底部外边距。
 
 3. 突出文字：通过添加 `.lead` 类可以让段落突出显示。
 
@@ -91,7 +90,6 @@ tags: bbc
 11. 斜体字：用 `<em>` 标签强调一段文本。
 
 12. 列表：给 `<ul>` 元素增加  `.list-inline` 内部的 `<li>` 会横向排列
-
 
 ### 对齐
 
@@ -163,13 +161,11 @@ tags: bbc
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/5dc63c6d9e2e836997c9956afb54292a051d454622abab32e95e51cfe008ed0763eba0d73f9cd23acac1846135515391?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-40.JPG&size=1024)
 
-
 ### 纵向表单
 
 纵向表单是指标题和表单控件之间分行显示，此模式只需要在 `<form>` 标签加类名 `.form-vertical` 即可，其它结构与基本实例保持一致。
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/92fafa60559ad1aa0e9942906154875fde8c7512f90bbce6aca55faba599edb885a697af2b9041644f5406fdbcbcca30?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-45.JPG&size=1024)
-
 
 ### 栅格化表单
 
@@ -207,7 +203,7 @@ tags: bbc
 `<label>`元素的 `.form-label` 和表单容器的 `.form-act` 类名可以去掉可以保留，建议 `.form-label` 不要去掉。
 
 在每个 `.form-row` 类名的元素上增加类名 `.row`，在 `<label>` 和表单的容器上增加 `col-*` 的类名。
-  
+
 也可以选择只对输入框有效果：
 
 ```html
@@ -218,12 +214,11 @@ tags: bbc
     </span>
 </div>
 ```
-  
+
 只需要在表单的容器上增加 `. row` 和 `.input-row` 类名，在表单元素上增加 `col-*` 。
 
-
 ### 被支持的控件
-  
+
 #### 输入框
 
 1. 包括大部分表单控件、文本域控件、所有html5类型的输入控件。只有正确设置了 `type` 属性的输入控件才能被赋予正确的样式。
@@ -231,7 +226,7 @@ tags: bbc
 2. 输入框焦点：某些表单控件的默认 `outline` 样式移除，然后在 `:focus` 状态下改变 `border-color`。
 
 3. 被禁用的输入框：为输入框设置 `disabled` 属性可以防止用户输入，并能对外观做一些修改，使其更直观。
- 
+
 4. 只读输入框：为输入框设置 `readonly` 属性可以禁止用户输入，并且输入框的样式也是禁用状态。
 
 #### 多选框和单选框
@@ -270,8 +265,8 @@ tags: bbc
     </label>
 </div>
 ```
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/d9945bc0b8241f68a28945e94d2cb0e7f09a18ac8dc9cd0f2414296a9d1c3e994dbbae3526be28d9db69218af3c34c97?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-46.JPG&size=1024)
 
+![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/d9945bc0b8241f68a28945e94d2cb0e7f09a18ac8dc9cd0f2414296a9d1c3e994dbbae3526be28d9db69218af3c34c97?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-46.JPG&size=1024)
 
 ```html
 <label for="" class="checkbox-inline">
@@ -298,7 +293,6 @@ tags: bbc
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/de4360b8d68d532eb06581457a5fabc817ec430b898ab1a6c21c2e9364324af5ed52efc1cddf0bb5fc85d79819a3afca?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-47.JPG&size=1024)
 
-
 #### 下拉列表框
 
 使用默认选项或添加 multiple 属性可以同时显示多个选项。
@@ -324,14 +318,11 @@ tags: bbc
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/21fa4273bfa9fd87ae59f3fc0e1c4d71c6d454a9c4bdd078c9116f46556d94e9ddc769ed84e645ef540f6da360b6e255?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-48.JPG&size=1024)
 
-
-
 #### 状态校验
 
 B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定义了样式。使用时，添加 `.has-error` 或 `.has-success` 类到这些控件的父元素即可。
 
 任何包含在此元素之内的标题，输入框和信息提示都将接受这些校验状态的样式。
-
 
 ```html
 <div class="form-row has-success">
@@ -352,7 +343,6 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 ```
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/9fd16563fde4cf170d5153011dceec57809d8204f295e10c238d1355ece952c7d519f40f97c4af2cf44c5219cb533869?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-49.JPG&size=1024)
-
 
 ```html
 <div class="has-success">
@@ -378,11 +368,10 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/1aac524df6a9d9568cb70116b198c95e2b72392d05004d1c510532c97867ba7eec0489852b23e4955f372cb0a42bcbb9?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-50.JPG&size=1024)
 
-  
 #### 输入框图标
-  
+
 在需要为输入框内添加图标时，常规做法是为其父元素添加 `.has-figure` 类并给相应的图标添加 `.input-figure` 类。
-  
+
 ```html
 <div class="form-row">
     <label for="for_input_user" class="form-label">输入用户名：</label>
@@ -400,11 +389,11 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
     </span>
 </div>
 ```
+
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/44ebed2e4469de62730dc515f62e2d6dbc5092e1193493d25e41c2ce79380f4f20a0eb14062cf3aa012ae66a98f093a3?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-51.JPG&size=1024)
 
 还可以针对校验状态为输入框添加额外的图标。只需为其父元素添加 `.has-figure` 类并给相应的图标添加 `.input-figure` 类即可。
-  
-  
+
 ```html
 <div class="form-row has-error has-figure">
     <label class="form-label" for="for_inputerror">输入错误</label>
@@ -423,14 +412,12 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 ```
 
 #### 控件尺寸
-  
+
 通过 `.input-lg` 类似的类可以为控件设置高度，通过 `.col-*` 或 `.input-ln` 类似的类可以为控件设置宽度（长度）。
-  
+
 ##### 高度尺寸
 
-  
 创建大一些或小一些的表单控件以匹配按钮尺寸。
-
 
 ```html
 <input class="input-lg" type="text" placeholder=".input-lg" name="" value="">
@@ -442,8 +429,6 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 ```
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/33676f7d52cb225b01707db0993e80cb132555c296c86da3d83fd577e3e833a74a2d783c798bd9a2ce958c62b60a00eb?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-52.JPG&size=1024)
-
-
 
 ##### 调整列（column）尺寸
 
@@ -458,8 +443,6 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 ```
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/721499e45b87b464ae090fd7dc863ef2bc72d946d96b127f0b3f594366b9518888df320ac0092cec95a57623b689f6b9?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-53.JPG&size=1024)
-
-
 
 ##### 调整输入框的长度
 
@@ -481,19 +464,18 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <input type="text" class="input-xxln" placeholder=".input-xxln">
 <br>
 ```
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/0337e4e5dba61e85145905a52d4fdad6902ac4c24c950b9310f6ca4a33ba63b9e5a30f4465a47148add6a8de8362fc15?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-54.JPG&size=1024)
 
+![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/0337e4e5dba61e85145905a52d4fdad6902ac4c24c950b9310f6ca4a33ba63b9e5a30f4465a47148add6a8de8362fc15?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-54.JPG&size=1024)
 
 ### 辅助文本
 
-针对表单控件的块(block)级辅助文本
+针对表单控件的块\(block\)级辅助文本
 
 ```html
 <span class="help-block">表单项的帮助提示信息</span>
 ```
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/8b4d3f399d7ec9c0c3e4afca6465406afcbe43998c876010db8d096536b01c6e48309ee327b71ff19bb5829bf1509738?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-55.JPG&size=1024)
-
 
 ### 输入框组
 
@@ -529,7 +511,6 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 ```
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/be02d9b84a9f0f08b34fdaf2915c2df30232903c47e0788a48537f80e36fef2546d791e17c0ed1ef3ba801d74f57317e?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-56.JPG&size=1024)
-
 
 ## 按钮
 
@@ -645,8 +626,6 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/7fb6a171c449446bf543f62208c7ebeb6ab63803a09ffe38383595d9ea5aa522ecf34aa3f907638713df81b93f4c6297?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-57.JPG&size=1024)
 
-
-
 ### 尺寸
 
 需要让按钮具有不同尺寸可以使用 `.btn-sm`、`.btn-lg` 或 `.btn-xl` 可以获得不同尺寸的按钮。
@@ -676,13 +655,12 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
     <span><span>继续购物</span></span>
 </a>
 ```
+
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/33245aa40b95a99b912e140e481a2440056a958b7e7838f04fef747ada50b3b409bf269f9a59db655a2458e5054f6d3b?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-58.JPG&size=1024)
 
-
-
-> 满屏按钮： `.btn-block` 类可以将按钮设为父元素100%的宽度。
-圆角按钮： `.btn-rounded` 类来为按钮增加圆角效果。
-禁用按钮： `.disabled` 类可以让样式变灰，但是ie9以下的版本比较难看。
+> 满屏按钮： `.btn-block` 类可以将按钮设为父元素100%的宽度。  
+> 圆角按钮： `.btn-rounded` 类来为按钮增加圆角效果。  
+> 禁用按钮： `.disabled` 类可以让样式变灰，但是ie9以下的版本比较难看。
 
 ## 辅助类
 
@@ -697,12 +675,12 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <p class="text-warning">一篇文档用text-warning类</p>
 <p class="text-danger">一篇文档用text-danger类</p>
 ```
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/80405562a36ec773a97faa9d42d25a4d8a84c4cbd8a97289ba05dcf5adfdf06d414e435fe7c5d7be26233bb4f84a83f0?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-59.JPG&size=1024)
 
+![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/80405562a36ec773a97faa9d42d25a4d8a84c4cbd8a97289ba05dcf5adfdf06d414e435fe7c5d7be26233bb4f84a83f0?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-59.JPG&size=1024)
 
 ### 背景颜色
 
-类似于文本颜色类，你也可以通过添加不同的 `.bg-*` 类来表达不同的语义。(PS:不知道为何实际css中设置仍然是前景色)
+类似于文本颜色类，你也可以通过添加不同的 `.bg-*` 类来表达不同的语义。\(PS:不知道为何实际css中设置仍然是前景色\)
 
 ```html
 <p class="bg-yellow">文本的背景颜色bg-yellow类</p><br>
@@ -714,8 +692,8 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <p class="bg-error">文本的背景颜色bg-error类</p><br>
 <p class="bg-selected">文本的背景颜色bg-selected类</p><br>
 ```
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/f565ce154a178efce9673f36c0c7c982323517ec54d5d2258a2988695886be294d60e12c58fe88cd4364072349693fcf?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-60.JPG&size=1024)
 
+![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/f565ce154a178efce9673f36c0c7c982323517ec54d5d2258a2988695886be294d60e12c58fe88cd4364072349693fcf?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-60.JPG&size=1024)
 
 ### 关闭和三角符号
 
@@ -733,7 +711,6 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/25f65aa6e4c0512a9299289114eee83c92bf460be7c9cab1438c00ef938e83bbf31c22cf295c86490f272e814e231a97?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-61.JPG&size=1024)
 
-
 ### 浮动
 
 左浮动和有浮动使用的类名，内部都使用了`!important`。
@@ -750,7 +727,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ### 显示隐藏内容
 
-对于元素的显示和隐藏分别使用 `.show` 和 `.hide` 类切换。也加入了 `!important`。请注意它们只适合块级元素的切换。 
+对于元素的显示和隐藏分别使用 `.show` 和 `.hide` 类切换。也加入了 `!important`。请注意它们只适合块级元素的切换。
 
 对于元素是否可见，还可以使用 `.visible` 和 `.hidden` 来实现，区别是它们会继续占用原来的位置和大小。
 
@@ -783,7 +760,6 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/cb918c9f0890d8ff993c38973969510de4fd2d208807ba1d1c0e2915230763d7be14acb0097d1d657f14a9fc912a8256?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-62.JPG&size=1024)
 
-
 ## 分页
 
 带有展示页码的分页组件，或者可以使用简单的翻页组件。
@@ -802,8 +778,8 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
   <a href="#" class="flip next">&rsaquo;</a>
 </div>
 ```
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/b1e0275e62279faec35a77b3a0b4286e682327bb1f496ff0c4b0e871473cdb0a520b7dbd3505e0d5348e953e3f69f202?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-63.JPG&size=1024)
 
+![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/b1e0275e62279faec35a77b3a0b4286e682327bb1f496ff0c4b0e871473cdb0a520b7dbd3505e0d5348e953e3f69f202?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-63.JPG&size=1024)
 
 ### 更小的分页
 
@@ -821,8 +797,8 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
   <a href="#" class="flip next">&rsaquo;</a>
 </div>
 ```
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/3009f86d9f8d26a7b9f4735008ac97f6347ad381b83d3caafe8e01a6a6a08ee4b6185f34dde201f00584537042454585?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-64.JPG&size=1024)
 
+![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/3009f86d9f8d26a7b9f4735008ac97f6347ad381b83d3caafe8e01a6a6a08ee4b6185f34dde201f00584537042454585?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-64.JPG&size=1024)
 
 ## 标签
 
@@ -835,9 +811,8 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <span class="label label-warning">新</span>
 <span class="label label-danger">新</span>
 ```
+
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/352a566aa8d7d3a13c80d41e41504170e3946d3d197b237779742b34915cebd36c7fc85aecc3c8fdcdc6a8ef588dd2eb?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-65.JPG&size=1024)
-
-
 
 ## 指示
 
@@ -852,8 +827,8 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <span class="point point-sm">10</span>
 <span class="point point-sm">245</span>
 ```
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/864a691acb9b21b1d44057b7431a7416148cf763b80329ab3eaa34c1b410676f9228ee9a4bd4e69ffd38ffc42bab4b95?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-66.JPG&size=1024)
 
+![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/864a691acb9b21b1d44057b7431a7416148cf763b80329ab3eaa34c1b410676f9228ee9a4bd4e69ffd38ffc42bab4b95?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-66.JPG&size=1024)
 
 ## 警告框
 
@@ -866,8 +841,8 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <div class="danger"><span class="icon-close-b"></span> danger提示提醒注意！</div>
 <div class="success"><span class="icon-checkmark-c"></span> success提示提醒注意！</div>
 ```
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/fce5e9b5deb129d540cf70d74eac843b331fe081469db23d35a4209ec06a1cf674ba79251bf6d8e7b1b96e7ce4f8b601?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-67.JPG&size=1024)
 
+![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/fce5e9b5deb129d540cf70d74eac843b331fe081469db23d35a4209ec06a1cf674ba79251bf6d8e7b1b96e7ce4f8b601?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-67.JPG&size=1024)
 
 ## 字体图标
 
@@ -879,10 +854,13 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 
 ## 增加的css
 
-- `.ablock` ：`display: block; width: 100%; height: 100%;`
+* `.ablock` ：`display: block; width: 100%; height: 100%;`
 
-- `.line-clamp1`: 文本一行显示。
+* `.line-clamp1`: 文本一行显示。
 
-- `.line-clamp2`: 文本两行显示。
+* `.line-clamp2`: 文本两行显示。
 
-- `.price-font`：¥符号的字体样式，带这个符号的元素都要加这个类。
+* `.price-font`：¥符号的字体样式，带这个符号的元素都要加这个类。
+
+
+
