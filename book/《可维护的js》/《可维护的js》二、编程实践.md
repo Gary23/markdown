@@ -124,3 +124,139 @@ require(['Person'], function( obj ) {
     // do something
 }(window))
 ```
+
+## 避免空比较
+
+在js中尽量不要检测数据类型时候与null比较，除非期望的值真的是null，则可以直接和null进行比较。
+
+```js
+var elem = document.getElementById('box');
+if (elem !== null) {
+    elem.callName = 'found';
+}
+```
+
+如果DOM元素不存在，则elem得到的值为null。所以这个方法要么返回一个节点要么返回一个null。这时null是可预见的一种输出，则可以使用null来检测。
+
+### 检测基本类型
+
+检测基本类型最好的方法是使用typeof，他可以检测：string、number、boolean、undefined。但是不能用来检测null，会返回object。
+
+### 检测引用类型
+
+引用类型也称作对象，js中除了基本类型外都是对象。检测引用值的类型的最好方法是 instanceof 运算符。
+
+```js
+// 检测日期
+if (value instanceof Date) {
+
+}
+
+// 检测正则
+if (value instanceof RegExp) {
+
+}
+``` 
+
+instanceof 不仅检测对象的构造器，还检测原型链。所以任何引用类型去 instanceof Object 都返回 true。instanceof 也可以检测自定义的类型。
+
+```js
+function Person(name) {
+    this.name = name;
+}
+var me = new Person('tim');
+console.log(me instanceof Person);  // 打印 true
+console.log(me instanceof Object);  // 打印 true
+```
+
+有一点需要注意，instanceof 在浏览器中的两个frame之间是不能互相检测的，即便都有Person。但是frameA的实例放到frameB中是检测不到的。他们引用自不同的地址，可以看作是一份拷贝的实例。
+
+另外函数和数组这两个类型一般也用不到instanceof。
+
+### 检测函数
+
+从技术上来看，js中的函数是引用类型，也确实存在Function构造函数，但是最好的方法使用typeof去检测函数。因为typeof可以跨frame。
+
+```js
+function fun() {}
+console.log(typeof fun === 'function');  // 打印true
+```
+
+但是在IE8及更早的IE浏览器中不能用typeof来检测DOM的方法，比如：document.getElementById()方法会返回object而不是function。因为这些老的浏览器没有将DOM实现为内置的js方法，所以在这些浏览器中需要用in运算符来检测DOM方法。
+
+```js
+if('querySelector' in document){
+
+}
+```
+
+### 检测数组
+
+检测数组最好的方法是 Array.isArry() 方法。
+
+```js
+var arr = [];
+console.log(Array.isArray(arr))  // 打印 true
+```
+
+对于旧浏览器我们可以自己扩展一个isArry方法。
+
+```js
+function isArray(value) {
+    if (typeof Array.isArray === 'function') {
+        return Array.isArray(value);
+    } else {
+        return Object.prototype.toString.call(value) === '[object Array]';
+    }
+}
+```
+
+`Object.prototype.toString.call(value) === '[object Array]'` 就是isArray的实现方式，这条语句适用于所有浏览器去检测数组。
+
+
+### 检测属性
+
+检测对象的属性，先来看几个不好的写法：
+
+```js
+// 不好的写法，检测假值
+if (object[propertyName]) {
+
+}
+
+// 不好的写法，和null比较
+if (object[propertyName] != null) {
+
+}
+
+// 不好的写法：和undefined比较
+if (object[propertyName] != undefined) {
+
+}
+```
+
+上面的几个检测都是通过检测这个属性的值来判断，这是不对的，应该只通过判断属性名来检测属性是否存在。这里最好的方法是使用in运算符。
+
+```js
+var object = {
+    count: 0
+};
+
+if ('count' in object) {
+    // 执行代码
+}
+```
+
+in运算符回去检测原型链，但是如果只想检测对象的实例属性，可以使用 hasOwnProperty() 方法。需要注意在旧的浏览器中，DOM对象并非继承自Object，因此DOM对象也不包含这个方法，也就是说在DOM对象调用 hasOwnProperty() 之前最好先检测其是否存在。
+
+```js
+// 所有非DOM对象
+if (object.hasOwnProperty('count')) {
+    // 执行代码
+}
+
+// 如果不确定是否为DOM对象及是否为旧浏览器
+if ('hasOwnProperty' in object && object.hasOwnProperty('count')) {
+    // 执行代码
+}
+```
