@@ -1,12 +1,4 @@
 
----
-
-title: hexo配置
-date: 2017-06-01 11:31:26
-tags: blog和git
-
----
-
 ## 安装hexo
 
 ### 安装过程

@@ -1,12 +1,3 @@
-
----
-
-title: bbc的tool.js
-date: 2017-09-11 17:26:21
-tags: bbc
-
----
-
 ## 工具类函数 tools.js
 
 ### 判断是否为 dom 元素

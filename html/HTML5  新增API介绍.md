@@ -1,12 +1,4 @@
 
----
-
-title: HTML5新增API介绍
-date: 2017-09-20 10:27:19
-tags: html
-
----
-
 ## 文件读取
 
 ### javascript 阻止读取本地文件

@@ -1,13 +1,4 @@
 
----
-
-title: Git
-date: 2017-09-19 16:16:58
-tags: blog和git
-
----
-
-
 ## Git的三个区域介绍
 
 ### Git仓库

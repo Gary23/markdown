@@ -1,12 +1,4 @@
 
----
-
-title: 《锋利的jQuery》八、XMLHttpRequest对象
-date: 2017-08-15 21:35:00
-tags: 《锋利的jQuery》
-
----
-
 `XMLHttpRequest`对象是Ajax的核心，它有许多的属性、方法和事件以便于js处理和控制HTTP的请求与响应。
 
 ## readyState属性

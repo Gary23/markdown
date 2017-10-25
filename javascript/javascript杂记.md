@@ -1,12 +1,4 @@
 
----
-
-title: javascript杂记
-date: 2017-05-21 14:34:25
-tags: javascript
-
----
-
 ## this的基本用法
 
 首先有一个函数

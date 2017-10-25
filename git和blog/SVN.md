@@ -1,12 +1,4 @@
 
----
-
-title: SVN
-date: 2017-09-20 11:36:42
-tags: blog和git
-
----
-
 ## VisualSVN
 
 SVN服务器：运行Subversion服务的计算机。

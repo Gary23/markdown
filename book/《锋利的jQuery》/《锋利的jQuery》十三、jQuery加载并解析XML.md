@@ -1,12 +1,4 @@
 
----
-
-title: 《锋利的jQuery》十三、jQuery加载并解析XML
-date: 2017-08-23 22:36:20
-tags: 《锋利的jQuery》
-
----
-
 ## 语法
 
 XML(eXtensible Markup Language)，于HTML一样，都属于SGML标准通用语言。

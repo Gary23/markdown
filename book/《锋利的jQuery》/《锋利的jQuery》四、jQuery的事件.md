@@ -1,12 +1,4 @@
 
----
-
-title: 《锋利的jQuery》四、jQuery的事件
-date: 2017-07-06 08:53:57
-tags: 《锋利的jQuery》
-
----
-
 ## 加载DOM
 
 jQuery中`$(document).ready()`方法运行时代表DOM已经加载完毕，用此方法代替`window.onload`方法可以极大地提高web应用程序的响应速度。

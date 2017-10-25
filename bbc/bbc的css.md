@@ -1,12 +1,3 @@
-
----
-
-title: bbc的css  
-date: 2017-09-15 13:09:11  
-tags: bbc
-
----
-
 ## 全局css样式
 
 1. `html` 的背景为 `background: #FFFFFF`

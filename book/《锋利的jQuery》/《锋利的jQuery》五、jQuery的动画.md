@@ -1,13 +1,4 @@
 
----
-
-title: 《锋利的jQuery》五、jQuery的动画
-date: 2017-07-14 11:19:00
-tags: 《锋利的jQuery》
-
----
-
-
 ## show()和hide()
 
 `hide()`方法是让元素隐藏，执行时候其实有两步，第一步是记住元素隐藏前的`display`属性值，第二步是将`display`设置为`none`。

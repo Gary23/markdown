@@ -1,12 +1,4 @@
 
----
-
-title: javascript（DOM常用方法）
-date: 2017-06-01 10:31:19
-tags: javascript
-
----
-
 ## DOM操作的一些常用属性和方法
 
 元素节点的nodeType是1

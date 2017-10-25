@@ -1,12 +1,4 @@
 
----
-
-title: javascript（时间、数组、字符串方法）
-date: 2017-06-01 10:25:43
-tags: javascript
-
----
-
 ## 日期对象
 
 ### 常用方法

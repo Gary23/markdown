@@ -1,12 +1,4 @@
 
----
-
-title: ionic环境配置(android)
-date: 2017-09-10 21:56:20
-tags: 移动端
-
----
-
 ## 系统环境搭建
 
 ### 安装java jdk

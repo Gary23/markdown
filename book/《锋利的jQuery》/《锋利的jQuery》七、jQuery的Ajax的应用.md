@@ -1,12 +1,3 @@
-
----
-
-title: 《锋利的jQuery》七、jQuery的Ajax的应用
-date: 2017-07-23 22:48:00
-tags: 《锋利的jQuery》
-
----
-
 在jQuery中对Ajax进行了封装，在jQuery中`$.ajax()`属于最底层方法，第二层是`$.post()`、`load()`、`$.get()`方法，第三层是`$.getScript()`和`$.getJson()`方法。通常第二层的方法使用频率最高。
 
 ## load()方法
