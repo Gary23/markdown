@@ -252,3 +252,123 @@ if ('hasOwnProperty' in object && object.hasOwnProperty('count')) {
     // 执行代码
 }
 ```
+
+## 将配置数据从代码中分离出来
+
+任何修改数据的操作都会有引入bug的风险，只修改一些数据的值约会带来一些不必要的风险，精心设计的应用应当将关键数据从主要的源码中抽离出来。这样修改源代码时才会更加放心。
+
+### 什么是配置数据
+
+配置数据在应用中是写死的值。
+
+```js
+function validate(value) {
+    if (!value) {
+        alert('Invalid value');
+        location.href = '/error/invalid.php';
+    }
+}
+```
+
+这段代码中'Invalid value'这个值是用来给用户提示的。它可能会被修改，第二个是url，在开发过程中，当架构变更时则很有可能频繁修改url。类似这种写死在代码里并且将来可能会被修改的数据都认为是配置数据。比如：
+
+- URL
+
+- 需要展现给用户的字符串
+
+- 重复的值
+
+- 设置（比如每页的配置项）
+
+- 任何可能发生变更的值
+
+### 抽离配置数据
+
+首先要将数据拿到外部。
+
+```js
+var config = {
+    MSG_INVALID_VALUE : 'Invalid value',
+    URL_INVALID : '/error/invalid.php'
+}
+function validate(value) {
+    if (!value) {
+        alert(config.MSG_INVALID_VALUE);
+        location.href = config.URL_INVALID;
+    }
+}
+```
+
+这段代码将配置数据保存在了config对象中，将配置抽离出来意味着任何人都可以修改它们，而不会导致应用逻辑出错。
+
+## 抛出自定义错误
+
+### 在js中抛出错误
+
+在js中抛出错误很有价值，因为web端调试的复杂性。可以使用throw操作符，将提供一个对象作为错误抛出，Error是最常用的。
+
+```js
+throw new Error('Something bad happened.');
+```
+
+错误信息将会抛出在浏览器的控制台中
+
+### 抛出错误的好处
+
+抛出自己的错误可以使用确切的文本供浏览器显示，除了行和列的号码，还可以包含任何你需要的有助于调试问题的信息，最好可以将函数名也添加到错误信息中。
+
+```js
+function getDivs(elem) {
+    return elem.getElementsByTagName('div');
+}
+```
+
+函数本意是查找传入元素下的所有div元素，但如果传入的参数是null，会看到一个类似'object expected'的含糊的错误信息。要实际定位到源文件才能知道错误原因，但通过抛出一个错误调试会更简单。
+
+```js
+function getDivs(elem) {
+    if (elem && elem.getElementsByTagName) {
+        return elem.getElementsByTagName('div');
+    } else {
+        throw new Error('getDivs() : Argument must be a DOM element.');
+    }
+}
+```
+
+这样只要参数不满足条件，就会抛出一个明确陈列错误发生的问题的信息。
+
+### 何时抛出错误
+
+理解了如何抛出只是等式的一个部分，另一部分就是理解什么时候抛出错误。由于js是弱类型语言，大量的开发者错误的假设自己应该实现每个函数的类型检查，这会对代码的整体性能造成影响，比如下面的函数：
+
+```js
+function addClass(elem, className) {
+    if (!elem || typeof elem.className != 'string') {
+        throw new Error('addClass() : First argument must be a DOM element.');
+    }
+    if (typeof className != 'string) {
+        throw new Error('addClass() : Second argument must be a string.');
+    }
+    elem.className += ' ' + className;
+}
+```
+
+函数本意是给elem参数添加一个类名，但其实函数中大部分代码都是检查。这种情况就要辨识代码中哪些部分在特定情况下最有可能导致失败，并只在那些地方抛出错误才是关键所在。所以在上面的函数中，最有可能引发错误的是elem参数是一个null值，因为如果第二个参数是null或其他值都不会抛出错误（js会将其强制转为字符串），所以只需要检查elem参数。
+
+```js
+function addClass(elem, className) {
+    if (!elem || typeof elem.className != 'string') {
+        throw new Error('addClass() : First argument must be a DOM element.');
+    }
+    elem.className += ' ' + className;
+}
+```
+
+一些关于抛出错误很好的经验法则：
+
+- 一旦修复了一个很难调试的错误，尝试增加一两个自定义错误，当再次发生错误时，这将有助于更容易的解决问题。
+
+- 如果正在编写代码，思考一下：“我希望某些事件不要发生，如果发生，代码会有错误”。这时，“某些事情”就应该抛出一个错误。
+
+- 如果正在编写的代码别人也会使用，思考一下他们使用的方式，在特定情况下抛出错误。
+
