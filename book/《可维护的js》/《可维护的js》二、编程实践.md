@@ -372,3 +372,51 @@ function addClass(elem, className) {
 
 - 如果正在编写的代码别人也会使用，思考一下他们使用的方式，在特定情况下抛出错误。
 
+### try-catch
+
+js提供了try-catch语句，它能在浏览器处理抛出错误之前来解析它。可能引发错误的代码放在try中，处理错误的代码放在catch中。
+
+```js
+try {
+    // 会发生错误的代码
+} catch(ex) {   
+    // 处理错误的代码
+}
+```
+
+当try中发生了一个错误时，程序会立刻停止，跳到catch块中，并传入一个错误对象，检查该对象可以确定从错误中恢复的最佳运作。
+
+### 错误类型
+
+目前共有7种错误类型。
+
+1. Error 所有错误的基本类型。实际上引擎从来不会抛出该类型的错误。
+
+2. EvalError 通过eval()函数执行代码发生错误时跳出
+
+3. RangeError 一个数字超出它的边界时抛出，例如一个长度为-20的数组。
+
+4. ReferenceError 期望的对象不存在时抛出，比如试图在一个null对象引用上调用一个函数。
+
+5. SyntaxError 给eval()函数传递的代码中有语法错误时抛出
+
+6. TypeError 变量不是期望的类型时抛出。比如 new 10
+
+7. URIError 给encodeURI()、encodeURIComponent()、decodeURI()或者decodeURIComponent()等函数传递格式非法的URI字符串时抛出。
+
+通过检查特定的错误类型可以更可靠的处理错误
+
+```js
+try {
+    // 会发生错误的代码
+} catch(ex) {
+    if (ex instanceof TypeError) {
+        // 处理TypeError错误
+    } else if (ex instanceof ReferenceError) {
+        // 处理ReferenceError错误
+    } else {
+        // 其他处理
+    }
+}
+
+```
