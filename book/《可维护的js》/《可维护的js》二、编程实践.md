@@ -420,3 +420,133 @@ try {
 }
 
 ```
+
+当然，如果使用new Error实例化一个错误信息，就丧失了区分自己抛出的错误和浏览器错误的能力。解决方案是创建自己的错误类型，让它继承自Error。
+
+```js
+function MyError(message) {
+    this.message = message;
+}
+MyError.prototype = new Error();
+```
+
+设置prototype为Error的一个实例，这样对js来说它就是一个错误对象了。接下来就可以抛出一个错误对象了。
+
+```js
+throw new MyError("Hello world!");
+```
+
+这个方法最大的好处是可以在错误类型检测中检测到这个类型。
+
+```js
+try {
+    // 有些代码引发了错误
+} catch(ex) {
+    if (ex instanceof MyError) {
+        // 处理自己的错误
+    } else {
+        // 其他处理
+    }
+}
+```
+
+但是该方法在IE8及更早的浏览器中不会显示自定义的错误类型，只会显示那个通用的"Exception thrown but not caught"消息。但是这点缺点实际上也不足为道了。
+
+### 不是你的对象不要动
+
+#### 原则
+
+js中原则上有一些对象是不能修改的，包括：
+
+- 原生对象(Object、Array等)
+
+- DOM对象(document)
+
+- 浏览器对象模型(window)
+
+- 类库的对象
+
+对于这些对象要遵守不覆盖方法、不新增方法、不删除方法的原则。因为大多数情况我们不是一个人在写一个项目，随意操作会给团队挖坑。而且如果随意在上面的对象上新增方法很可能会与js或者类库以后更新的方法名称冲突。
+
+#### 更好的途径 
+
+如果要对非自己拥有的对象进行修改，最好的方式是基于对象的继承和基于类型的继承。
+
+##### 基于对象的继承
+
+也经常叫做原型继承，一个对象继承另一个对象是不需要调用构造函数的，Object.create()是实现这种继承最简单的方式。
+
+```js
+var person = {
+    name: 'tim',
+    sayName: function() {
+        alert(this.name);
+    }
+};
+
+var myPerson = Object.create(person);
+myPerson.sayName();  // 弹出'tim'
+```
+
+这种继承方式就如同myPerson的原型设置为person，从此可以访问person的属性和方法，而且重新定义属性和方法会自动切断对person.sayName()的访问。
+
+```js
+myPerson.sayName = function() {
+    alert('jack');
+};
+
+myPerson.sayName();  // 弹出'jack'
+person.sayName();   // 弹出'tim'
+```
+
+Object.create()方法可以指定第二个参数，该参数是对象类型，可以将对象中的属性和方法添加到新的对象中。
+
+```js
+var myPerson = Object.create(person, {
+    name: {
+        value: 'gary'
+    }
+});
+
+myPerson.sayName();  // 弹出gary
+```
+
+##### 基于类型的继承
+
+区别就是基于类型的继承是通过构造函数实现的，而非对象。这意味着需要访问被继承对象的构造函数。
+
+```js
+function MyError(message) {
+    this.message = message;
+}
+
+MyError.prototype = new Error();
+```
+
+这是前面的一个例子，MyError继承自Error。给MyError.prototype赋值为一个Error实例后，每个MyError实例都会从Error那里继承它的属性和方法。
+
+```js
+var error = new MyError('Something bad happened.');
+
+console.log(error instanceof Error);  // true
+console.log(error instanceof MyError);  // true
+```
+
+上面的Error是js的原生类型，而在开发者定了以构造函数的情况下，基于类型的继承也是最合适的。一般需要两步：首先，原型继承；然后，构造器继承。构造器继承是调用类的构造函数时传入新建的对象作为其this的值。例如：
+
+```js
+function Person(name) {
+    this.name = name;
+}
+
+function Author(name) {
+    Person.call(this, name);   // 继承构造器
+}
+
+Author.prototype = new Person();
+var author = new Author('jack');
+alert(author.name);  // 弹出'jack'
+```
+
+Author类型继承自Person，属性name实际上是由Person类管理的，所以Person.call(this, name)允许Person构造器继续定义该属性。Person构造器是在this上执行的，this指向一个Author对象，所以最终的name定义在这个Author对象上。
+
