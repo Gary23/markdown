@@ -452,9 +452,9 @@ try {
 
 但是该方法在IE8及更早的浏览器中不会显示自定义的错误类型，只会显示那个通用的"Exception thrown but not caught"消息。但是这点缺点实际上也不足为道了。
 
-### 不是你的对象不要动
+## 不是你的对象不要动
 
-#### 原则
+### 原则
 
 js中原则上有一些对象是不能修改的，包括：
 
@@ -468,11 +468,11 @@ js中原则上有一些对象是不能修改的，包括：
 
 对于这些对象要遵守不覆盖方法、不新增方法、不删除方法的原则。因为大多数情况我们不是一个人在写一个项目，随意操作会给团队挖坑。而且如果随意在上面的对象上新增方法很可能会与js或者类库以后更新的方法名称冲突。
 
-#### 更好的途径 
+### 更好的途径 
 
 如果要对非自己拥有的对象进行修改，最好的方式是基于对象的继承和基于类型的继承。
 
-##### 基于对象的继承
+#### 基于对象的继承
 
 也经常叫做原型继承，一个对象继承另一个对象是不需要调用构造函数的，Object.create()是实现这种继承最简单的方式。
 
@@ -511,7 +511,7 @@ var myPerson = Object.create(person, {
 myPerson.sayName();  // 弹出gary
 ```
 
-##### 基于类型的继承
+#### 基于类型的继承
 
 区别就是基于类型的继承是通过构造函数实现的，而非对象。这意味着需要访问被继承对象的构造函数。
 
@@ -549,4 +549,121 @@ alert(author.name);  // 弹出'jack'
 ```
 
 Author类型继承自Person，属性name实际上是由Person类管理的，所以Person.call(this, name)允许Person构造器继续定义该属性。Person构造器是在this上执行的，this指向一个Author对象，所以最终的name定义在这个Author对象上。
+
+#### 门面模式
+
+门面模式为一个已存在的对象创建一个新的接口。门面是一个全新的对象，其背后有一个已存在的对象在工作。门面有时也叫包装器，它们用不同的接口来包装已存在的对象。比如jQuery就使用了一个门面。
+
+```js
+function DOMWrapper(element) {
+    this.element = element;
+}
+
+DOMWrapper.prototype.addClass = function(className) {
+    this.element += " " + className;
+}
+
+var wrapper = new DOMWrapper(document.getElementById('box'));
+wrapper.addClass('selected');
+
+```
+
+DOMWrapper 类型期望传递给其构造器的是一个DOM元素，该元素会保存起来以便以后引用，
+
+### 阻止修改
+
+ECMAScript5中引入了几个方法来防止对对象的修改，有三种锁定修改的级别：锁定(禁止扩展)、密封(禁止删除)、冻结(禁止修改)。每种级别都有两个方法，一个用来实施，一个用来检测是否用了相应的操作。
+
+锁定对象：
+
+```js
+var person = {
+    name: 'tim'
+};
+
+Object.preventExtension(person);   // 锁定对象
+console.log(Object.isExtensible(person));    // false，已经锁定，不能被扩展所以是false
+person.age = 25;   // 添加不上，如果在严格模式下还会抛出错误
+```
+
+密封对象：
+
+```js
+Object.seal(person);    // 密封对象
+console.log(Object.isExtensible(person));  // false  被密封的对象同时也是不可扩展的
+console.log(Object.isSealed(person));    // true  已经被密封，所以打印true
+delete.person.name;   // 无法删除对象，严格模式下会报错
+```
+
+冻结对象：
+
+```js
+Object.freeze(person);   // 冻结对象
+console.log(Object.isExtensible(person));    // false，被冻结的对象同时也不可扩展
+console.log(Object.isSealed(person));    // true  同上也被密封
+console.log(Object.isFrozen(person));    // true  被冻结
+person.name = 'Greg';   // 不会修改，在严格模式下报错
+```
+
+使用时最好使用严格模式，如果别人在使用你的对象时不知道已经锁定了，进行扩展修改及删除操作并不知道已经锁定而又不报错将会令人沮丧，而抛出错误将会明确的支出原因。
+
+## 浏览器嗅探
+
+### user-agent
+
+为了保证js的正确执行，user-agent检测应该是没有办法的办法，因为新浏览器的发布代表着user-agent也要更新才能保证良好的用户体验。而最安全的办法是只检测旧浏览器，例如要针对IE8之前的版本执行一些特殊操作，那么就检测旧的浏览器user-agent而不要去检测更高的版本。谁也不能确定未来的更新会不会改变user-agent。
+
+总之，user-agent有合理使用的场景，但是要慎用，如果一定要用那么唯一安全的方式是针对旧的或者某个特定版本的浏览器做检测，绝不该针对最新版本或者未来的浏览器做检测。
+
+### 检测特性
+
+检测特性是一种比检测user-agent更聪明的做法。原理是为特定浏览器的特性进行测试。
+
+```js
+function getById(id) {
+    var element;
+    if (document.getElementById) {
+        element = document.getElementById(id);
+    } else if (document.all) {
+        element = document.all[id];
+    } else if (document.layers) {
+        element = document.layers[id];
+    }
+    return element;
+}
+```
+
+特性的检测不依赖于所使用的浏览器，而仅仅依赖特性是否存在。也说明了正确的特性检测的一些重要组成部分：
+
+1. 探测标准的方法。
+
+2. 探测不同浏览器的特定写法。
+
+3. 当被探测的方法均不存在时提供一个合乎逻辑的备用方法。
+
+### 避免特性推断
+
+意思是根据一个特性的存在就推断另一个特性是否存在，问题是这只是一个假设并非事实。例如：
+
+```js
+if (document.getElementsByTagName) {
+    element = document.getElementById(id);
+} else if (window.ActiveXObject) {
+    element = document.all(id);
+}
+```
+
+这都是糟糕的特性推断，最起码两者也要有薄弱的关系才行。通常只需要在使用方法之前检测是否可用即可，不要试图推断特性的关系。
+
+### 避免浏览器推断
+
+```js
+if (document.all) {
+    id = document.uniqueID;
+} else {
+    id = Math.random();
+}
+```
+
+这是一个糟糕的判断，通过检测document.all间接的判断浏览器是否为IE并使用IE的属性。然而仅靠document.all并不能推断就一定是IE浏览器。所以通过特性推断出是某个浏览器是糟糕的做法。
 
