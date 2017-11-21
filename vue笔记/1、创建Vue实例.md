@@ -1,5 +1,5 @@
 
-## 一个最简单的Vue的例子
+# 一个最简单的Vue的例子
 
 Vue的核心是：允许采用简洁的模板语法、声明式的将数据渲染进DOM(与声明式相对应的是命令式)。
 
@@ -38,7 +38,7 @@ app.message = '123'
 
 这样页面中的Hello Vue就会变为123。这是利用的Object.delinedProperty中的getter和setter代理数据，监控对数据的操作。
 
-## Vue渲染DOM树的过程
+# Vue渲染DOM树的过程
 
 1. 读取html模板
 

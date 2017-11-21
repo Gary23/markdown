@@ -3,7 +3,7 @@
 
 但是字符串拼接麻烦又易错。因此在`v-bind`用于`class`和`style`时，Vue专门增强了它。表达式的结果类型除了字符串之外，还可以是对象或数组。
 
-## 绑定class
+# 绑定class
 
 这里class是否为active取决于isActive是否为真
 ```html
@@ -56,7 +56,7 @@ var app = new Vue({
 
 需要注意的是，`class`中如果包括用`-`连接的类名。一定要写为字符串的形式。
 
-## 绑定style
+# 绑定style
 
 `v-bind:style`的语法十分直观，看着非常像`css`，但其实是一个`js`对象。`css`属性名可以用驼峰式，或者配合引号的短横分隔命名。另外对于css3的前缀，vue会自动添加。
 

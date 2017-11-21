@@ -1,5 +1,5 @@
 
-## 结构
+# 结构
 
 使用IScroll这个脚本库时，DOM树的结构要足够简单，移除不必要的标签，尽量避免过多的标签嵌套使用。
 
@@ -31,7 +31,7 @@
 </div>
 ```
 
-## 实例化IScroll
+# 实例化IScroll
 
 ```js
 <script>
@@ -51,9 +51,9 @@
 console.log(myScroll.options);
 ```
 
-## IScroll的核心参数
+# IScroll的核心参数
 
-### options.useTransform
+## options.useTransform
 
 默认值是`true`
 
@@ -61,13 +61,13 @@ console.log(myScroll.options);
 
 这个属性在滚动器感知到Flash，iframe或者视频插件内容时会有用，但是需要注意：性能会有极大的损耗。
 
-### options.useTransition
+## options.useTransition
 
 默认是`true`
 
 使用css的`transition`实现动画效果(动量和弹力)，如果设置为`false`，将使用`requestAnimationFrame`代替，在旧设备上`transition`执行的更好
 
-### options.HWCompositing
+## options.HWCompositing
 
 默认是为`true`
 
@@ -75,27 +75,27 @@ console.log(myScroll.options);
 
 > 如果不确定IScroll的最优配置，从性能角度出发，上面的所有选项都应该设置为true
 
-## IScroll的基本参数
+# IScroll的基本参数
 
-### options.bounce
+## options.bounce
 
 默认值`true`
 
 滚动到边界反弹动画，在旧的设备上禁用对实现平滑滚动有帮助。
 
-### options.click
+## options.click
 
 默认值是`false`
 
 为了重写原生滚动条，iScroll禁止了一些默认的浏览器行为，比如鼠标的点击。如果你想你的应用程序响应click事件，那么该设置次属性为`true`。
 
-### options.disableMouse、options.disablePointer、options.disableTouch
+## options.disableMouse、options.disablePointer、options.disableTouch
 
 默认值是`false`
 
 可以把你不需要的事件禁用（鼠标，指针、触摸事件），设置为`true`是禁用。
 
-### options.eventPassthrough
+## options.eventPassthrough
 
 有些时候你想保留原生纵向滚动条，但是想为横向滚动条增加IScroll功能。就可设置为true。
 
@@ -147,7 +147,7 @@ css部分
 
 ```
 
-### options.freeScroll
+## options.freeScroll
 
 默认值是`false`
 
@@ -198,67 +198,67 @@ p {
 ```
 
 
-### options.keyBindings
+## options.keyBindings
 
 默认值`false`
 
 设置为`true`时可以激活键盘绑定。
 
-### options.invertWheelDirection
+## options.invertWheelDirection
 
 默认为`false`
 
 当鼠标滚轮支持激活后，在有些情况下需要反转滚动的方向。（比如，鼠标滚轮向下滚动条向上）。
 
-### options.momentum
+## options.momentum
 
 默认值`true`
 
 在用户快速触摸屏幕时，你可以开/关势能动画。关闭此功能将大幅度提升性能。
 
-### options.mouseWheel
+## options.mouseWheel
 
 默认值`false`
 
 是否监听鼠标滚轮事件。
 
-### options.preventDefault
+## options.preventDefault
 
 默认值`true`
 
 当事件触发时是否执行`preventDefault()`。此属性应该设置为`true`。
 
-### options.preventDefault
+## options.preventDefault
 
 默认值`false`
 
 是否显示为默认的滚动条。
 
-### options.scrollX、options.scrollY
+## options.scrollX、options.scrollY
 
 `scrollX`默认值`false`，`scrollY`默认值`true`
 
 `scrollX`为是否进行横向滚动，`scrollY`为是否进行纵向滚动
 
-### options.startX、options.startY
+## options.startX、options.startY
 
 默认值0
 
 默认情况下iScroll从0, 0 (top left)00位置开始，通过此属性可以让滚动条从不同的位置开始滚动。
 
-### options.tap
+## options.tap
 
 默认`false`
 
 设置此属性为`true`，当滚动区域被点击或者触摸但并没有滚动时，可以让iScroll抛出一个自定义的tap事件。
 
-## 滚动条
+# 滚动条
 
 滚动条不只是像名字所表达的意义一样，在内部它们是作为indicators的引用。
 
 一个指示器侦听滚动条的位置并且现实它在全局中的位置，但是它可以做更多的事情。
 
-### options.scrollbars
+## options.scrollbars
 
 激活滚动条，代码如下：
 
@@ -268,25 +268,25 @@ var myScroll = new IScroll('#wrapper', {
 });
 ```
 
-### options.fadeScrollbars
+## options.fadeScrollbars
 
 默认值`false`
 
 设置为`true`则滚动条使用淡入淡出的方式，不适用淡入淡出比较节省资源。
 
-### options.interactiveScrollbars
+## options.interactiveScrollbars
 
 默认值`false`
 
 设置为`true`可以让滚动条能拖动
 
-### options.resizeScrollbars
+## options.resizeScrollbars
 
 默认值`true`
 
 滚动条尺寸改变基于容器和滚动区域的宽/高之间的比例。此属性设置为`false`让滚动条固定大小。这可能有助于自定义滚动条样式
 
-### options.shrinkScrollbars
+## options.shrinkScrollbars
 
 有效值是`clip`和`scale`
 
@@ -296,7 +296,7 @@ var myScroll = new IScroll('#wrapper', {
 
 如果页面在多种设备上运行最好使用`scale`，在旧的设备上应该设置为`clip`。
 
-### 滚动条样式
+## 滚动条样式
 
 如果不喜欢默认的滚动条样式，可以自定义。
 
@@ -304,23 +304,23 @@ var myScroll = new IScroll('#wrapper', {
 
 以下内容是自定义滚动条需要设置的css类名
 
-#### .iScrollHorizontalScrollbar
+## .iScrollHorizontalScrollbar
 
 这个样式应用到横向滚动条的容器。这个元素实际上承载了滚动条指示器。
 
-#### .iScrollVerticalScrollbar
+## .iScrollVerticalScrollbar
 
 和上面的样式类似，只不过适用于纵向滚动条容器。
 
-#### .iScrollIndicator
+## .iScrollIndicator
 
 真正的滚动条指示器。
 
-#### .iScrollBothScrollbars
+## .iScrollBothScrollbars
 
 这个样式将在双向滚动条显示的情况下被加载到容器元素上。通常情况下其中一个（横向或者纵向）是可见的。
 
-## 指示器
+# 指示器
 
 上面所有关于滚动条的选项实际上是包装了一个底层的选项indicators。它看起来或多或少像这样
 
@@ -341,7 +341,7 @@ var myScroll = new IScroll('#wrapper', {
 });
 ```
 
-### options.indicators.el
+## options.indicators.el
 
 这是一个强制性的参数，它保留了指向滚动条容器元素的引用，容器里的第一个子元素就是指示器，而且滚动条可以在文档的任何地方，它不需要在滚动条包装器内。
 
@@ -361,26 +361,26 @@ indicators: {
 }
 ```
 
-### options.indicators.ignoreBoundaries
+## options.indicators.ignoreBoundaries
 
 默认值`false`
 
 这个属性告诉指示器忽略它容器所带来的边界，比如想让指示器是滚动条速度的两倍，指示器将很快到达它的结尾，这个属性被用在视差滚动。
 
 
-### options.indicators.listenX、options.indicators.listenY
+## options.indicators.listenX、options.indicators.listenY
 
 默认值`true`
 
 指示器的横向和纵向被侦听。可以设置一个或者都设置
 
-### options.indicators.speedRatioX、options.indicators.speedRatioY
+## options.indicators.speedRatioX、options.indicators.speedRatioY
 
 默认值0
 
 指示器移动的速度和主要滚动条大小的关系，默认情况下是设置为自动。基本不需要改变的参数。
 
-### options.indicators.fade、options.indicators.interactive、options.indicators.resize、options.indicators.shrink
+## options.indicators.fade、options.indicators.interactive、options.indicators.resize、options.indicators.shrink
 
 这几个选项和已经介绍过的滚动条中的一样，可以参考下面这个案例
 
@@ -453,7 +453,7 @@ css部分
 }
 ```
 
-### 视差滚动
+## 视差滚动
 
 视差滚动时指示器的一个功能，指示器是一个遵循主滚动条移动和动画的层。增加这个功能就可以创建任意数量的指示器和视差滚动。
 
@@ -545,11 +545,11 @@ css部分
 }
 ```
 
-### 滚动的接口
+## 滚动的接口
 
 可以通过下面的方法滚动到指定位置
 
-#### scrollTo(x, y, time, easing)
+## scrollTo(x, y, time, easing)
 
 初始化IScroll之后会创建一个`myScroll`实例(名字是自己定义的变量)，可以通过`myScroll.scrollTo(0, -100)`滚动到任意位置。因为左上角永远是0，所以向下滚动一定是负数
 
@@ -557,13 +557,13 @@ css部分
 
 示例：`myScroll.scrollTo(0, -100, 1000, IScroll.utils.ease.elastic);`
 
-#### scrollBy(x, y, time, easing)
+## scrollBy(x, y, time, easing)
 
 和上面一个方法类似，但是可以传递X和Y的值从当前位置进行滚动。
 
 `myScroll.scrollBy(0, -10)`会在当前位置向下滚动10个像素。
 
-#### scrollToElement(el, time, offsetX, offsetY, easing)
+## scrollToElement(el, time, offsetX, offsetY, easing)
 
 在这个方法中只有一个强制的参数就是el。传递一个元素或者一个选择器，IScroll将尝试滚动到这个元素的左上角位置。
 
@@ -573,11 +573,11 @@ css部分
 
 `easing`和之前的一样。
 
-## 对齐
+# 对齐
 
 iScroll能对齐到固定的位置和元素。
 
-### options.snap
+## options.snap
 
 按照页面容器大小自动分割滚动条
 
@@ -595,7 +595,7 @@ var myScroll = new IScroll('#wrapper', {
 });
 ```
 
-### goToPage(x, y, time, easing)
+## goToPage(x, y, time, easing)
 
 `x`和`y`呈现想滚动到横向轴或者纵向轴的页面数，如果需要咋单个纬度上使用滚动条，只需要为你不需要的轴上传递0值。
 
@@ -606,35 +606,35 @@ var myScroll = new IScroll('#wrapper', {
 在一秒钟内沿着横向滚动到第10页 `myScroll.goToPage(10, 0, 1000);`
 
 
-## 缩放
+# 缩放
 
 为了使用缩放功能，你最好使用iscroll-zoom.js脚本。
 
-### options.zoom
+## options.zoom
 
 默认值`false`
 
 此属性设置为`true`启用缩放功能。
 
-### options.zoomMax
+## options.zoomMax
 
 默认值4
 
 最大缩放级数
 
-### options.zoomMin
+## options.zoomMin
 
 默认值1
 
 最小缩放级数
 
-### options.startZoom
+## options.startZoom
 
 默认值1
 
 初始的缩放级数
 
-### options.wheelAction
+## options.wheelAction
 
 鼠标滚轮的动作可以设置为`zoom`，这样在滚动滚轮时缩放操作会代替原来的滚动操作。
 
@@ -684,7 +684,7 @@ css部分
 }
 ```
 
-### zoom(scale, x, y, time)
+## zoom(scale, x, y, time)
 
 `scale`是缩放因子
 
@@ -699,7 +699,7 @@ css部分
 一个简单的解决方案是使用实际分辨率双倍（或者三倍）装载内容，然后 放到一个按照scale(0.5)比例缩小的div中。这种方法大多数情况下能适用。
 
 
-## 刷新
+# 刷新
 
 IScroll需要知道包装器和滚动器确切的尺寸，在IScroll初始化的时候进行计算，如果元素大小发生了变化，需要告诉IScroll DOM发生了变化。
 
@@ -716,7 +716,7 @@ function onCompletion () {
 这里调用`refresh()`使用了零秒等待，如果你需要立即刷新IScroll边界就是如此使用。当然还有其他方法可以等待页面重绘，但零超时方式相当稳定。
 
 
-## 自定义事件
+# 自定义事件
 
 使用`on(type, fn)`方法注册事件
 
@@ -743,7 +743,7 @@ myScroll.on('scrollEnd', doSomething);
 
 - zoomEnd，缩放结束。
 
-## 滚动条信息
+# 滚动条信息
 
 iScroll存储了很多有用的信息，您可以使用它们来增强应用场景，可以说要用IScroll做一个功能这个信息是必不可少的。
 
@@ -766,7 +766,7 @@ myScroll.on('scrollEnd', function () {
 });
 ```
 
-## 销毁
+# 销毁
 
 在不需要使用iScoll的时候调用iScroll实例的公共方法destroy()可以释放一些内存。
 

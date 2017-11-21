@@ -1,7 +1,7 @@
 
-## 系统环境搭建
+# 系统环境搭建
 
-### 安装java jdk
+## 安装java jdk
 
 [点击这里下载 java jdk](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
@@ -9,7 +9,7 @@
 
 下载后双击打开安装
 
-### 配置jdk环境变量
+## 配置jdk环境变量
 
 1. 增加系统变量 JAVA_HOME
 
@@ -29,7 +29,7 @@
 
 ![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/b8b61ba2b3dfbb4acc6a8689960cc49ebc9732ef0856b3b667769995eb689041a9cf2572cadedbe8722b4ba7c7dc5a47?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-37.png&size=1024)
 
-### 安装android adt
+## 安装android adt
 
 [点击这里下载 android sdk](http://www.android-studio.org/)
 
@@ -41,7 +41,7 @@
 
 ![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/055149b468a559a8eb34eb8fdc856b925e315ea061585cf7df68130d2e06bcf7bbdf1069326f7a68304d0515bb4221da?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-39.png&size=1024)
 
-### 设置 android sdk 环境变量
+## 设置 android sdk 环境变量
 
 1. 新建系统变量 ANDROID_HOME，值为android sdk的安装路径 
 
@@ -56,49 +56,49 @@
 ![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/234ff64c1381cc5581ff94d6aacfef5fac8f1937ab9e4d254969c9bbfa4e328267c5a064f78c98e7cca04bbc39ca477d?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-42.png&size=1024)
 
 
-### 安装C++
+## 安装C++
 
 直接在百度搜索即可。也可以下载Visual Studio只安装C++部分。
 
-### node环境
+## node环境
 
 - 直接在[node官网](https://nodejs.org/en/)或者[node中文网](http://nodejs.cn/)下载即可
 
-### git环境
+## git环境
 
 [git官网的下载页面](https://git-scm.com/download/win)
 
-### 项目依赖环境搭建
+## 项目依赖环境搭建
 
-#### cordova
+## cordova
 
 打开cmd，下载npm install -g cordova
 
-#### ionic
+## ionic
 
 打开cmd，下载npm install -g ionic
 
-## 项目搭建
+# 项目搭建
 
-### 创建项目模板
+## 创建项目模板
 
 打开cmd，输入ionic  start  myApp (muApp是项目名)。
 
 tabs是默认样式，还有Ionic  start  myApp  blank和Ionic start myApp sidemenu
 
-### 打包App
+## 打包App
 
-#### 添加项目平台
+## 添加项目平台
 
 进入刚才下载的项目，打开cmd，执行`ionic  platform  add  android`
 
-#### 打包成apk
+## 打包成apk
 
 在项目目录下打开cmd执行`ionic build android`。打包成功后文件存放位置会有提示
 
-## 添加项目平台报错的情况
+# 添加项目平台报错的情况
 
-### 如果命令框一直出现………………
+## 如果命令框一直出现………………
 
 1. ctrl+c 直接退出，下载.gradle.zip解压后放到 用户名->users下。
 
@@ -106,7 +106,7 @@ tabs是默认样式，还有Ionic  start  myApp  blank和Ionic start myApp sidem
 
 3. 再运行`Ionic  platform  add  android`
 
-### 出现Picked up _JAVA_OPTIONS: -Xmx512M
+## 出现Picked up _JAVA_OPTIONS: -Xmx512M
 
 ![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/973ec9378e2db6ab9c9b9ccf9ae4a0b14296f72e8d20e7504514f3cc7f870ecb3970eb10cf5cdd73521cc819c486e4f9?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-43.png&size=1024)
 
@@ -116,6 +116,6 @@ tabs是默认样式，还有Ionic  start  myApp  blank和Ionic start myApp sidem
 
 3. 有可能是它在执行命令的时候download jar包的时候网络不好什么的，所以报错了缺少哪个文件失败了。反正我又重新来一遍了，因为资源都是下载在myApp里面的platform文件夹里【不完整】，所以我就整个都删掉了然后重新执行命令 `ionic platform add android`。
 
-### 注意
+## 注意
 
 以上错误改完后再运行`ionic  platform  add  android`，会提示`platform added` 已经被添加。只要删除目录下的platform文件夹就行，这里面就是打包的内容。

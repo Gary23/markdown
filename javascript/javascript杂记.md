@@ -1,5 +1,5 @@
 
-## this的基本用法
+# this的基本用法
 
 首先有一个函数
 
@@ -26,7 +26,7 @@ div.onclick = function(){
 div.onclick = fn1;    // 这里打印的this就是div元素对象，这里已经改变了fn1函数的环境，赋值给了div元素对象的事件属性中，环境自然也从全局变为div元素对象。
 ```
 
-## 判断浏览器名称
+# 判断浏览器名称
 
 ```js
 function myBrowser(){
@@ -49,7 +49,7 @@ function myBrowser(){
 }
 ```
 
-## 火狐浏览器禁止页面滚动
+# 火狐浏览器禁止页面滚动
 
 ```js
 if (navigator.userAgent.toLowerCase().indexOf('firefox')>=0){
@@ -59,7 +59,7 @@ if (navigator.userAgent.toLowerCase().indexOf('firefox')>=0){
 }
 ```
 
-## 鼠标滚轮事件
+# 鼠标滚轮事件
 
 非FireFox浏览器是使用onmousewheel事件，而FireFox浏览器使用DOMMouseScroll事件。
 
@@ -79,7 +79,7 @@ document.body.addEventListener("DOMMouseScroll", function(event) {
 
 ```
 
-## jquery兼容性的滚轮事件
+# jquery兼容性的滚轮事件
 
 ```js
 $('#scrollSelect-view').on("mousewheel DOMMouseScroll", function (e) {
@@ -98,7 +98,7 @@ $('#scrollSelect-view').on("mousewheel DOMMouseScroll", function (e) {
 ```
 
 
-## 自定义属性
+# 自定义属性
 
 有时候写方法时会定义大量变量，有的变量其实比较多余，很多数据可以存储到元素对象的自定义属性中去。这样不用去考虑作用域的问题，因为只要这个元素对象存在在这个方法内就可以去使用，但是最好只保存和这个元素对象有关的属性。
 
@@ -114,9 +114,9 @@ for(var i = 0; i < 5; i++) {
 }
 ```
 
-## 排他思想和清空上一个
+# 排他思想和清空上一个
 
-#### 排他
+## 排他
 
 通常在tab栏切换中经常用到排他，比如有10个选项，只有当前项才有背景色，通常颜色是通过一个类名挂钩到css中去设置的，那么排他就是每次先将所有导航选项的类名清空，然后只给当前点击的这个元素对象添加类名。
 
@@ -134,7 +134,7 @@ for(var i = 0;i < Lis.length;i++){
 };
 ```
 
-#### 清空上一个
+## 清空上一个
 
 这种效果除了排他之外还可以通过清除上一个选项来完成。创建一个变量存储上一个选中元素，在点击当前元素时候清空上一个类名，之后把自己赋值给这个变量，如此每次只需要清空一个元素的类名即可。
 
@@ -156,7 +156,7 @@ for(var i = 0;i < Lis.length;i++){
 ```
 
 
-## jquery的stop()方法
+# jquery的stop()方法
 
 `$(selector).stop(stopAll,goToEnd)`
 
@@ -164,7 +164,7 @@ stopAll    可选。规定是否停止被选元素的所有加入队列的动画
 
 goToEnd    可选。规定是否允许完成当前的动画。该参数只能在设置了 stopAll 参数时使用。
 
-## 使用懒加载插件
+# 使用懒加载插件
 
 使用的 jquery.lazyload
 
@@ -187,7 +187,7 @@ html部分，一定要在外层包一个div并且设置宽高，不要用图片�
 </div>
 ```
 
-## js中的NaN
+# js中的NaN
 
 1. NaN是一个数字类型但不是一个数值。
 2. 出现NaN肯定是进行了非法操作而不是获取数值有错，如果获取数值有错是undefind。
@@ -200,13 +200,13 @@ isNaN可以判断某些类型是不是一个数字类型。如果判断到是一
 NaN在判断时是在内部使用Number()方法转换，所以是不是数字类型的依据主要是看Number()转出的是什么类型。比如布尔值、空字符串、字符串数字都会被认为是数字类型而返回false。
 
 
-## js的作用域基础
+# js的作用域基础
 
 作用域实际上是浏览器js解析器的一种工作方式。
 
 浏览器的js解析器在读取javascript代码时会先提升变量和函数，再去逐行解读代码。这是每个作用域的解析步骤。
 
-#### 预解析
+## 预解析
 
 根据var、function、参数 找一些东西。
 
@@ -214,7 +214,7 @@ NaN在判断时是在内部使用Number()方法转换，所以是不是数字类
 
 当var和function重名时，会保留function，覆盖var,但是如果两个以上同名的function，那么就看声明的先后顺序了。
 
-#### 逐行解析
+## 逐行解析
 
 变量提升之后，js解析器会开始逐行解析代码，这时只有表达式可以改变变量的值，用下边的案例来说明。
 
@@ -234,7 +234,7 @@ a();    // 报错
 
 第一个alert打印出函数的原因是变量提升的规则，后面的a打印的都是变量的值而不是函数，因为变量赋值是一种表达式，而函数只是一个声明并不是表达式。并且因为现在a是一个数值，所以调用时自然会报错。
 
-#### 多组script
+## 多组script
 
 自上而下的作用域大部分指的是多组script标签，如下代码
 
@@ -254,7 +254,7 @@ a();    // 报错
 
 如果碰到这种情况，js解析器会对每个script代码块进行独立预解析和逐行解析，第一块script的代码还没声明a，第二块script的代码声明和赋值了，这时到第三块script代码块时a已经声明并赋值了，所以直接会打印1。
 
-#### 函数
+## 函数
 
 由内而外主要指函数，一个函数也是一个单独的作用域，javascript中，函数是唯一能分隔作用域的。
 
@@ -321,7 +321,7 @@ for(var i = 0; i < 3; i++){
 最开始我以为这里打印的i是会随着遍历打印出0,1,2的，但实际上onclick函数中相当于一个独立的作用域，这个作用域中没有声明i变量，所以就要去上级作用域去获取，那为什么是3呢，因为函数只有在点击时才会调用，只有调用时才会发生预解析和逐步解析，这时去获取i的值上级作用域早已遍历完毕。
 
 
-## js运算符%取余的应用
+# js运算符%取余的应用
 
 下面的例子中要在li元素中添加背景色，颜色存储在arr数组。如果不用取余运算符只能写两层for循环，而使用取余运算，可以直接让取余后的值自己循环。
 
@@ -365,7 +365,7 @@ var s = 70;
 var m = Math.floor( 70/60 + '分' + 70%60 + '秒');
 ```
 
-## js获取浏览器计算后的属性值
+# js获取浏览器计算后的属性值
 
 像width或者height这种属性直接获取只能得到行内样式，如果不写在行内就获取不到，使用getComputerStyle可以获取浏览器计算后的样式，也就是被浏览器渲染之后得到的元素实际的属性的值。格式是`getComputerStyle(element).width;`
 
@@ -378,7 +378,7 @@ var m = Math.floor( 70/60 + '分' + 70%60 + '秒');
 另外在firefox浏览器4.0版本之前，getComputerStyle的参数要写两个，第二个参数可以随便写比如`getComputerStyle(element,'').width;`或`getComputerStyle(element,true).width;`，总之只要写一个参数就可以。
 
 
-## jq中的即使搜索事件
+# jq中的即使搜索事件
 
 在jq中实现input搜索框的即时搜索和其他即时性的改变需要用到input和propertychange(兼容ie8及以下浏览器)事件。
 
@@ -387,11 +387,11 @@ input是标准的浏览器事件，一般应用于input元素，当input的value
 propertychange只要当前对象属性发生改变都会触发，所以使用propertychange时最好排除一下不想触发事件的元素。
 
 
-## window.parent
+# window.parent
 
 在b.html页面使用iframe的时候，引入一个Html页面名称暂定为a.html，呢么在a.html中，window指的是a的window对象，而window.parent指的就是b.html的window对象。
 
-## 监听DOM树加载完成的事件
+# 监听DOM树加载完成的事件
 
 DOM的加载顺序：
 
@@ -409,7 +409,7 @@ DOM的加载顺序：
 
 `DOMContentLoaded`事件 可以在DOM模型加载完成后就执行代码，而不用等到加载完图片或外部文件
 
-## 移动端获取屏幕的宽高
+# 移动端获取屏幕的宽高
 
 `document.documentElement.clientWidth` 和 `document.documentElement.clientHeight` 
 这个得到的是设备像素可见宽高，比如iPhone 5里为320和504。

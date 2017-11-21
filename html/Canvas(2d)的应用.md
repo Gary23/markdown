@@ -1,5 +1,5 @@
 
-## 绘制网格
+# 绘制网格
 
 ```js
 for (var i = 0; i <= 1000; i+=20) {
@@ -12,7 +12,7 @@ for (var i = 0; i <= 1000; i+=20) {
 }
 ```
 
-## 绘制坐标轴
+# 绘制坐标轴
 
 ```js
 // 绘制坐标轴
@@ -37,7 +37,7 @@ ctx.lineTo(padding + w / 2, padding + h)
 ctx.stroke()
 ```
 
-## 绘制矩形
+# 绘制矩形
  
 `ctx.fillRect(x,y,width,height)` 和 `ctx.strokeRect(x,y,width,height)` 
 
@@ -53,7 +53,7 @@ ctx.strokeStyle = 'pink'
 ctx.strokeRect(50,50,200,200)
 ```
 
-## 绘制圆弧
+# 绘制圆弧
 
 1. `ctx.arc(x,y,radius,start angle，end angle，anit-clockwise(true/false))`
 
@@ -106,7 +106,7 @@ ctx.fill()
 
 - 一度：180 / Math.PI
 
-## 绘制文字
+# 绘制文字
 
 
 1. `ctx.fillText("text",x pos , y pos , maxwidth(optional))`
@@ -151,7 +151,7 @@ ctx.fill()
 
 
 
-## drawImage  绘制图像
+# drawImage  绘制图像
 
 使用时要等图片加载完再绘制，要不然绘制的是空的，可以用load事件，两种方式：
 
@@ -173,7 +173,7 @@ img.'onload' = function(){
 
 以下三种用法都要等页面加载完毕之后再去绘制
 
-### 普通的渲染图像
+## 普通的渲染图像
 
 `drawImage(imObj,x,y)`
 
@@ -187,7 +187,7 @@ img.addEventListener('load',function(){
 })
 ```
 
-### 缩放绘制图像
+## 缩放绘制图像
 
 `drawImage(imgObj,x,y,width,height)`
 
@@ -201,7 +201,7 @@ img.addEventListener('load',function(){
 })
 ```
 
-### 切片绘制图像
+## 切片绘制图像
 
 `drawImage(imgObj,sx,sy,swidth,sheight,x,y,width,height)`
 
@@ -216,11 +216,11 @@ img.addEventListener('load',function(){
 })
 ```
 
-## 坐标系变换
+# 坐标系变换
 
 整个坐标轴就按照移动后的计算，两种移动方式都要写在渲染之前
 
-### 平移坐标系
+## 平移坐标系
 
 `ctx.translate(x,y)` 
 
@@ -232,7 +232,7 @@ ctx.translate(100,100);
 ctx.fillRect(300,200,200,200);
 ```
 
-### 旋转坐标系
+## 旋转坐标系
 
 `ctx.rotate(radian)`
 
@@ -247,13 +247,13 @@ ctx.fillRect(0,0,200,200);
 ```
 
 
-## 清除画布
+# 清除画布
 
 `ctx.clearRect(x,y,width,height)`
 
 清除由x,y为原点width和height确定的矩形内部的所有的图形。
 
-## 状态保存与恢复
+# 状态保存与恢复
 
 `ctx.save()` 将上一次的状态保存起来。
 

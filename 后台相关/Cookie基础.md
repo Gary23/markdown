@@ -1,5 +1,5 @@
 
-## Cookie的原理
+# Cookie的原理
 
 服务器记录用户上次的登录信息，服务器需要一个类似橱柜的空间存储，橱柜的每个区域要通过钥匙才能打开。
 
@@ -11,7 +11,7 @@
 
 session就是保存用户数据的橱柜，保存在服务端。要记录用户登录的状态信息，也就是存储在session。
 
-## Cookie的过程
+# Cookie的过程
 
 1. 浏览器发送了一个请求，这个过程中做了一个封装请求报文。转成二进制，通过tcp协议传输层传输给服务器。
 
@@ -28,13 +28,13 @@ session就是保存用户数据的橱柜，保存在服务端。要记录用户�
 7. cookie是一个技术。session是基于该技术，通过connect.sid找到对应的数据
 
 
-## 查看某个网站颁发的Cookie
+# 查看某个网站颁发的Cookie
 
 在Console中输入JavaScript:alert (document. cookie)就可以了（需要有网才能查看）。
 
 JavaScript浏览器会弹出一个对话框显示本网站颁发的所有Cookie的内容。
 
-## Cookie的所有属性
+# Cookie的所有属性
 
 **String name**
 该Cookie的名称。Cookie一旦创建，名称便不可更改
@@ -60,7 +60,7 @@ JavaScript浏览器会弹出一个对话框显示本网站颁发的所有Cookie�
 **int version**
 该Cookie使用的版本号。0表示遵循Netscape的Cookie规范，1表示遵循W3C的RFC 2109规范
 
-## Cookie的有效期
+# Cookie的有效期
 
 Cookie的 `maxAge` 决定着Cookie的有效期，单位为秒（Second）。Cookie中通过`getMaxAge()` 方法与 `setMaxAge(int maxAge)` 方法来读写maxAge属性。
 
@@ -82,13 +82,13 @@ cookie.setMaxAge(0);   // 设置生命周期为0，不能为负数
 response.addCookie(cookie);   // 必须执行这一句
 ```
 
-## Cookie的修改、删除
+# Cookie的修改、删除
 
 Cookie并不提供修改、删除操作。如果要修改某个Cookie，只需要新建一个同名的Cookie，添加到response中覆盖原来的Cookie。
 
 如果要删除某个Cookie，只需要新建一个同名的Cookie，并将maxAge设置为0，并添加到response中覆盖原来的Cookie。注意是0而不是负数。负数代表其他的意义。读者可以通过上例的程序进行验证，设置不同的属性。
 
-## Cookie的域名
+# Cookie的域名
 
 Domain就是域，根据域来选择相应Cookie，域Domain的值是网站的地址。
 
@@ -106,7 +106,7 @@ cookie.setMaxAge(Integer.MAX_VALUE);  // 设置有效期
 response.addCookie(cookie);   // 输出到客户端
 ```
 
-## Cookie的路径
+# Cookie的路径
 
 Domain属性决定运行访问Cookie的域名，而path属性决定允许访问Cookie的路径（ContextPath）。例如，如果只允许/sessionWeb/下的程序使用Cookie，可以这么写：
 
@@ -120,7 +120,7 @@ response.addCookie(cookie);   // 输出到客户端
 
 注意：页面只能获取它属于的Path的Cookie。例如/session/test/a.jsp不能获取到路径为/session/abc/的Cookie。使用时一定要注意。
      
-## Cookie的安全属性
+# Cookie的安全属性
 
 HTTP协议不仅是无状态的，而且是不安全的。使用HTTP协议的数据不经过任何加密就直接在网络上传播，有被截获的可能。
 
@@ -134,7 +134,7 @@ response.addCookie(cookie);  // 输出到客户端
 
 提示：secure属性并不能对Cookie内容加密，因而不能保证绝对的安全性。如果需要高安全性，需要在程序中对Cookie内容加密、解密，以防泄密
     
-## JavaScript操作Cookie
+# JavaScript操作Cookie
 
 Cookie是保存在浏览器端的，因此浏览器具有操作Cookie的先决条件。浏览器可以使用脚本程序如JavaScript或者VBScript等操作Cookie。
 

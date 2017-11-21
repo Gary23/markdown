@@ -1,7 +1,7 @@
 
-## 文件读取
+# 文件读取
 
-### javascript 阻止读取本地文件
+## javascript 阻止读取本地文件
 
 浏览器是不允许JS读取本地文件的，也就是用户电脑本地的文件。这是出于安全的考虑。
 
@@ -11,13 +11,13 @@
 
 缺点是如果上传的图片不合适，重新上传就要再走一个这个步骤，而且之前上传的图片也不会被删除，会存在服务器上。
 
-### FileList
+## FileList
 
 通过 `FileList` 对象，可以让js直接读取本地文件，将读取到的文件放到页面上。不经过服务器，不需要网络
 
 `FileList` 对象存储文件的信息。支持多个文件上传。
 
-#### 上传一个文件查看FileList的信息
+## 上传一个文件查看FileList的信息
 
 ```html
 <input type="file" multiple class="file"/>
@@ -38,11 +38,11 @@ console.log(this.files);
 }
 ```
 
-###   FileReader
+##   FileReader
 
 是html5的内建对象，也就是说使用时需要new一下，也叫文件读取器，负责读取本地文件。比如图片就是将图片处理成了base64编码格式，代替url地址。
 
-#### 上传一个图片显示在页面上
+## 上传一个图片显示在页面上
 
 ```html
 <input type="file" multiple class="file"/>
@@ -66,7 +66,7 @@ file.onchange = function(){
 }
 ```
 
-## 全屏
+# 全屏
 
 让网页内容以一个全屏的形式展现，也可以是图片等元素
 
@@ -82,7 +82,7 @@ file.onchange = function(){
  
  2. `mozRequertFullScreen`
 
-### 让整个html文档全屏的步骤
+## 让整个html文档全屏的步骤
 
 ```css
 .box{
@@ -124,7 +124,7 @@ check.onclick = function(){
 }
 ```
 
-### 让div全屏的效果的步骤
+## 让div全屏的效果的步骤
 
 ```css
 .box{
@@ -165,13 +165,13 @@ check.onclick = function(){
 }
 ```
 
-## 地理定位
+# 地理定位
 
 获取用户当前的地理信息，可以向用户推送一些服务，给用户周边的商家带来消费
 
 基于位置的服务LBS（Location Base Service）
 
-### navigator
+## navigator
 
 想获取地理信息是通过BOM进行获取的，也就是指的浏览器
 
@@ -185,7 +185,7 @@ check.onclick = function(){
 
 2. `WatchPosition()`  持续的获取位置信息，比如导航
 
-#### 使用方法介绍
+## 使用方法介绍
 
 ```js
 // 需要两个回调方法，一个表示成功，一个表示失败
@@ -199,7 +199,7 @@ function error(err){
 
 ```
 
-#### 失败原因
+## 失败原因
 
 1. 在谷歌浏览器下要想使用地理定位必须要以服务器的方式访问。
 
@@ -207,7 +207,7 @@ function error(err){
 
 但是在手机上的浏览器没问题，因为手机有gps，浏览器在获取用户地理位置时是有多种途径的.可以通过wifi、ip、GPS，依次检测，看看哪个能获取到。
 
-####实际开发案例
+##实际开发案例
 
 在实际开发中，根据api的文档来做，这里以百度为例
 
@@ -248,15 +248,15 @@ navigator.geolocation.getCurrentPosition(function(position){
 
 ```
 
-## 网络状态
+# 网络状态
 
 可以监听网络是处于联网状态还是断网状态，应用场景：当前网络不佳的提示
 
-### online和offline
+## online和offline
 
 监听在线的是事件 online 离线是 offline，要绑定在window上
 
-### 使用方法
+## 使用方法
 
 ```js
 // 当设备联网的时候会触发。
@@ -269,9 +269,9 @@ window.addEventListener('offline',function(){
 })
 ```
 
-## 历史管理
+# 历史管理
 
-### history
+## history
 
 针对BOM的 `window.history` 对象我们可以管理历史记录。
 
@@ -279,7 +279,7 @@ window.addEventListener('offline',function(){
 
 在DOM操作中，通过按钮更改页面的内容后，一刷新后还是按钮之前的样子，有的网站刷新后不变就是通过历史管理来实现的
     
-### 更改href
+## 更改href
 
 ```html
 <input type="button" value="看地址变没变" id="btn"/>
@@ -293,7 +293,7 @@ btn.onclick = function(){
 }
 ```
 
-### 用历史管理的效果
+## 用历史管理的效果
 
 ```html
 <input type="button" value="看地址变没变" id="btn"/>
@@ -315,7 +315,7 @@ btn.onclick = function(){
 第三个是新的历史
 
 
-### replaceState的区别
+## replaceState的区别
 
 ```html
 <input type="button" value="看地址变没变" id="btn"/>
@@ -332,7 +332,7 @@ btn.onclick = function(){
 </body>
 ```
 
-### onpopstate事件
+## onpopstate事件
 
 ```html
 <input type="button" value="看地址变没变" id="btn"/>
@@ -352,7 +352,7 @@ window.onpopstate = function (ev){
 }
 ```
 
-## web存储
+# web存储
 
 通常存储数据是存在变量或者对象里，变量是要占内存的，所以存储量比较大的数据不适合放在变量里
 
@@ -360,9 +360,9 @@ window.onpopstate = function (ev){
 
 而且数据不仅要存，还要可存可删
 
-### sessionStorage
+## sessionStorage
    
-#### 添加、读取、删除、清空的使用方法  
+## 添加、读取、删除、清空的使用方法  
 
 ```html
 <!-- 添加 -->
@@ -427,17 +427,17 @@ $('.clear').on('click',function(){
 })
 ```
 
-### localStorage
+## localStorage
 
 用法和 `sessionStorage` 用法相同，区别是声明周期不同，`sessionStorage` 是关闭浏览器就被清除，`localStorage` 永远都是在的，除非手动清除数据。`sessionStorage` 只能在同一个页面下存储和读取数据，`localStorage` 可以在多页面之间存储和读取数据
 
-## 应用缓存
+# 应用缓存
 
 用html和css模拟原生应用和实际原生的区别是原生应用在没有网络时候也能打开看到内容，只是内容不更新，而模拟的话会直接打不开网页，不能显示。
 
 这个可以通过应用缓存来解决。需要一个缓存清单。其中资源是被缓存起来的，需要明确告诉浏览器要缓存谁不要缓存谁，浏览器按照缓存清单来确认该缓存哪个。
 
-### 创建
+## 创建
 
 1. 新建一个txt文档，改名XXX.appcache
 
@@ -449,7 +449,7 @@ $('.clear').on('click',function(){
 <html lang="en" manifest="./study.appcache">
 ```
 
-### 文件内容
+## 文件内容
 
 也就是要缓存的内容：
 
@@ -470,11 +470,11 @@ NETWORK:
 FALLBACK:
 ./online.html ./offline.html
 
-### 管理
+## 管理
 
 chrome浏览器可以模拟网络，Network中右边的选项可以下拉选择，可以测试断网环境
 
-#### 管理缓存内容
+## 管理缓存内容
 
 在chrome浏览器打开：chrome://appcache-internals   工具和离线模式来调试管理应用缓存
 

@@ -1,7 +1,7 @@
 
-## 日期对象
+# 日期对象
 
-### 常用方法
+## 常用方法
 
 `new Date()` 获取当前时间
 
@@ -33,13 +33,13 @@
 
 > 以上获取时间的方法在get后加上UTC就是根据世界时间获取，例如`getUTCHours()`就是根据世界时间返回小时数。
 
-### 获取一个时间点
+## 获取一个时间点
 
 设定一个时间点`new Date(2017,4,22,22,48,20);` 得出的是毫秒。
 
 也可以通过`new Date('November 10,2013 22:3:0');`来获取。主要是用来计算倒计时用到。
 
-### 秒的转换
+## 秒的转换
 
 秒转为天：`Math.floor(秒 / 86400)`
 
@@ -49,18 +49,18 @@
 
 秒转为秒：`秒 % 60`
 
-### 英文的月份
+## 英文的月份
 
 一月 January、二月 February、三月 March、四月 April、五月 May、六月 June、七月 July、八月 August、九月 September、十月 October、十一月 November、十二月 December。
 
 
-## 字符串的方法
+# 字符串的方法
 
-### length
+## length
 
 字符串长度，字符串里的空格也占用一个长度
 
-### charAt()
+## charAt()
 
 返回字符串索引位置的字符，如果不传参数默认获取第一个。
 
@@ -70,19 +70,19 @@ alert(str.charAt(1))   // b
 alert(str.charAt())   // a
 ```
 
-### charCodeAt()
+## charCodeAt()
 
 返回字符串索引位置的字符的Unicode值。使用方法同上。
 
-### charCodeAt()
+## charCodeAt()
 
 使用方式和charAt相同，区别是返回的是字符的编码值
 
-### String.fromCharCode()
+## String.fromCharCode()
 
 参数里输入一个编码，返回相对应的字符，多个编码用逗号间隔
 
-### indexOf()
+## indexOf()
 
 返回查找字符在字符串中的索引位置，没找到返回-1。
 
@@ -104,17 +104,17 @@ while( str.indexOf(s,i) != -1 ){
 
 这个循环会打印b在字符串中的所有索引位置
 
-### lastIndexOf()
+## lastIndexOf()
 
 和indexOf()相对应，indexOf()是从左往右找，lastIndexOf()是从右往左找。第二个参数索引值也是从右向左查找。
 
-### 字符串的大小比较
+## 字符串的大小比较
 
 中文字符也是可以进行比较的，比如`'山东' > '青岛'`，比较的是第一个字符的编码值的大小，也就是山的编码值和青的编码值的比较，和后面的所有字符没有关系。
 
 同样的道理，`'aaaabbbb' > 'c'`，比较的是a和c的大小，和后面字符没有关系。`'1000' > '2'`比较的也是1和2的编码值的大小。
 
-### substring()
+## substring()
 
 截取类方法，对字符串当中的某些文字进行截取。负数会直接当0来处理。
 
@@ -128,7 +128,7 @@ alert(str.substring(4);  // efg
 alert(str.substring(0,2);  // ab  
 ```
 
-### slice()
+## slice()
 
 和substring()用法基本一样。但是传两个参数时不会交换位置。
 
@@ -144,15 +144,15 @@ alert(str.slice(-1))  // f
 alert(str.slice(-4,-2))  // cd
 ```
 
-### toUpperCase()
+## toUpperCase()
 
 字符串转为大写，只能针对英文
 
-### toLowerCase()
+## toLowerCase()
 
 字符串转为小写，只能针对英文
 
-### split()
+## split()
 
 将字符串分割为数组。参数是按照什么字符分割，如果不传参数默认会将整个字符串当做一个数组的一个元素。
 
@@ -171,7 +171,7 @@ var str = '2017-05-27-19-47';
 alert(str.split('-',3));   // ['2017','05','27']
 ```
 
-### replace()
+## replace()
 
 替换字符串，第一个参数是要查找的字符串，也可以通过正则表达式查找。第二个参数是要替换的内容。
 
@@ -181,25 +181,25 @@ console.log(str.replace('abc','ccc'))    // 打印cccdefg
 console.log(str.replace(/^a/,'ccc'))     // 打印cccbcdefg
 ```
 
-## 数组的方法
+# 数组的方法
 
-### push()
+## push()
 
 在数组最后一位添加一个元素，返回值是增加后的数组的长度。
 
-### unshift()
+## unshift()
 
 在数组第一位插入一个元素，返回值是增加后的数组的长度。ie6、ie7不支持这个方法的返回值。
 
-### pop()
+## pop()
 
 从数组的最后删除一个元素，返回值是删除的那个元素。
 
-### shift()
+## shift()
 
 从数组的开头删除一个元素，返回值是删除的那个元素。
 
-### splice()
+## splice()
 
 splice方法可以删除、替换、添加
 
@@ -216,7 +216,7 @@ arr.splice(0,2,'z','x')   // arr = ['z','x','c','d','e']
 arr.splice(1,0,'x')   // arr = ['a','x','b','c','d','e']
 ```
 
-### slice()
+## slice()
 
 返回从原数组中指定开始下标到结束下标之间的元素组成的新数组。只传一个参数那就是获取到最后，不会改变原数组
 
@@ -226,7 +226,7 @@ console.log(arr.slice(2))      // 打印[3,4,5,6]
 console.log(arr.slice(2,4))      // 打印[3,4]
 ```
 
-### sort()
+## sort()
 
 对数组进行排序，默认全部按照字符串的规则进行排序，会将数字转为字符串，然后按照字符串的比较方式，由小到大排序。
 
@@ -249,11 +249,11 @@ arr.sort(function(a,b){
 
 只要return 为true，那么就会换位置。
 
-### join()
+## join()
 
 将数组转为字符串，用传入的参数去分割数组每个元素，组成一个字符串，如果不传参数默认用逗号分割。
 
-### concat()
+## concat()
 
 将多个数组拼接起来，参数可以传过个，传几个就连接几个，会拼成一个新的数组，不会改变原来的数组。
 
@@ -263,7 +263,7 @@ var arr2 = [4,5,6];
 alert(arr1.concat(arr2));  // [1,2,3,4,5,6]    
 ```
 
-### reverse()
+## reverse()
 
 颠倒数组内部元素的位置。对字符串也可以进行操作，只是从头到尾颠倒位置。不会进行比较。
 
@@ -272,45 +272,45 @@ var arr = [1,2,3,4];
 arr.reverse();    // arr = [4,3,2,1]
 ```
 
-### toString()
+## toString()
 
 把数组转换为字符串，字符串包含逗号。
 
-## Math系列方法
+# Math系列方法
 
-### Math.round()
+## Math.round()
 
 对参数进行四舍五入操作。
 
-### Math.abs()
+## Math.abs()
 
 返回参数的绝对值。
 
-### Math.ceil()
+## Math.ceil()
 
 对参数进行向上取整
 
-### Math.floor()
+## Math.floor()
 
 对参数进行向下取整
 
-### Math.max()
+## Math.max()
 
 传两个参数，返回两数中的最高值
 
-### Math.min()
+## Math.min()
 
 传两个参数，返回两数中的最低值
 
-### Math.pow()
+## Math.pow()
 
 传递两个参数，第二个参数是幂，返回第一个参数的几次幂
 
-### Math.sqrt()
+## Math.sqrt()
 
 返回参数的平方根
 
-### Math.random()
+## Math.random()
 
 产生0-1之间的随机数
 

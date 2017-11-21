@@ -1,5 +1,5 @@
 
-## BOM操作的常用属性和方法
+# BOM操作的常用属性和方法
 
 open()：打开一个新的页面，格式为`open(页面的url,打开的方式)`，如果url为空则打开一个空白页面。如果打开方式为空，默认为新窗口方式打开。这个方法返回新窗口的window对象。
 
@@ -15,7 +15,7 @@ location.search：url中?后面的内容。
 
 location.hash：url中#后面的内容。
 
-#### 窗口尺寸与大小
+## 窗口尺寸与大小
 
 可视区的尺寸：`document.documentElement.clientWidth`和`document.documentElement.clientHeight`。
 
@@ -25,7 +25,7 @@ location.hash：url中#后面的内容。
 
 文档的宽高：`document.documentElement.offsetHeight`和`document.documentElement.offsetWidth`。也可以使用`document.body.offsetHeight`和`document.body.offsetWidth`。
 
-#### 事件
+## 事件
 
 onscroll：当滚动条滚动的时候触发。
 
@@ -51,7 +51,7 @@ oncontextmenu：当右键菜单显示出来时触发。
 
 event事件对象：当一个事件发生时，这个对象发生的这个事件有关的一些详细的信息都会临时保存到event对象中，以便在需要时使用。
 
-#### 事件绑定
+## 事件绑定
 
 标准浏览器的方法：`div.addEventListener(事件名称，事件处理函数，捕获/冒泡);`。false是冒泡，true是捕获。
 
@@ -73,13 +73,13 @@ event事件对象：当一个事件发生时，这个对象发生的这个事件
 
 4. 事件执行的顺序是倒序。
 
-#### 事件取消
+## 事件取消
 
 非标准浏览器方法：`div.dettachEvent('on'+事件名称,事件处理函数);`
 
 标准浏览器方法：`div.removeEventListener(事件名称，事件处理函数，捕获/冒泡)`
 
-#### 事件流
+## 事件流
 
 事件流和样式位置没关系，和html的结构有关系
 
@@ -92,7 +92,7 @@ event事件对象：当一个事件发生时，这个对象发生的这个事件
 
 控制事件是捕获还是冒泡是由addEventListener中的第三个参数决定的，false为冒泡事件监控是出去的由内向外的，true为捕获事件监控是进来的由外向内的。
 
-#### cookie
+## cookie
 
 cookie的作用就是存储数据。长时间去保存一个值，比如用户上次访问的时间等。
 
