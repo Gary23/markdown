@@ -1,10 +1,10 @@
 在这一章主要是用上一章的思想改进图片库，所以我会把之前的javascript图片库案例拿来看看是不是符合上一章所说的规则。
 
-## 1、支持平稳退化吗？
+# 1、支持平稳退化吗？
 
 可以确定，图片库如果禁用了javascript功能，也已经留了退路，网页里的所有链接都是可用的，虽然用户体验游影响，但网页的功能并未受到损害，而如果当时在href中写的不是链接而是伪协议或是'#'，那么禁用javascript后它会无法使用。
 
-## 2、javascript与html分离吗？
+# 2、javascript与html分离吗？
 
 在图片库中它们确实是混在了一起，onclick直接插入到了html中，理想情况下，应该在外部文件里添加onclick事件处理函数。
 
@@ -46,7 +46,7 @@ function prepareGallery(){
 
 函数的最后是一个遍历，links存储了列表中的所有a元素，并且是一个伪数组，所以可以遍历得到每个a元素并且将onclick事件绑定给该元素，这样绑定之后，该事件处理函数的this就是绑定该事件的元素，至此可以从html中彻底删除onclick事件了。
 
-## 3、共享onload事件
+# 3、共享onload事件
 
 现在我还需要一个功能，就是要在DOM树加载完之后再执行上面的prepareGallery函数，如果只有一个函数用`window.onload = prepareGallery`即可，但如果有多个函数，就不能直接这样写，后面的会覆盖前面的，所以我还要再写一个函数完成这个绑定功能。
 
@@ -72,7 +72,7 @@ function addLoadEvent(func){
 
 这个函数将把那些在页面加载完毕时执行的函数创建一个队列，参数func就是要执行的函数。
 
-## 4、不要做太多的假设
+# 4、不要做太多的假设
 
 下面我要改造一下showPic函数，因为我发现showPic函数并没有任何检查和测试，所以需要一些语句来检查这些元素是否存在。
 
@@ -136,13 +136,13 @@ function showPic(whichpic) {
 
 showPic的代码变得更多了，在实际中，你需要自己决定是否真的需要这些检查，它们针对的是html文档有可能不再你的控制范围内的情况，但理想情况下，脚本不应该对html文档的内容和结构做太多假设。
 
-## 5、键盘访问事件
+# 5、键盘访问事件
 
 前面的代码只能用鼠标操作，而浏览器web页面也是可以用键盘进行操作的，有个名叫onkeypress的事件处理函数就是专门用来处理键盘事件的，按下键盘的任何一个按键都会触发onkeypress事件。
 
 如果想把onkeypress事件加到上面的案例并完成和onclick相同的操作，只需要这样写`links[i].onkeypress = links[i].onclick;`，但是在这个案例中我认为并不需要键盘访问事件，有onclick事件足矣，我想说的是，在这里完全体现出了javascript和html分离带来的方便，如果像是最开始那样把javascript写在html中，将不得不去修改每行html语句，而现在只要在javascript代码中加一条语句即可。
 
-## 6、DOM Core和HTML-DOM
+# 6、DOM Core和HTML-DOM
 
 至此，我在编写javascript代码时只用到了以下几个DOM方法：getElementById、getElementsByTagName、getAttribute、setAttribute。
 
@@ -151,7 +151,7 @@ showPic的代码变得更多了，在实际中，你需要自己决定是否真�
 
 它们的区别是HTML-DOM只能处理web文档，我使用DOM Core也是因为其兼容多种类型的文档，其实这个完全是根据使用场景来选择，并没有绝对的对错之分。
 
-## 7、增加css
+# 7、增加css
 
 ```css
 body {
@@ -200,7 +200,7 @@ img{
 }
 ```
 
-## 8、把图片的文字链接改为缩略图
+# 8、把图片的文字链接改为缩略图
 
 ```html
 <!DOCTYPE html>

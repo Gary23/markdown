@@ -1,6 +1,6 @@
 这一章节主要通过一些DOM方法，通过创建新元素和修改现有元素来改变网页结构，用DOM的方法改变标记。
 
-## 1、创建元素节点和文本节点
+# 1、创建元素节点和文本节点
 
 DOM是文档的表示，DOM所包含的信息与文档里的信息一一对应，你只要学会问正确的问题，就可以从获取DOM节点上任何一个节点的细节。
 
@@ -36,7 +36,7 @@ window.onload = function(){
 
 其实我也可以改变上面的执行顺序，先创建两个节点，再依次加入DOM树中也是一样的。
 
-## 2、重回图片库案例
+# 2、重回图片库案例
 
 现在图片库的html文件中有一个图片和一段文字仅仅是为showPic脚本服务的，既然这些元素的存在只是为了让DOM方法处理它们，那么用DOM方法来创建它们才是最合适的选择。动态创建需要完成的步骤如下：
 
@@ -101,13 +101,13 @@ function insertAfter(newElement,targetElement){
 5. 如果不是就把新元素插入到目标元素和其下一个兄弟元素之间，使用nextSibling属性获取这个元素的下一个兄弟元素，使用insertBefore方法把下一个元素插入到另一个元素之前，语法是`parentElement.insertBefore(newElement,targetElement)`。
 
 
-## 3、Ajax
+# 3、Ajax
 
 Ajax主要用于异步加载页面内容的技术，用Ajax可以做到只更新页面的一小部分，不必刷新整个页面。
 
 Ajax的优势就是对页面的请求以异步的方式发送到服务器，而服务器不会用整个页面来相应请求，它会在后台处理请求，与此同时用户还能继续浏览页面并与页面交互，而脚本则可以按需加载内容。
 
-### XMLHttpRequest对象
+## XMLHttpRequest对象
 
 Ajax技术的核心就是XMLHttpRequest对象，这个对象充当着浏览器中的脚本与服务器之间的中间人的角色，以往的请求都是浏览器发出，而javascript通过这个对象也可与自己发送请求，同时也自己处理响应。
 
@@ -138,7 +138,7 @@ function getHttpObject(){
 
 其中ActiveXObject是IE的实现方法，实现了一个名叫XMLHTTP的对象，IE版本中使用的XMLHTTP对象也不完全相同。
 
-### XMLHttpRequest发送请求的方法
+## XMLHttpRequest发送请求的方法
 
 XMLHttpRequest对象有许多的方法，下面通过一个新的函数来具体看XMLHttpRequest的执行过程和方法，这里假设example.txt是接口的地址
 
@@ -165,7 +165,7 @@ onreadystatechange方法会在服务器给出回应的时候被触发执行，�
 
 send方法用于发送数据，通常写在指定请求的目标并明确如何处理响应之后。
 
-### 服务器回响XMLHttpRequest的方法
+## 服务器回响XMLHttpRequest的方法
 
 服务器在向XMLHttpRequest对象发送回响时，该对象有许多属性可用。
 

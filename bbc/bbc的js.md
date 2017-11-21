@@ -1,6 +1,6 @@
-## 工具类函数 tools.js
+# 工具类函数 tools.js
 
-### 判断是否为 dom 元素
+## 判断是否为 dom 元素
 
 函数： isElement(dom)
 
@@ -36,7 +36,7 @@ var falg1 = isElement(box);    // true
 var flag2 = isElement('#box')   // false
 ```
 
-### 模板字符替换
+## 模板字符替换
 
 函数： substitute(string, object)
 
@@ -73,7 +73,7 @@ console.log(s);
 // 打印: <label>abc</label><input type="text" value="123"/>
 ```
 
-### 页面最大 z-index
+## 页面最大 z-index
 
 函数： maxZindex(scope, increase)
 
@@ -122,7 +122,7 @@ var maxZ = maxZindex('div',10);
 console.log(maxZ);     // 假如页面中的div元素定位最高为100，那么会打印110
 ```
 
-### 获取配置项
+## 获取配置项
 
 函数： dataOptions(element, prefix)
 
@@ -176,7 +176,7 @@ console.log(obj)
 // 打印 { name: "box",time: 3000 }
 ```
 
-### 倒计时时钟
+## 倒计时时钟
 
 函数： countdown(element, options)
 
@@ -284,7 +284,7 @@ countdown($('#box'),{
 })
 ```
 
-### 获取元素的内补或外补
+## 获取元素的内补或外补
 
 函数： $.fn.patch(type)
 
@@ -355,7 +355,7 @@ console.log(result);
 ```
 
 
-### dom 9点定位
+## dom 9点定位
 
 函数： $.fn.locate(options)
 
@@ -453,7 +453,7 @@ $.fn.locate = function (options) {
 };
 ```
 
-### 数组some方法
+## 数组some方法
 
 函数： Array.some(fn, thisArg)
 
@@ -491,7 +491,7 @@ var passed = [2, 5, 8, 1, 4].some(isBigEnough);
 // false
 ```
 
-### 数组every方法
+## 数组every方法
 
 函数： Array.every(fn, thisArg)
 

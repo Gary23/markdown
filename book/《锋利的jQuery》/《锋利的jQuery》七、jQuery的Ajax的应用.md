@@ -1,6 +1,6 @@
 在jQuery中对Ajax进行了封装，在jQuery中`$.ajax()`属于最底层方法，第二层是`$.post()`、`load()`、`$.get()`方法，第三层是`$.getScript()`和`$.getJson()`方法。通常第二层的方法使用频率最高。
 
-## load()方法
+# load()方法
 
 `load()`方法能载入远程html页面到dom中。
 
@@ -12,7 +12,7 @@ data: 可选参数，发送至服务器的数据。
 
 callback：可选参数，请求完成后的回调，不论请求成功或者失败。
 
-### 载入html文档
+## 载入html文档
 
 假设有一个test.html的页面，那么只需要这样写就能引入这个test到当前页面。
 
@@ -26,7 +26,7 @@ callback：可选参数，请求完成后的回调，不论请求成功或者失
 $('#resText').load('text.html');
 ```
 
-### 筛选载入html文档
+## 筛选载入html文档
 
 上面是将test.html的所有内容都加载进来，如果只需要加载一部分那么只需要改变url参数即可，格式为：`url selector`。
 
@@ -36,7 +36,7 @@ $('#resText').load('text.html');
 $('#resText').load('text.html .para')
 ```
 
-### 回调函数
+## 回调函数
 
 `load()`的回调有三个参数，分别是：
 
@@ -46,7 +46,7 @@ textStatus：请求状态：success、error、notmodified、timeout 四种。
 
 XMLHttpRequest： XMLHttpRequest对象。
 
-## $.get()和$.post()方法
+# $.get()和$.post()方法
 
 使用get的方式进行异步请求，格式为：`$.get( url , [data] , [callback] , [type] )`。
 
@@ -58,13 +58,13 @@ callback：可选参数，载入成功时回调函数，只有当Response返回�
 
 type：可选参数，服务器返回的格式，包括 xml、html、script、json、text、_default。
 
-### 回调函数
+## 回调函数
 
 回调函数只有当数据成功返回(success)才能被调用，这点和`load()`方法不同，回调函数有两个参数，分别是`data`、`textStatus`。
 
 `data`是成功后返回的数据，`textStatus`是请求状态。
 
-## $.getScript()和$.getJson()方法
+# $.getScript()和$.getJson()方法
 
 `$.getScript()`用于加载一个新的js文件，和写一个`<script>`标签的效果是一样的，但因为在页面初次加载时就取得所有js文件是没有必要的，所以就需要这个方法。
 
@@ -72,7 +72,7 @@ type：可选参数，服务器返回的格式，包括 xml、html、script、js
 
 `$.getJson()`用于获取json文件，使用方法和`$.getScript()`相同。只是在回调函数中可用一个参数来获取json的内容。
 
-## $.ajax()方法
+# $.ajax()方法
 
 `$.ajax()`是jQuery最底层的ajax实现，上面的所有方法都可以用这个方法代替。
 
@@ -96,13 +96,13 @@ type：可选参数，服务器返回的格式，包括 xml、html、script、js
 > 需要注意的是，如果将传递给服务器的数据使用字符串拼接的方式拼接到`url`上，必须使用`encodeURIComponent()`方法转码，如果是写到`data`属性则不需要。
 
 
-## 序列化元素
+# 序列化元素
 
-### serialize()方法
+## serialize()方法
 
 在提交表单的时候，需要给服务器传表单中的数据，如果表单的内容比较多，一个个获取比较麻烦，jQuery提供了一个简化的方法`serialize()`,它能够将dom元素的内容序列化为字符串，用于ajax请求。例如表单的id为form，那么可以将ajax的data属性直接写为`$('#form').serialize()`。
 
-### serializeArray()方法
+## serializeArray()方法
 
 和`serialize()`方法类似，但是`serializeArray()`方法不是返回字符串，而是将DOM元素序列化后，返回json格式的数据。
 
@@ -120,7 +120,7 @@ js代码
     console.log(fields);   // 打印一个数组[ {name:'user',value:'1'} , {name:'user',value:'2'} ]
 ```
 
-### $.param()方法
+## $.param()方法
 
 这是`serialize()`方法的核心，用以将一个数组或对象按照key/value进行序列化。比如将一个普通对象序列化
 
@@ -130,7 +130,7 @@ var k = $.param(obj);
 console.log(k);      // 输出a=1&b=2&c=3    
 ```
 
-## Ajax全局事件
+# Ajax全局事件
 
 通过jQuery提供的一些自定义全局函数，能够为各种与Ajax相关的事件注册回调函数。
 

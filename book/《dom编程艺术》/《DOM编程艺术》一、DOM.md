@@ -1,5 +1,5 @@
 
-## 1、DOM的含义
+# 1、DOM的含义
 
 - 文档(D)，指的是document，当创建了一个网页并把它加载到web浏览器中时，DOM就在幕后悄然而生，DOM把我们编写的网页文档转换为一个文档对象。
 
@@ -35,7 +35,7 @@
 
 实际上用parent、silbling、child就可以代表整个DOM树的结构，比如ul是ul是body的child元素，而ul又是li的parent元素，ul和p是sibling元素，并且这棵树上的每个元素都是一个DOM节点。
 
-## 2、节点
+# 2、节点
 
 上面介绍了DOM的概念，由图也可以看出，DOM树是由一个个节点组成的，这些就是DOM节点。分为三种类型。
 
@@ -58,11 +58,11 @@ nodeType属性总共有12种可取值，但其中仅有3种有实用价值。
 
 实际使用中可以通过元素对象的nodeType属性值来判断节点类型。
 
-## 3、获取元素
+# 3、获取元素
 
 有3种DOM方法可以获取元素节点，分别是通过元素id、通过标签名、通过class获取。
 
-### 通过id名获取
+## 通过id名获取
 
 这个方法将返回一个与给定id属性值的元素节点对应的元素对象，它是document对象特有函数。
 ```
@@ -73,7 +73,7 @@ document.getElementById('box');
 > 这里一直再说元素对象这个概念，其实就是指的html元素，但是在DOM里html元素都是DOM节点。而DOM节点本身就是一个对象，所以叫做元素对象。
 另外函数和方法其实也是一个概念，对象的方法其实就是一个函数。
 
-### 通过标签名获取
+## 通过标签名获取
 
 这个方法返回一个对象数组，与getElementById不同的是，这个返回的是一个数组，返回的数组中，每个元素都是获取到的元素对象，可以用length属性查出这个数组的长度。
 
@@ -90,7 +90,7 @@ var lis = box.getElementsByTagName('*');
 
 这样可以获取id为box的元素下的所有元素对象。
 
-### 通过class获取
+## 通过class获取
 
 这是HTML5中新增的方法，可以通过class名获取元素，返回的也是一个对象数组。
 
@@ -130,12 +130,12 @@ function getElementsByClassName(node, className) {
 
 这个函数接收两个参数，node表示搜索起点，className是要搜索的class名，这个方法不足的地方是不适用多个class名。
 
-## 4、获取和设置属性
+# 4、获取和设置属性
 
 已经了解了三种获取元素节点的方法，现在可以去获取它们的属性。
 
 
-### 获取属性
+## 获取属性
 
 ```js
 var paras = document.getElementsByTagName('p');
@@ -149,7 +149,7 @@ for(var i = 0;i < paras.length;i++){
 
 getAttribute用于获取属性，需要用元素节点去调用，参数是要获取的属性名，如果调用的元素节点里没有要查找的属性就会返回null。
 
-### 设置属性
+## 设置属性
 
 ```js
 var paras = document.getElementsByTagName('p');

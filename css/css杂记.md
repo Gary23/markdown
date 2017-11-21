@@ -1,58 +1,58 @@
 
-## word-spacing 单词间距
+# word-spacing 单词间距
 
 判断是否是单词的依据是有没有空格
 
-## 行高的测量方式
+# 行高的测量方式
 
 假如文字是12px，行高是16px，那么文字上下空隙分别是2px，假如行高是15px，那么上方是1px，下方是2px。
 
-## white-space 强制不换行
+# white-space 强制不换行
 
 值为nowrap为强制不换行，默认是normal。
 
-## text-indent  首行缩进。
+# text-indent  首行缩进。
 
 通常设置em，这样文字尺寸改变了也不用该缩进值，只需要设置2em便一直是2个字的距离。
 
-## 文字和空格的大小
+# 文字和空格的大小
 
 字体本身原本是一张张的图片，通过一定的编码方式确定是哪个文字，文字和文字之间本身也有一定的缝隙，算上缝隙才算是一个文字的大小，所以文字大小最好是从上到下测量。而宋体中一个空格的大小差不多是一个文字的一半。
 
-## 伪类的顺序
+# 伪类的顺序
 
 a:link 未访问过,a:visited 访问过后,a:bover 鼠标移入,a:active 鼠标按下。
 
-## clear属性
+# clear属性
 
 给一个元素加上clear属性，那么对应方向上的元素就不会浮动了。值可以设置为left|right|both|none|inherit。
 clear:both是左右两侧都不能浮动。
 
-## 清除浮动的方法
+# 清除浮动的方法
 
 清除浮动是为了让元素回归文档流，回归到同一层级。
 
-### 加高度
+## 加高度
 
 给浮动元素的父元素加一个固定的高度。缺点是扩展性不好。有时候高度不能写死。
 
-### 父级浮动
+## 父级浮动
 
 给浮动元素的父元素加浮动，缺点是父元素的父元素仍然会有问题，当前元素的父元素同时也是更上级元素的子元素。而且`margin:0 auto;`会失效
 
-### inline-block
+## inline-block
 
 给浮动元素的父元素加inline-block，缺点也是`margin:0 auto;`会失效
 
-### 使用空白元素
+## 使用空白元素
 
 在浮动元素的后面增加一个没有内容的块级元素设置css为clear:both。缺点是只要清除浮动就要放一个空白元素，而且ie6仍会有2px的默认高度。
 
-### br
+## br
 
 在浮动元素后面增加一个`<br clear="all" />`。缺点也是只要清除浮动就要放一个空白元素。
 
-### 伪类清除浮动
+## 伪类清除浮动
 
 假设浮动元素的父元素添加一个class名为clearfix。
 
@@ -68,12 +68,12 @@ clear:both是左右两侧都不能浮动。
 ```
 zoom是为了兼容ie浏览器，当设置了zoom之后会检索设置对象的缩放比例，所设置的元素就会扩大或缩小，高度就被重新计算了，所以可以清除浮动，*号是hack的写法，只有ie6、7浏览器可以识别。
 
-### overflow
+## overflow
 
 给浮动元素的父元素设置overflow:hidden。原理是触发BFC。缺点是比浮动长的内容会被直接剪裁掉。
 
 
-## BFC和haslayout
+# BFC和haslayout
 
 **BFC(block formatting context)**:BFC是块级元素格式化上下文。是标准浏览器块级元素的标准(除了ie6、7、8之外都是标准浏览器)。
 
@@ -93,7 +93,7 @@ zoom是为了兼容ie浏览器，当设置了zoom之后会检索设置对象的�
 
 1. zoom的值不会normal的时候。给ie浏览器设置zoom:1清楚浮动就是为了触发haslayout。
 
-## css hack
+# css hack
 
 - `\9`所有ie10及以下的浏览器。`\9`是写在属性值的后面。
 
@@ -103,7 +103,7 @@ zoom是为了兼容ie浏览器，当设置了zoom之后会检索设置对象的�
 
 hack的书写顺序要从高版本往低版本写，因为css是按照顺序执行，后面的覆盖前面的，所以先做统一处理，最后再去处理个别低版本浏览器。另外hack不是一个标准的方法，所以一般不要使用。
 
-## 禁止选中文字
+# 禁止选中文字
 
 不同的浏览器设置的内容不一样，user-select不是一个W3C的标准，浏览器的支持不完成，需要对不同的浏览器进行调整。
 
@@ -124,11 +124,11 @@ user-select:none;
 
 ie6至ie9还没发现有css属性支持
 
-## opacity的兼容性
+# opacity的兼容性
 
 opacity是设置透明度，标准写法是`opacity:1;`,兼容ie的写法是`　filter:alpha(opacity=100);`
 
-## 超出2行隐藏(强制2行)
+# 超出2行隐藏(强制2行)
 
 首先css有三个属性：
 
@@ -156,7 +156,7 @@ display: -webkit-box;
 -webkit-line-clamp:2;
 ```
 
-## css命名参考
+# css命名参考
 
 头：header head
 
@@ -251,7 +251,7 @@ display: -webkit-box;
 指南：guide
 
 
-## 移动端弹窗时暴力禁止html滚动
+# 移动端弹窗时暴力禁止html滚动
 
 ```css
 html.lock-html {
@@ -260,17 +260,17 @@ html.lock-html {
 }
 ```
 
-## 实现文字竖向排版
+# 实现文字竖向排版
 
-### 模拟竖排文字
+## 模拟竖排文字
 
 对文字对象的宽度设置只能排下一个文字的宽度距离，让文字一行排不下两个文字使其文字自动换行，就形成了竖立排版需求。
 
-### writing-mode属性
+## writing-mode属性
 
 `writing-mode` 有两套属性，一套是IE私有的，另一套是CSS规范属性。
 
-#### CSS规范属性
+## CSS规范属性
 
 ```css
 writing-mode: horizontal-tb;    /* 默认值 */
@@ -283,7 +283,7 @@ writing-mode: vertical-lr;
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/59520336b7c28190b615fc5b7f17a94e84b8a80e2fe33267303cb2a5079267e63bdb0ef955e23bcf600d2cfc62311b50?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-24.png&size=1024)
 
-#### IE私有属性
+## IE私有属性
 
 ```css
 writing-mode: lr-tb | rl-tb | tb-rl | bt-rl | tb-lr | bt-lr | lr-bt | rl-bt | lr | rl | tb
@@ -297,7 +297,7 @@ IE下的属性特别多，但是需要关注的只有这几个：
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/a702cce905d871e58e72b214eccc3d00957920bcdb2daa514f0e70205b8d934a7e01d90ad3d9b5b95d298a12fd4a4ce8?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-25.png&size=1024)
 
-## css的计算属性calc()
+# css的计算属性calc()
 
 `calc()` 可以使用百分比、em、px和rem单位值计算出一个值应用于元素上，这样一来你就不用考虑元素DIV的宽度值到底是多少，而把这个烦人的任务交由浏览器去计算。比如说“width:calc(50% + 2em)”。
 

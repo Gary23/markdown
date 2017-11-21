@@ -1,5 +1,5 @@
 
-## 语法
+# 语法
 
 XML(eXtensible Markup Language)，于HTML一样，都属于SGML标准通用语言。
 
@@ -15,7 +15,7 @@ XML的语法如下：
 
 很多时候XML不能正常解析是因为Content-Type没有设置好。要设置为text/xml，否则会按照默认的text/html方式处理，导致解析失败
 
-## 解析XML
+# 解析XML
 
 解析XML文档与解析DOM一样，也可以用`find()`、`children()`等函数来解析和用`each()`方法来进行遍历，另外也可以用`text()`和`attr()`方法来获取节点文本和属性（类似HTML的行内属性）。
 

@@ -1,9 +1,9 @@
 
-## flexbox是什么
+# flexbox是什么
 
 即使不知道视窗大小或者未知元素情况之下都可以智能的、灵活的调整和分配元素和空间两者之间的关系。简单的理解，就是可以自动调整，计算元素在容器空间中的大小。
 
-## 使用flexbox
+# 使用flexbox
 
 要开始使用flexbox，必须先让父元素变成一个flex容器，而此时子元素就变成了flex项目。
 
@@ -35,13 +35,13 @@ li {
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/a0be427e384a9a7069151f21e0b8c9e825e0551dcb7250d41d832fd588249f180dcd843b6411c3ca7e4a3cdce6bfc75d?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-4.jpg&size=1024)
 
-## flex容器属性
+# flex容器属性
 
 > flex-direction || flex-wrap || flex-flow || justify-content || align-items || align-content
 
 当父元素设置为一个flex容器后，这几个属性可以直接使用在flex容器上。
 
-### flex-direction
+## flex-direction
 
 `flex-direction`属性控制flex项目沿着主轴(Main Axis)的排列方向。
 
@@ -85,7 +85,7 @@ li {
 
 > 在`flex-direction`改变方向后，实际上是改变的Main-Axis和Cross-Axis两个轴的方向，如果设置`flex-direction: column;`，那么实际上就是Main-Axis和Cross-Axis调换了位置。这将会影响之后基于Main-Axis和Cross-Axis的所有flex属性的设置。
 
-### flex-wrap
+## flex-wrap
 
 `flex-wrap`属性有三个属性值，分别是换行、不换行、反向换行
 
@@ -106,7 +106,7 @@ flex的默认行为会在一行内容纳所有的flex项目，即使浏览器出
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/0a1358406ea6f73d9f8471c847ad08411325d355d7295b0d1afea3efe2cd6053e2be6ef1b14015e8c4f05f8f0f9e9cd1?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-9.jpg&size=1024)
 
-### flex-flow
+## flex-flow
 
 `flex-flow`是`flex-direction`和`flex-wrap`两个属性的连写属性。
 
@@ -114,7 +114,7 @@ flex的默认行为会在一行内容纳所有的flex项目，即使浏览器出
 
 `flex-flow: row wrap`相当于`flex-direction: row; flex-wrap: wrap;`的写法。
 
-### justify-content
+## justify-content
 
 `justify-content`属性主要定义了flex项目在Main-Axis上的对齐方式，有五个值可选：
 
@@ -140,7 +140,7 @@ flex的默认行为会在一行内容纳所有的flex项目，即使浏览器出
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/99887e97f6bbaab135ddab6e644c5ade60467f18995de7f5235c648b09640f174c62f170e02640edc05bf106cd118251?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-14.jpg&size=1024)
 
-### align-items
+## align-items
 
 `align-items`属性类似于`justify-content`属性，主要是控制flex项目在Cross-Axis对齐方式，有五个可选值：
 
@@ -166,7 +166,7 @@ flex的默认行为会在一行内容纳所有的flex项目，即使浏览器出
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/802a98295d7774aa9e76f105250ab85277bbbacb45dda61d72840235e0a43de90f22b8301525c28d68aa807f0a7342c7?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-19.jpg&size=1024)
 
-### align-content
+## align-content
 
 `align-content`必须用于多行的flex容器，也是用来控制flex项目在flex容器里的排列方式，效果和`align-items`相似，可选五个值：
 
@@ -188,11 +188,11 @@ flex的默认行为会在一行内容纳所有的flex项目，即使浏览器出
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/5f8cacd1b6fa645515af91e08884d3b1d562d207ba45f411cb736e5afef729ea883eb3698e43d5cb36410467139e2fb7?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-23.jpg&size=1024)
 
 
-## flex项目属性
+# flex项目属性
 
 > order || flex-grow || flex-shrink || flex-basis
 
-### order
+## order
 
 允许flex项目在一个flex容器中重新排序，基本上可以改变flex项目的顺序从一个位置移到另一个地方。
 
@@ -227,7 +227,7 @@ li:nth-child(4) {
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/d8712d57f62fcced8578c1c1e72e5c64c6ecfd14aaa6f1f4c784a61c057055316015d954668ea3e491a80eaf9080e83e?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-24.jpg&size=1024)
 
-### flex-grow和flex-shrink
+## flex-grow和flex-shrink
 
 `flex-grow`属性控制flex项目在容器有多余的控件如何放大。默认值0。
 
@@ -251,7 +251,7 @@ flex容器有多余的空间，这时将`flex-grow: 1;`即可让flex忽略自己
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/fbced702f50424ba3592a9ec6ac1524b4630bb2a0a35b7c45137b11fe7ac50b1be1cf234972c8cabb7633e2d4dddf084?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-28.jpg&size=1024)
 
-### flex-basis
+## flex-basis
 
 `flex-basis`属性可以指定flex项目的初始大小，也就是在`flex-grow`和`flex-shrink`调整之前的大小。
 
@@ -265,13 +265,13 @@ flex容器有多余的空间，这时将`flex-grow: 1;`即可让flex忽略自己
 
 ![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/c4cd7fceb31fab18b7d95c3dc1244686b16cd188f87565a59db90fef5a4579910c741832c8cc61d7717e1d1c3bbc7d1d?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-30.jpg&size=1024)
 
-### flex连写
+## flex连写
 
 `flex`是`flex-grow`、`flex-shrink`、`flex-basis`三个属性的连写。
 
 `flex: 0 1 auto;`相当于`flex-grow: 0; flex-shrink: 1; flex-basis: auto;`
 
-### align-self
+## align-self
 
 `align-self`可以改变一个弹性项目沿着侧轴的位置，而不影响相邻的弹性项目。该属性的可选值为：
 
@@ -290,7 +290,7 @@ flex容器有多余的空间，这时将`flex-grow: 1;`即可让flex忽略自己
 
 最后一个是`align-self: auto;`是将目标flex项目的值设置为父元素的`align-items`的值，或者如果该元素没有父元素的话，就设置为`stretch`。
 
-## 相对和绝对flex项目
+# 相对和绝对flex项目
 
 相对和绝对flex项目主要区别在于间距和如何计算间距，相对flex项目内的间距是根据它的内容大小来计算的，而在觉得flex项目中，只根据flex属性来计算。
 

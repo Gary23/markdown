@@ -2,7 +2,7 @@
 
 | 参数名称 | 类型 | 说明 |
 | --- | --- | --- |
-| accepts | Map | 内容类型发送请求头，告诉服务器什么样的响应会接受返回。如果accepts设置需要修改，推荐在$.ajaxSetup()方法中做一次。 |
+| accepts | Map | 内容类型发送请求头，告诉服务器什么样的响应会接受返回。如果accepts设置需要修改，推荐在`$.ajaxSetup()`方法中做一次。 |
 | async | Boolean | 默认设置下（默认为true），所有请求均为异步请求。如果需要发送同步请求，要将此选项设置为false，跨域不支持同步操作。 |
 | beforeSend | Function | 发送请求前可修改XMLHttpRequest对象的函数，返回false可取消本次请求，`function(XMLHttpRequest){ this是请求时传递的option参数 }` |
 | cache | Boolean | 默认true，当跨域时默认为false，false时将不会从浏览器缓存中加载请求信息 |

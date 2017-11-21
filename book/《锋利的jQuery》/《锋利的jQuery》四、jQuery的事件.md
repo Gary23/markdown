@@ -1,11 +1,11 @@
 
-## 加载DOM
+# 加载DOM
 
 jQuery中`$(document).ready()`方法运行时代表DOM已经加载完毕，用此方法代替`window.onload`方法可以极大地提高web应用程序的响应速度。
 
 此方法的另一种写法是`$(function(){})`。
 
-## 事件绑定
+# 事件绑定
 
 使用`bind()`来进行事件绑定。格式为`bind( type,[data],fn )`。
 
@@ -36,9 +36,9 @@ $('#box').click(function(){
 
 
 
-## 合成事件
+# 合成事件
 
-### hover()
+## hover()
 
 用于模拟光标悬停事件，格式为`hover(enter,leave)`，当光标移动到元素上时，会触发指定的第一个函数，当光标移出这个元素时，会触发指定的第二个函数。
 
@@ -50,7 +50,7 @@ $('#box').hover(function(){
 })
 ```
 
-### toggle()
+## toggle()
 
 用于模拟鼠标连续单击事件，格式为`toggle(fn1,fn2...fnN)`，第一次单机触发指定的第一个函数，再点击同一元素时，触发第二个函数，如果有更多函数则依次触发直到最后一个函数，随后的每次单机都重复对这几个函数的轮番调用
 
@@ -74,7 +74,7 @@ $('#box').toggle(function(){
 })
 ```
 
-## 事件冒泡
+# 事件冒泡
 
 通过事件对象的`stopPropagation()`方法来阻止事件冒泡。
 
@@ -86,7 +86,7 @@ $('span').bind('click',function(event){
 
 > jQuery中并不支持事件捕获
 
-### 阻止默认行为
+## 阻止默认行为
 
 通过事件对象的`preventDefault()`方法来阻止元素的默认行为。
 
@@ -100,11 +100,11 @@ $('span').bind('click',function(event){
 
 > 如果既需要阻止冒泡也需要阻止默认行为，可以在事件处理函数中简写为`return false`。
 
-## 事件对象的属性
+# 事件对象的属性
 
 jQuery对事件对象进行了封装，不存在兼容性问题，下面介绍几个常用的属性
 
-### event.type
+## event.type
 
 该方法的作用是可以获取到事件的类型
 
@@ -114,15 +114,15 @@ $('#box').click(function(event){
 })
 ```
 
-### event.preventDefault()
+## event.preventDefault()
 
 阻止默认的事件行为
 
-### event.stopPropagation()
+## event.stopPropagation()
 
 阻止事件的冒泡行为
 
-### event.target
+## event.target
 
 获取到触发事件的元素
 
@@ -132,17 +132,17 @@ $('#box').click(function(event){
 })
 ```
 
-### event.reatedTarget
+## event.reatedTarget
 
 获取比如`mouseover`和`mouseout`事件发生所相关的元素，对于`mouseout`，`event.relatedtarget`指向将进入的页面元素；而`mouseover`, 指向的是刚掠过的页面元素。
 
 和`event.target`的区别是，一个是触发事件的主体元素，一个是存在过渡的事件的相关主体之一。
 
-### event.pargeX和event.pageY
+## event.pargeX和event.pageY
 
 获取到光标相对于页面的x坐标和y坐标
 
-### event.which
+## event.which
 
 在鼠标点击事件中获取到鼠标的左、中、右键，在键盘相关事件中获取键盘的按键。
 
@@ -156,11 +156,11 @@ $('#box').keydown(function(event){
 })
 ```
 
-### event.metaKey
+## event.metaKey
 
 在键盘事件中获取ctrl按键。
 
-## 移除事件
+# 移除事件
 
 通过`unbind()`方法来移除元素的方法，格式为`unbind([type],[data])`
 
@@ -184,9 +184,9 @@ $('#btn').click(function(){
 
 另外jQuery还提供了一种简写方法，当事件处理函数触发一次后，立即删除，就是`one()`方法，使用方法和`bind()`相同。
 
-## 模拟操作
+# 模拟操作
 
-### 常用模拟
+## 常用模拟
 
 以上的事件都是需要用户去操作才能触发的，jQuery中还可以模拟用户的操作，可以使用`trigger()`方法完成模拟操作。
 
@@ -205,7 +205,7 @@ $('#btn').trigger('click',['1','2'])
 
 `trigger()`方法有一个问题，那就是会触发事件的浏览器默认行为，比如`$('input').trigger('focus');`，我想触发表单的`focus`事件处理函数，但是不想真的让表单获取焦点，这时就可以使用`triggerHandler()`方法，`$('input').triggerHandler('focus');`这样既会触发表单的获取焦点的处理函数，还不会让表单获取焦点。
 
-### 事件的命名空间
+## 事件的命名空间
 
 可以把为元素绑定的多个事件类型用命名空间规范起来。
 

@@ -1,5 +1,5 @@
 
-## 禁用页面的右键菜单
+# 禁用页面的右键菜单
 
 ```js
 $(function(){
@@ -9,7 +9,7 @@ $(function(){
 })
 ```
 
-## 返回头部动画
+# 返回头部动画
 
 ```js
 $.fn.scrollTo = function(speed,elem){
@@ -26,7 +26,7 @@ $('.goto').click(function(){
 })
 ```
 
-## 模拟输入框的placeholder
+# 模拟输入框的placeholder
 
 ```js
 $(function(){
@@ -48,7 +48,7 @@ $(function(){
 })
 ```
 
-## 获取鼠标位置
+# 获取鼠标位置
 
 ```js
 $(function(){
@@ -58,7 +58,7 @@ $(function(){
 })
 ```
 
-## 判断元素是否存在
+# 判断元素是否存在
 
 ```js
 $(function(){
@@ -68,7 +68,7 @@ $(function(){
 })
 ```
 
-## 点击div也可以跳转
+# 点击div也可以跳转
 
 ```html
 <div><a href="index.html">index</a></div>
@@ -81,7 +81,7 @@ $('div').click(function(){
 })
 ```
 
-## 根据浏览器大小添加不同样式
+# 根据浏览器大小添加不同样式
 
 ```js
 $(function(){
@@ -97,7 +97,7 @@ $(function(){
 })
 ```
 
-## 设置div在屏幕中央
+# 设置div在屏幕中央
 
 ```js
 $.fn.center = function(){
@@ -107,7 +107,7 @@ $.fn.center = function(){
 }
 ```
 
-## 关闭所有动画效果
+# 关闭所有动画效果
 
 ```js
 $(function(){
@@ -116,7 +116,7 @@ $(function(){
 })
 ```
 
-## 检测鼠标左键和右键
+# 检测鼠标左键和右键
 
 ```js
 $('#xy').mousedown(function(e){
@@ -124,7 +124,7 @@ $('#xy').mousedown(function(e){
 })
 ```
 
-## 设置全局Ajax参数
+# 设置全局Ajax参数
 
 ```js
 $('#load').ajaxStart(function(){
@@ -138,14 +138,14 @@ $('#load').ajaxComplete(function(){
 })
 ```
 
-## 获取选中的下拉框
+# 获取选中的下拉框
 
 ```js
 $('#someElement').find('option:selected');
 $('#someElement option:selected');
 ```
 
-## $.proxy()的使用
+# $.proxy()的使用
 
 ```html
 <div id="panel" style="display:none;">
@@ -175,7 +175,7 @@ $('#panel').fadeIn(function(){
 这样利用 `$.proxy()` 方法可以将this改变为 `#panel` 。
 
 
-## 限制输入框的字数
+# 限制输入框的字数
 
 ```js
 $.fn.maxLength = function(max){
@@ -198,7 +198,7 @@ $.fn.maxLength = function(max){
 }
 ```
 
-## 删除元素内部的html标签，只留下文本内容
+# 删除元素内部的html标签，只留下文本内容
 
 ```js
 $.fn.stripHTML = function(){

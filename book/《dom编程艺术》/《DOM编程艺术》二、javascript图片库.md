@@ -1,6 +1,6 @@
 从这一篇开始会逐步完成一个图片库的案例，但我们不能直接把所有的图片直接放到一个页面里，因为图片下载的时间较长，用户需要等待很长时间去加载一个网页，所以我们需要一个图片库，把整个图片库的浏览链接集中安排在主页里，只在用户点击了这个主页里的某个图片链接时才把相应的图片加载。
 
-## 1、建立基础的HTML结构
+# 1、建立基础的HTML结构
 
 ```html
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
 
 ![image](http://upload-images.jianshu.io/upload_images/5140754-159984e01005f539?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 2、改进图片库
+# 2、改进图片库
 
 这个网页现在的功能是：
 
@@ -56,7 +56,7 @@
 3. 点击某个链接时，获取链接的描述文字，保存到图片下方的位置。
 
 
-### 第一步、增加占位图片
+## 第一步、增加占位图片
 
 html部分
 
@@ -85,7 +85,7 @@ function showPic(whichpic){
 <script src="script/script.js"></script>
 ```
 
-### 第二步、事件处理函数
+## 第二步、事件处理函数
 
 事件处理函数的作用是在特定事件发生时，调用特定的javascript代码。这个案例中要使用的是onclick点击事件。
 
@@ -99,7 +99,7 @@ function showPic(whichpic){
 
 > 事件处理函数的工作机制：在给某个元素添加了事件处理函数后，一旦事件发生，javascript代码便会执行，这些被调用的javascript代码可以返回一个值，这个值将被传递给事件处理函数，具体到此案例中，当onclick被触发时，如果执行的代码返回true，onclick事件处理函数就会认为这个链接被点击了，如果返回false，onclick事件处理函数就认为这个链接没有被点击，所以当onclick认为没有点击链接，自然也不会打开一个新链接。
 
-### 第三步、增加图片描述文字
+## 第三步、增加图片描述文字
 
 现在我要用DOM给图片增加一段描述，这段描述的位置在img标签之后，同时也起到了占位符的作用
 
@@ -131,7 +131,7 @@ function showPic(whichpic){
 比如description是一个元素节点，那么`description.nodeChild`获取的就是null，用description的子节点才有效`description.firstChild.nodeChild`，这里description只有一个子节点并且是文本节点，所以使用firstChild和lastChild都一样，如果description有好几个子元素，要获取其中的某个可以用children[index]来获取。
 
 
-### 最终效果
+## 最终效果
 
 最后我们增加一些css样式来美化一下页面,创建style.css文件并引入html文件中。
 
