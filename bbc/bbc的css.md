@@ -150,13 +150,13 @@
 </form>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/5dc63c6d9e2e836997c9956afb54292a051d454622abab32e95e51cfe008ed0763eba0d73f9cd23acac1846135515391?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-40.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/5dc63c6d9e2e836997c9956afb54292a051d454622abab32e95e51cfe008ed0763eba0d73f9cd23acac1846135515391?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-40.JPG&size=1024)
 
 ## 纵向表单
 
 纵向表单是指标题和表单控件之间分行显示，此模式只需要在 `<form>` 标签加类名 `.form-vertical` 即可，其它结构与基本实例保持一致。
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/92fafa60559ad1aa0e9942906154875fde8c7512f90bbce6aca55faba599edb885a697af2b9041644f5406fdbcbcca30?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-45.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/92fafa60559ad1aa0e9942906154875fde8c7512f90bbce6aca55faba599edb885a697af2b9041644f5406fdbcbcca30?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-45.JPG&size=1024)
 
 ## 栅格化表单
 
@@ -257,7 +257,7 @@
 </div>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/d9945bc0b8241f68a28945e94d2cb0e7f09a18ac8dc9cd0f2414296a9d1c3e994dbbae3526be28d9db69218af3c34c97?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-46.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/d9945bc0b8241f68a28945e94d2cb0e7f09a18ac8dc9cd0f2414296a9d1c3e994dbbae3526be28d9db69218af3c34c97?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-46.JPG&size=1024)
 
 ```html
 <label for="" class="checkbox-inline">
@@ -282,7 +282,7 @@
 </label>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/de4360b8d68d532eb06581457a5fabc817ec430b898ab1a6c21c2e9364324af5ed52efc1cddf0bb5fc85d79819a3afca?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-47.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/de4360b8d68d532eb06581457a5fabc817ec430b898ab1a6c21c2e9364324af5ed52efc1cddf0bb5fc85d79819a3afca?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-47.JPG&size=1024)
 
 ## 下拉列表框
 
@@ -307,7 +307,7 @@
 </select>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/21fa4273bfa9fd87ae59f3fc0e1c4d71c6d454a9c4bdd078c9116f46556d94e9ddc769ed84e645ef540f6da360b6e255?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-48.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/21fa4273bfa9fd87ae59f3fc0e1c4d71c6d454a9c4bdd078c9116f46556d94e9ddc769ed84e645ef540f6da360b6e255?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-48.JPG&size=1024)
 
 ## 状态校验
 
@@ -333,7 +333,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 </div>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/9fd16563fde4cf170d5153011dceec57809d8204f295e10c238d1355ece952c7d519f40f97c4af2cf44c5219cb533869?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-49.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/9fd16563fde4cf170d5153011dceec57809d8204f295e10c238d1355ece952c7d519f40f97c4af2cf44c5219cb533869?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-49.JPG&size=1024)
 
 ```html
 <div class="has-success">
@@ -357,7 +357,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 </div>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/1aac524df6a9d9568cb70116b198c95e2b72392d05004d1c510532c97867ba7eec0489852b23e4955f372cb0a42bcbb9?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-50.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/1aac524df6a9d9568cb70116b198c95e2b72392d05004d1c510532c97867ba7eec0489852b23e4955f372cb0a42bcbb9?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-50.JPG&size=1024)
 
 ## 输入框图标
 
@@ -381,7 +381,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 </div>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/44ebed2e4469de62730dc515f62e2d6dbc5092e1193493d25e41c2ce79380f4f20a0eb14062cf3aa012ae66a98f093a3?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-51.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/44ebed2e4469de62730dc515f62e2d6dbc5092e1193493d25e41c2ce79380f4f20a0eb14062cf3aa012ae66a98f093a3?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-51.JPG&size=1024)
 
 还可以针对校验状态为输入框添加额外的图标。只需为其父元素添加 `.has-figure` 类并给相应的图标添加 `.input-figure` 类即可。
 
@@ -419,7 +419,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <select name="" id="" class="input-sm"></select>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/33676f7d52cb225b01707db0993e80cb132555c296c86da3d83fd577e3e833a74a2d783c798bd9a2ce958c62b60a00eb?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-52.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/33676f7d52cb225b01707db0993e80cb132555c296c86da3d83fd577e3e833a74a2d783c798bd9a2ce958c62b60a00eb?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-52.JPG&size=1024)
 
 ### 调整列（column）尺寸
 
@@ -433,7 +433,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
     </div>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/721499e45b87b464ae090fd7dc863ef2bc72d946d96b127f0b3f594366b9518888df320ac0092cec95a57623b689f6b9?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-53.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/721499e45b87b464ae090fd7dc863ef2bc72d946d96b127f0b3f594366b9518888df320ac0092cec95a57623b689f6b9?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-53.JPG&size=1024)
 
 ### 调整输入框的长度
 
@@ -456,7 +456,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <br>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/0337e4e5dba61e85145905a52d4fdad6902ac4c24c950b9310f6ca4a33ba63b9e5a30f4465a47148add6a8de8362fc15?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-54.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/0337e4e5dba61e85145905a52d4fdad6902ac4c24c950b9310f6ca4a33ba63b9e5a30f4465a47148add6a8de8362fc15?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-54.JPG&size=1024)
 
 ## 辅助文本
 
@@ -466,7 +466,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <span class="help-block">表单项的帮助提示信息</span>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/8b4d3f399d7ec9c0c3e4afca6465406afcbe43998c876010db8d096536b01c6e48309ee327b71ff19bb5829bf1509738?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-55.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/8b4d3f399d7ec9c0c3e4afca6465406afcbe43998c876010db8d096536b01c6e48309ee327b71ff19bb5829bf1509738?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-55.JPG&size=1024)
 
 ## 输入框组
 
@@ -501,7 +501,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 </div>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/be02d9b84a9f0f08b34fdaf2915c2df30232903c47e0788a48537f80e36fef2546d791e17c0ed1ef3ba801d74f57317e?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-56.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/be02d9b84a9f0f08b34fdaf2915c2df30232903c47e0788a48537f80e36fef2546d791e17c0ed1ef3ba801d74f57317e?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-56.JPG&size=1024)
 
 # 按钮
 
@@ -615,7 +615,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 </a>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/7fb6a171c449446bf543f62208c7ebeb6ab63803a09ffe38383595d9ea5aa522ecf34aa3f907638713df81b93f4c6297?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-57.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/7fb6a171c449446bf543f62208c7ebeb6ab63803a09ffe38383595d9ea5aa522ecf34aa3f907638713df81b93f4c6297?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-57.JPG&size=1024)
 
 ## 尺寸
 
@@ -647,7 +647,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 </a>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/33245aa40b95a99b912e140e481a2440056a958b7e7838f04fef747ada50b3b409bf269f9a59db655a2458e5054f6d3b?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-58.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/33245aa40b95a99b912e140e481a2440056a958b7e7838f04fef747ada50b3b409bf269f9a59db655a2458e5054f6d3b?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-58.JPG&size=1024)
 
 > 满屏按钮： `.btn-block` 类可以将按钮设为父元素100%的宽度。  
 > 圆角按钮： `.btn-rounded` 类来为按钮增加圆角效果。  
@@ -667,7 +667,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <p class="text-danger">一篇文档用text-danger类</p>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/80405562a36ec773a97faa9d42d25a4d8a84c4cbd8a97289ba05dcf5adfdf06d414e435fe7c5d7be26233bb4f84a83f0?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-59.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/80405562a36ec773a97faa9d42d25a4d8a84c4cbd8a97289ba05dcf5adfdf06d414e435fe7c5d7be26233bb4f84a83f0?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-59.JPG&size=1024)
 
 ## 背景颜色
 
@@ -684,7 +684,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <p class="bg-selected">文本的背景颜色bg-selected类</p><br>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/f565ce154a178efce9673f36c0c7c982323517ec54d5d2258a2988695886be294d60e12c58fe88cd4364072349693fcf?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-60.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/f565ce154a178efce9673f36c0c7c982323517ec54d5d2258a2988695886be294d60e12c58fe88cd4364072349693fcf?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-60.JPG&size=1024)
 
 ## 关闭和三角符号
 
@@ -700,7 +700,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <span class="caret"></span>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/25f65aa6e4c0512a9299289114eee83c92bf460be7c9cab1438c00ef938e83bbf31c22cf295c86490f272e814e231a97?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-61.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/25f65aa6e4c0512a9299289114eee83c92bf460be7c9cab1438c00ef938e83bbf31c22cf295c86490f272e814e231a97?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-61.JPG&size=1024)
 
 ## 浮动
 
@@ -749,7 +749,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 </ol>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/cb918c9f0890d8ff993c38973969510de4fd2d208807ba1d1c0e2915230763d7be14acb0097d1d657f14a9fc912a8256?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-62.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/cb918c9f0890d8ff993c38973969510de4fd2d208807ba1d1c0e2915230763d7be14acb0097d1d657f14a9fc912a8256?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-62.JPG&size=1024)
 
 # 分页
 
@@ -770,7 +770,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 </div>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/b1e0275e62279faec35a77b3a0b4286e682327bb1f496ff0c4b0e871473cdb0a520b7dbd3505e0d5348e953e3f69f202?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-63.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/b1e0275e62279faec35a77b3a0b4286e682327bb1f496ff0c4b0e871473cdb0a520b7dbd3505e0d5348e953e3f69f202?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-63.JPG&size=1024)
 
 ## 更小的分页
 
@@ -789,7 +789,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 </div>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/3009f86d9f8d26a7b9f4735008ac97f6347ad381b83d3caafe8e01a6a6a08ee4b6185f34dde201f00584537042454585?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-64.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/3009f86d9f8d26a7b9f4735008ac97f6347ad381b83d3caafe8e01a6a6a08ee4b6185f34dde201f00584537042454585?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-64.JPG&size=1024)
 
 # 标签
 
@@ -803,7 +803,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <span class="label label-danger">新</span>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/352a566aa8d7d3a13c80d41e41504170e3946d3d197b237779742b34915cebd36c7fc85aecc3c8fdcdc6a8ef588dd2eb?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-65.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/352a566aa8d7d3a13c80d41e41504170e3946d3d197b237779742b34915cebd36c7fc85aecc3c8fdcdc6a8ef588dd2eb?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-65.JPG&size=1024)
 
 # 指示
 
@@ -819,7 +819,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <span class="point point-sm">245</span>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/864a691acb9b21b1d44057b7431a7416148cf763b80329ab3eaa34c1b410676f9228ee9a4bd4e69ffd38ffc42bab4b95?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-66.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/864a691acb9b21b1d44057b7431a7416148cf763b80329ab3eaa34c1b410676f9228ee9a4bd4e69ffd38ffc42bab4b95?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-66.JPG&size=1024)
 
 # 警告框
 
@@ -833,15 +833,15 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 <div class="success"><span class="icon-checkmark-c"></span> success提示提醒注意！</div>
 ```
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/fce5e9b5deb129d540cf70d74eac843b331fe081469db23d35a4209ec06a1cf674ba79251bf6d8e7b1b96e7ce4f8b601?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-67.JPG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/fce5e9b5deb129d540cf70d74eac843b331fe081469db23d35a4209ec06a1cf674ba79251bf6d8e7b1b96e7ce4f8b601?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-67.JPG&size=1024)
 
 # 字体图标
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/df4736c6eb9b4ce4501d804d520a50789de284aa8d1b92ed2b2c3c0c3c8a1c9c148d943ed281b89079e068d2263a9c8c?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-68.PNG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/df4736c6eb9b4ce4501d804d520a50789de284aa8d1b92ed2b2c3c0c3c8a1c9c148d943ed281b89079e068d2263a9c8c?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-68.PNG&size=1024)
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/717b553a97aa1ca165ee4a215c3ed34206da72438fe10227648e85bfe86553651ea935558748b324c3e5f994fb08ded1?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-69.PNG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/717b553a97aa1ca165ee4a215c3ed34206da72438fe10227648e85bfe86553651ea935558748b324c3e5f994fb08ded1?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-69.PNG&size=1024)
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/f279c888f4c04127ac933a7ad3d85773dd74757b3d5d4098e80a7018c20a115dfa5d3343999742b733261f1e4c3dbc1b?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-70.PNG&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/f279c888f4c04127ac933a7ad3d85773dd74757b3d5d4098e80a7018c20a115dfa5d3343999742b733261f1e4c3dbc1b?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-70.PNG&size=1024)
 
 # 增加的css
 

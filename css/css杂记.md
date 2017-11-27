@@ -281,7 +281,7 @@ writing-mode: vertical-lr;
 
 `vertical-lr` 表示文本是垂直方向(vertical)展示，然后阅读的顺序还是默认的从左往右(lr:left-right)，也就是仅仅是水平变垂直。
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/59520336b7c28190b615fc5b7f17a94e84b8a80e2fe33267303cb2a5079267e63bdb0ef955e23bcf600d2cfc62311b50?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-24.png&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/59520336b7c28190b615fc5b7f17a94e84b8a80e2fe33267303cb2a5079267e63bdb0ef955e23bcf600d2cfc62311b50?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-24.png&size=1024)
 
 ## IE私有属性
 
@@ -295,7 +295,7 @@ IE下的属性特别多，但是需要关注的只有这几个：
 
 如果是IE7浏览器：`lr-tb` 和 `tb-rl` 分别对应CSS规范的 `horizontal-tb` 和 `vertical-rl`。
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/a702cce905d871e58e72b214eccc3d00957920bcdb2daa514f0e70205b8d934a7e01d90ad3d9b5b95d298a12fd4a4ce8?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-25.png&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/a702cce905d871e58e72b214eccc3d00957920bcdb2daa514f0e70205b8d934a7e01d90ad3d9b5b95d298a12fd4a4ce8?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-25.png&size=1024)
 
 # css的计算属性calc()
 

@@ -190,7 +190,7 @@ SSH是一种网络协议，用于计算机之间的加密登录，在自己的�
 
 经过算法将原始数据加密，接收方接收到之后解密，两方通过秘钥加密和解密。在第一次发送时会先将秘钥传递到接收方，所以虽然很好用但是秘钥可能会被拦截。
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/af71b5eabff9dc24f8a0a72d5414637bc944fd268d5e93e05bcfa48fdf97b119c8babdb7c15f596cf73c333aa6aeb853?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-5.jpg&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/af71b5eabff9dc24f8a0a72d5414637bc944fd268d5e93e05bcfa48fdf97b119c8babdb7c15f596cf73c333aa6aeb853?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-5.jpg&size=1024)
 
 
 ## 非对称性加密
@@ -200,4 +200,4 @@ SSH是一种网络协议，用于计算机之间的加密登录，在自己的�
 第一次登陆远程计算机时，会将远程计算机的公钥下发下来，保存在本地。这时登陆远程计算机，密码就可以用公钥加密发送。当远程服务器接收到公钥加密的数据后，会自动使用私钥进行加密。
 
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/919498cf24ae09abbc5b7c36d2a95082abcdd22700e6888a86735d99726cd96ed56c7df40ec444d4b0a721871384cafe?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-6.jpg&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/919498cf24ae09abbc5b7c36d2a95082abcdd22700e6888a86735d99726cd96ed56c7df40ec444d4b0a721871384cafe?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-6.jpg&size=1024)

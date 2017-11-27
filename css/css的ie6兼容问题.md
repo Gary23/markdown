@@ -45,11 +45,11 @@ h2 {
 ```
 将.left和.right分别左右浮动并设置颜色、h2元素设置高度应该是如下效果。
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/c5d316903851fe3601d00f7c1924caa55afa3716bdafc94eae2733f4b614b39660a826fadfffcd908c960ce073c7fb66?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-40.png&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/c5d316903851fe3601d00f7c1924caa55afa3716bdafc94eae2733f4b614b39660a826fadfffcd908c960ce073c7fb66?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-40.png&size=1024)
 
 但在ie6下会显示成这样，
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/ffeafa79fe0a8051ae92a9d6db19c1e7f2cf9a3fbb9b953b1ed069906f62a376a059350837f5b64691380bb6bed9fbc7?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-41.png&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/ffeafa79fe0a8051ae92a9d6db19c1e7f2cf9a3fbb9b953b1ed069906f62a376a059350837f5b64691380bb6bed9fbc7?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-41.png&size=1024)
 
 ie6下在浮动的元素下的元素h2设置高度，会独占整行，因为h2是块级元素，但我希望的是浮动元素被内容撑开。这时只要设置样式`h2{float:left}`就可以解决这个问题。
 

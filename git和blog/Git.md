@@ -166,11 +166,11 @@ gitHub提供共享仓库的功能，类似于一个博客空间
 
 ## 在gitHub中新建一个仓库
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/01b9027ad082480b4ecaf5c3d409b1669c7ce659ea1121640d6bab9d45dc16ec59ec3e1c848ed864295f6979aa83574e?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-1.jpg&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/01b9027ad082480b4ecaf5c3d409b1669c7ce659ea1121640d6bab9d45dc16ec59ec3e1c848ed864295f6979aa83574e?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-1.jpg&size=1024)
 
 首先创建一个新的项目，要输入项目名，项目描述，是否公开。其实就相当于新建一个共享库。
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/b658772ba6bbbab37dd0b23106c82297c3c8220aa654739332ffa57c42cfad64bf3ee9a9f157550d014c4490bd79f257?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-2.jpg&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/b658772ba6bbbab37dd0b23106c82297c3c8220aa654739332ffa57c42cfad64bf3ee9a9f157550d014c4490bd79f257?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-2.jpg&size=1024)
 
 以表格形式创建一个仓库，并且会提供给我们一个仓库地址。
 
@@ -188,11 +188,11 @@ gitHub提供共享仓库的功能，类似于一个博客空间
 **git remote** 
 显示所有主机名
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/2b986b6310f8871bd5510d7e00358cc515a9d96645960fa508f1930864885cb4c22eccd824f7e4006244ce2eec5929e5?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-3.jpg&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/2b986b6310f8871bd5510d7e00358cc515a9d96645960fa508f1930864885cb4c22eccd824f7e4006244ce2eec5929e5?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-3.jpg&size=1024)
 
 地址下面会告诉用户应该怎样操作，如何创建.git并上传等设置，这里根据自己的实际情况，并不是每一步骤都要设置，有可能之前已经设置好了
 
-![enter image description here](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/a982aefd65ce1404b046fc07890e5612070551e26984b013f339185807b1f8ff2c65f5c439e17e63377cfc1bd03b869c?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-4.jpg&size=1024)
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/a982aefd65ce1404b046fc07890e5612070551e26984b013f339185807b1f8ff2c65f5c439e17e63377cfc1bd03b869c?pictype=scale&from=30012&version=2.0.0.2&uin=406490508&fname=20170904-4.jpg&size=1024)
 
 设置之后就可以push了，但是这时会有权限问题，也就是公钥和私钥，需要将本电脑的公钥传到gitHub上。
 
