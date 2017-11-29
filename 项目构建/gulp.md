@@ -1,3 +1,8 @@
+---
+title: gulp
+tags: gulp,自动化,构建
+notebook: 项目构建
+---
 
 # 为什么需要gulp
 
@@ -100,7 +105,115 @@ var rev = require('gulp-rev');
 var revCollector = require('gulp-rev-collector');
 ```
 
-## 处理css文件任务
+## gulp的部分方法演示
+
+### 任务依赖
+
+有一些任务需要完成之前某个任务之后再去执行，这就是依赖关系，gulp.task方法的第二个参数可以配置这种依赖关系。
+
+```js
+gulp.task('all', ['a', 'b'], function() {
+    
+})
+```
+
+要注意的是这里all不会等a,b执行完了再开始执行，而是让a,b先执行，然后立马开始执行all任务，也就是一种异步的执行，如果想让a,b执行结束再去执行all就需要在a,b任务中增加return 
+
+```js
+gulp.task('a', function(){
+    // return gulp.src()......
+})
+
+gulp.task('b', function(){
+    // return gulp.src()......
+})
+```
+
+### 默认任务
+
+默认任务是指在命令行中只输入gulp就执行的默认任务。
+
+```js
+gulp.task('default', function() {
+    console.log('默认任务');
+})
+```
+
+### 处理html文件任务
+
+```js
+gulp.task('html',function() {
+    gulp.src(['./index.html', './views/*.html'], {base: './'})
+        .pipe(htmlmin({collapseWhitespace: true, removeComments: true, minifyJS: true, minifyCSS: true}))    // htmlmin插件需要传入一个配置参数，collapseWhitespace是删除空白行，removeComments是删除注释，minifyJS是压缩html中的js，minifyCSS是压缩html中的css
+        .pipe(gulp.dest('./release'));
+})
+```
+
+### 处理浏览器缓存
+
+浏览器判断是否加载内容的标准就是url地址有没有更改。也就是引用的文件名。rev 插件可以给文件加个后缀的名字，只有当文件内容改变的时候才会改变，否则名字不会改变。下面以css任务举例：
+
+```js
+gulp.task('css',function(){
+    gulp.src('./css/main.css',{base:'./'})
+        .pipe(cssmin())    
+        .pipe(rev())
+        .pipe(gulp.dest('./release'))   // 如果文件内容有变动则更改文件名
+        .pipe(rev.manifest())   // 记录旧文件名和新文件名的对应关系
+        .pipe(gulp.dest('./release/rev'))   // 保存记录对应关系的文件
+});
+```
+
+
+
+### 文件合并后html里的引用修改
+
+有时候多个js文件或者css文件在开发环境是多个文件，而在生产环境为了减少请求可以合并为一个。合并之后html中的引用也要随之改变，这里示例这种情况的任务：
+
+```js
+gulp.task('useref', function(){
+    gulp.src('./index.html')  // 要修改的html文件
+        .pipe(useref())   // 根据html文件中的注释执行，这个任务顺便还直接将js文件合并了
+        .pipe(gulp.dest('./release'));
+})
+```
+
+下面是html文件中需要修改的部分，最主要的是注释部分，all.js就是合并后的文件，如果是css文件就将 build:js 改为 build:css 。注意这里在html修改路径时，要以转译后的html文件位置写相对路径。
+
+```html
+<!--build:js ./script/all.js-->
+<script src="./scripts/app.js"></script>
+<script src="./scripts/controllers.js"></script>
+<script src="./scripts/directives.js"></script>
+<!--endbuild-->
+```
+
+这里useref任务会执行两个任务，第一个是合并这三个js文件，第二个是根据html的注释更改文件的引用。下面再来看下第三个作用，删除引用
+
+```html
+<!--build:remove-->
+<script src="./public/less.js"></script>
+<!--endbuild-->
+```
+
+## 一个gulp构建的完整实例（声明和引用省略）
+
+### 筛选操作
+
+在gulp任务中也可以进行if判断，通过判断执行任务的文件的名称来执行某些特定的任务，就拿上面的useref来举个例子。
+
+```js
+gulp.task('useref', function(){
+    gulp.src('./index.html')  
+        .pipe(useref())   
+        .pipe(gulpif('*.js', uglify()))  // 如果执行任务的文件是*.js则进行压缩任务处理
+        .pipe(gulp.dest('./release'));
+})
+```
+
+
+
+### 处理css文件任务
 
 ```js
 // 处理css文件
@@ -119,7 +232,7 @@ gulp.task('css',function(){
 })
 ```
 
-## 处理图片文件任务
+### 处理图片文件任务
 
 ```js
 //处理图片任务
@@ -134,92 +247,50 @@ gulp.task('image',function(){
 })
 ```
 
-## 处理js文件任务
+### 处理js文件任务
 
 ```js
-gulp.task('js', function() {
-    gulp.src('./scripts/*.js', {base: './'})
-        .pipe(uglify())     // 压缩js文件
-        .pipe(concat('scripts/all.js'))    // 合并js文件，参数是合并后的文件名
-        .pipe(gulp.dest('./release'));
+gulp.task('useref', function() {
+    return gulp.src('./index.html')
+        .pipe(useref())  // 替换html中的js引用，自带合并功能
+        .pipe(gulpif('*.js', uglify()))   // 筛选压缩js文件
+        .pipe(gulpif('*.js', rev()))   // 给js文件改名
+        .pipe(gulp.dest('./release'))
+        .pipe(rev.manifest())   // 生成新旧文件对应关系
+        .pipe(rename('js-manifest.json'))   // 给文件改名
+        .pipe(gulp.dest('./release/rev'));
 })
 ```
 
-## 处理html文件任务
+### 改变引用的文件名
+
+之前修改了文件的名称，那么在html中的引用也要改变，下面这个是改变文件引用时的文件名的例子，先找到之前保存好的对应关系的文件，任务会自动替换引用中的文件名。
 
 ```js
-gulp.task('html',function() {
-    gulp.src(['./index.html', './views/*.html'], {base: './'})
-        .pipe(htmlmin({collapseWhitespace: true, removeComments: true, minifyJS: true, minifyCSS: true}))    // htmlmin插件需要传入一个配置参数，collapseWhitespace是删除空白行，removeComments是删除注释，minifyJS是压缩html中的js，minifyCSS是压缩html中的css
-        .pipe(gulp.dest('./release'));
-})
-```
-
-## 处理浏览器缓存
-
-浏览器判断是否加载内容的标准就是url地址有没有更改。也就是引用的文件名。rev 插件可以给文件加个后缀的名字，只有当文件内容改变的时候才会改变，否则名字不会改变。下面以css任务举例：
-
-```js
-gulp.task('css',function(){
-    gulp.src('./css/main.css',{base:'./'})
-        .pipe(cssmin())    
-        .pipe(rev())
-        .pipe(gulp.dest('./release'))   // 如果文件内容有变动则更改文件名
-        .pipe(rev.manifest())   // 记录旧文件名和新文件名的对应关系
-        .pipe(gulp.dest('./release/rev'))   // 保存记录对应关系的文件
-});
-```
-
-要注意的是这里改变了文件名之后，html中的引用也要改变。下面这个例子是改变文件的引用。
-
-```js
-gulp.task('rev', function(){
+// 先执行之前三个任务，运行gulp rev就可执行之前三个任务
+gulp.task('rev', ['css', 'image', 'useref'], function(){
     // 对应关系文件，需要替换操作的文件(已经被压缩)
-    gulp.src(['./release/rev/*.json', './release/index.html'])
+    gulp.src(['./release/rev/*.json', './release/index.html'], {base: './release'})
         .pipe(revCollector())
         .pipe(gulp.dest('./release'));
 })
 ```
 
-## 文件合并后html里的引用修改
+### 其他任务
 
-有时候多个js文件或者css文件在开发环境是多个文件，而在生产环境为了减少请求可以合并为一个。合并之后html中的引用也要随之改变，这里示例这种情况的任务：
+在这里移动一些其他不需要操作的文件。
 
 ```js
-gulp.task('useref', function(){
-    gulp.src('./index.html')  // 要修改的html文件
-        .pipe(useref())   // 根据html文件中的注释执行，这个任务顺便还直接将js文件合并了
-        .pipe(gulp.dest('./release'));
+gulp.task('other'), function() {
+    gulp.src(['./api*/*', './public/font/*', './public/libs/*', './view/*.html'], {base: './'})
+        .pipe(gulp.desc('./release'));
 })
 ```
 
-下面是html文件中需要修改的部分，最主要的是注释部分，all.js就是合并后的文件，如果是css文件就将 build:js 改为 build:css 。
-
-```html
-<!--build:js ./script/all.js-->
-<script src="./scripts/app.js"></script>
-<script src="./scripts/controllers.js"></script>
-<script src="./scripts/directives.js"></script>
-<!--endbuild-->
-```
-
-这里useref任务会执行两个任务，第一个是合并这三个js文件，第二个是根据html的注释更改文件的引用。下面再来看下第三个作用，删除引用
-
-```html
-<!--build:remove-->
-<script src="./public/less.js"></script>
-<!--endbuild-->
-```
-
-## 筛选操作
-
-在gulp任务中也可以进行if判断，通过判断执行任务的文件的名称来执行某些特定的任务，就拿上面的useref来举个例子。
+### 默认任务
 
 ```js
-gulp.task('useref', function(){
-    gulp.src('./index.html')  
-        .pipe(useref())   
-        .pipe(gulpif('*.js', uglify()))  // 如果执行任务的文件是*.js则进行压缩任务处理
-        .pipe(gulp.dest('./release'));
-})
+gulp.task('default', ['rev', 'other'])
 ```
+
+这里如果方法内没有必要的逻辑，可以省略填写第三个参数
