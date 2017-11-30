@@ -1,3 +1,8 @@
+---
+title: 《锋利的jQuery》五、jQuery的动画
+tags: book,《锋利的jQuery》
+notebook: 《锋利的jQuery》
+---
 
 # show()和hide()
 
@@ -139,3 +144,4 @@ $('#box').click(function(){
 格式为：`fadeToggle(speed,easing,callback)`
 
 通过不透明度来切换匹配元素的可见性，只能调整不透明度，相当于先后执行了`fadeOut()`和`fadeIn()`方法。
+

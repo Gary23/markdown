@@ -1,3 +1,8 @@
+---
+title: 《锋利的jQuery》十一、jQuery的性能优化
+tags: book,《锋利的jQuery》
+notebook: 《锋利的jQuery》
+---
 
 # 使用合适的选择器
 
@@ -158,3 +163,4 @@ $cr.click(function(){
 `$(this).css('color','red');`优化成`this.style.color = 'red';`。
 
 `$('<p></p>')`优化成`$(document.createElement('p'))`。
+

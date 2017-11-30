@@ -1,3 +1,8 @@
+---
+title: 《锋利的jQuery》四、jQuery的事件
+tags: book,《锋利的jQuery》
+notebook: 《锋利的jQuery》
+---
 
 # 加载DOM
 
@@ -247,3 +252,4 @@ $('#btn').click(function(){
 ```
 
 如果点击`$('#box')`会同时触发`click`事件和`click.plugin`事件。如果点击`$('#btn')`元素则只触发`click`事件，因为`trigger('click!');`中的叹号是匹配所有不包含命名空间的方法。
+

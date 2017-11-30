@@ -1,3 +1,8 @@
+---
+title: bbc的js
+tags: work
+notebook: work
+---
 # 工具类函数 tools.js
 
 ## 判断是否为 dom 元素

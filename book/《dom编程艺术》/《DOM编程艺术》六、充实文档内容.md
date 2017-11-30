@@ -1,3 +1,8 @@
+---
+title: 《DOM编程艺术》六、充实文档内容
+tags: book,《DOM编程艺术》
+notebook: 《DOM编程艺术》
+---
 
 这一章将继续在实践中应用动态创建标记
 
@@ -284,3 +289,4 @@ function displayCitetions(){
 第一部分是筛选出cite属性，再去获取`<blockquote>`元素的最后一个子节点，这里`<blockquote>`的lastChild有可能是个换行符，所以在函数中是获取的`<blockquote>`下的所有元素对象，这样就可以方便的获取`<blockquote>`的最后一个子元素。
 
 第二部分是创建链接和插入链接，最终让`<sup>`元素包含`<a>`元素，而`<a>`元素href属性保存了cite的属性值，也就是一个url地址。最后将`<sup>`元素插入到`<blockquote>`元素的最后。
+

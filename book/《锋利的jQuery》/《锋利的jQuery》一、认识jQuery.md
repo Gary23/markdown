@@ -1,3 +1,8 @@
+---
+title: 《锋利的jQuery》一、认识jQuery
+tags: book,《锋利的jQuery》
+notebook: 《锋利的jQuery》
+---
 # window.onload和$(document).ready()
 
 `window.onload`：必须等网页中所有的内容加载完毕后(包括图片)才能执行，不能同时编写多个。
@@ -136,3 +141,4 @@ if($('#tt')[0]){
     
 }
 ```
+

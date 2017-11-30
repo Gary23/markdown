@@ -1,3 +1,8 @@
+---
+title: 《DOM编程艺术》四、图片库改进
+tags: book,《DOM编程艺术》
+notebook: 《DOM编程艺术》
+---
 在这一章主要是用上一章的思想改进图片库，所以我会把之前的javascript图片库案例拿来看看是不是符合上一章所说的规则。
 
 # 1、支持平稳退化吗？
@@ -215,22 +220,22 @@ img{
     <ul id="imagegallery">
         <li>
             <a href = "images/fireworks.jpg" title = "A fireworks display">
-                ![](images/thumbnail_fireworks.jpg)
+                <img src="images/thumbnail_fireworks.jpg" alt=""> 
             </a>
         </li>
         <li>
             <a href = "images/coffee.jpg" title = "A cup of black offee">
-                ![](images/thumbnail_coffee.jpg)
+                <img src="images/thumbnail_coffee.jpg" alt=""> 
             </a>
         </li>
         <li>
             <a href = "images/rose.jpg" title = "A red,red rose">
-                ![](images/thumbnail_rose.jpg)
+                <img src="images/thumbnail_rose.jpg" alt="">                 
             </a>
         </li>
         <li>
             <a href = "images/bigben.jpg" title = "The famous clock">
-                ![](images/thumbnail_bigben.jpg)
+                <img src="images/thumbnail_bigben.jpg" alt=""> 
             </a>
         </li>        
     </ul>
@@ -241,3 +246,4 @@ img{
 </body>
 </html>
 ```
+

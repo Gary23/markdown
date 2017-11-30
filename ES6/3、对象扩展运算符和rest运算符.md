@@ -1,3 +1,8 @@
+---
+title: 3、对象扩展运算和rest运算符
+tags: ES6,javascript
+notebook: ES6
+---
 
 # 对象扩展运算符
 

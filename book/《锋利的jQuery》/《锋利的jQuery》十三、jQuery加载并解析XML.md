@@ -1,3 +1,8 @@
+---
+title: 《锋利的jQuery》十三、jQuery加载并解析XML
+tags: book,《锋利的jQuery》
+notebook: 《锋利的jQuery》
+---
 
 # 语法
 
@@ -31,6 +36,7 @@ success: function(xml){
     frag.appendTo('#load');        // 最后添加到html文档中
 }
 ```
+
 
 
 

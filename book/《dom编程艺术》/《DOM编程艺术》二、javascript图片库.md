@@ -1,3 +1,8 @@
+---
+title: 《DOM编程艺术》二、javascript图片库
+tags: book,《DOM编程艺术》
+notebook: 《DOM编程艺术》
+---
 从这一篇开始会逐步完成一个图片库的案例，但我们不能直接把所有的图片直接放到一个页面里，因为图片下载的时间较长，用户需要等待很长时间去加载一个网页，所以我们需要一个图片库，把整个图片库的浏览链接集中安排在主页里，只在用户点击了这个主页里的某个图片链接时才把相应的图片加载。
 
 # 1、建立基础的HTML结构
@@ -222,3 +227,4 @@ html文件的最终结构如下
 
 页面的最终效果如下，点击i链接可以改变图片和描述文字。
 ![image](http://upload-images.jianshu.io/upload_images/5140754-1844bb7a65ebc8ed?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+

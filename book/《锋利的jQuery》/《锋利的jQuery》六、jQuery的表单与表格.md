@@ -1,3 +1,8 @@
+---
+title: 《锋利的jQuery》六、jQuery的表单与表格
+tags: book,《锋利的jQuery》
+notebook: 《锋利的jQuery》
+---
 
 # 表单的应用
 
@@ -234,3 +239,4 @@ $('span').click(function(){
 })
 
 ```
+

@@ -1,3 +1,8 @@
+---
+title: 《可维护的js》一、编程风格
+tags: book,《可维护的js》
+notebook: 《可维护的js》
+---
 # 基本格式化
 
 ## 缩进

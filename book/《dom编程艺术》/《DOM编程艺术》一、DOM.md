@@ -1,3 +1,8 @@
+---
+title: 《DOM编程艺术》一、DOM
+tags: book,《DOM编程艺术》
+notebook: 《DOM编程艺术》
+---
 
 # 1、DOM的含义
 
@@ -160,3 +165,4 @@ for(var i = 0;i < paras.length;i++){
 ```
 
 setAttribute用于设置属性，不管调用的元素原来有没有设置的属性，最终都会被设置上，用setAttribute对文档做出修改后，在浏览器中查看源代码仍是改变前的属性，这就是DOM的工作模式，对页面内容更新却不需要在浏览器里刷新。
+

@@ -1,3 +1,8 @@
+---
+title: flexbox布局
+tags: flexbox,css,css3
+notebook: css
+---
 
 # flexbox是什么
 

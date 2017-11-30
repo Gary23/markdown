@@ -1,3 +1,8 @@
+---
+title: 《锋利的jQuery》八、XMLHttpRequest对象
+tags: book,《锋利的jQuery》
+notebook: 《锋利的jQuery》
+---
 
 `XMLHttpRequest`对象是Ajax的核心，它有许多的属性、方法和事件以便于js处理和控制HTTP的请求与响应。
 
@@ -63,3 +68,4 @@
 # getRequestHeader()方法
 
 检索响应的头部值，仅当`readyState`值为3或者4时才可以调用这个方法，否则会返回一个空字符串。
+

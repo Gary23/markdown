@@ -1,3 +1,8 @@
+---
+title: bbc的css
+tags: work
+notebook: work
+---
 # 全局css样式
 
 1. `html` 的背景为 `background: #FFFFFF`
@@ -852,6 +857,7 @@ B2B2C 对表单控件的校验状态，如 `error` 和 `success` 状态，都定
 * `.line-clamp2`: 文本两行显示。
 
 * `.price-font`：¥符号的字体样式，带这个符号的元素都要加这个类。
+
 
 
 

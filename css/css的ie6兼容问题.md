@@ -1,3 +1,8 @@
+---
+title: css的ie6兼容问题
+tags: css,css兼容相关
+notebook: css
+---
 
 # png图片的兼容性
 

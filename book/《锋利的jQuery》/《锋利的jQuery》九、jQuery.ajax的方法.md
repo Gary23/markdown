@@ -1,3 +1,8 @@
+---
+title: 《锋利的jQuery》九、jQuery.ajax的方法
+tags: book,《锋利的jQuery》
+notebook: 《锋利的jQuery》
+---
 
 
 | 参数名称 | 类型 | 说明 |
@@ -35,3 +40,4 @@
 | username | String | 用于响应HTTP访问认证请求的用户名 |
 | xhr | Function | 回调创建XMLHttpRequest对象，当可用时默认为ActiveObject（IE）中，否则为XMLHttpRequest |
 | xhrFields | Map | 一对"文件名-文件值"在本机设置XHR对象。例如，如果需要德华，可以用它来设置withCredentials为true的跨域请求 |
+

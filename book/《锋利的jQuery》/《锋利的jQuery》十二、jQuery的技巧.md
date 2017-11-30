@@ -1,3 +1,8 @@
+---
+title: 《锋利的jQuery》十二、jQuery的技巧
+tags: book,《锋利的jQuery》
+notebook: 《锋利的jQuery》
+---
 
 # 禁用页面的右键菜单
 
@@ -209,3 +214,4 @@ $.fn.stripHTML = function(){
     return $(this);
 }
 ```
+
