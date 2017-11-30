@@ -1,3 +1,8 @@
+---
+title: javascript（杂记）
+tags: javascript
+notebook: javascript
+---
 
 # this的基本用法
 

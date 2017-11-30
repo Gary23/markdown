@@ -1,3 +1,8 @@
+---
+title: 4、class与style
+tags: vue,前端框架
+notebook: vue笔记
+---
 
 数据绑定一个常见需求是，操作元素的`class`列表，和它的`style`时，因为他们都是属性所以可以用 `v-bind` 处理他们
 

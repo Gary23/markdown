@@ -1,3 +1,8 @@
+---
+title: hexo配置
+tags: hexo,blog
+notebook: git和blog
+---
 
 # 安装hexo
 

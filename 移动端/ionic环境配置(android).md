@@ -1,3 +1,8 @@
+---
+title: ionic环境配置(android)
+tags: ionic,移动端
+notebook: 移动端
+---
 
 # 系统环境搭建
 
@@ -119,3 +124,5 @@ tabs是默认样式，还有Ionic  start  myApp  blank和Ionic start myApp sidem
 ## 注意
 
 以上错误改完后再运行`ionic  platform  add  android`，会提示`platform added` 已经被添加。只要删除目录下的platform文件夹就行，这里面就是打包的内容。
+
+

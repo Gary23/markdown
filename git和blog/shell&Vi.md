@@ -1,3 +1,8 @@
+---
+title: shell&Vi
+tags: shell,版本控制
+notebook: git和blog
+---
 
 # 壳和核的概念
 

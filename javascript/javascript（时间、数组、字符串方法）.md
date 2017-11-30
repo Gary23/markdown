@@ -1,3 +1,8 @@
+---
+title: javascript（时间、数组、字符串方法）
+tags: javascript,javascript数组,javascript字符串,javascript时间
+notebook: javascript
+---
 
 # 日期对象
 

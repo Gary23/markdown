@@ -1,3 +1,8 @@
+---
+title: javascript（正则表达式）
+tags: javascript,正则表达式
+notebook: javascript
+---
 
 正则的意思就是让计算机能读懂我们想要的格式和规则。
 

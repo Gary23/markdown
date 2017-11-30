@@ -1,3 +1,8 @@
+---
+title: Canvas(2d)
+tags: canvas,H5
+notebook: html
+---
 
 # 简介
 
@@ -226,3 +231,4 @@ ctx.fill()
 ## 奇偶原则
 
 就是看相交线的个数，如果为奇数，就填充；否则就不填充。
+

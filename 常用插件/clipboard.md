@@ -1,3 +1,8 @@
+---
+title: clipboard
+tags: 插件
+notebook: 常用插件
+---
 
 这里传入的参数是复制按钮的选择器。
 

@@ -1,3 +1,8 @@
+---
+title: SVN
+tags: svn,版本控制
+notebook: git和blog
+---
 
 # VisualSVN
 
@@ -100,6 +105,7 @@ HEAD revision是最新版本，Revision是选择版本，点击show log选择。
 
 选择Theirs或Mine右键选择use this txt block就是选择用这个版本的。
 还可以选择Mine在Theirs之前或者Theirs在Mine之前。
+
 
 
 

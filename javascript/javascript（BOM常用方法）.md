@@ -1,19 +1,24 @@
+---
+title: javascript（BOM常用方法）
+tags: javascript,BOM
+notebook: javascript
+---
 
 # BOM操作的常用属性和方法
 
-open()：打开一个新的页面，格式为`open(页面的url,打开的方式)`，如果url为空则打开一个空白页面。如果打开方式为空，默认为新窗口方式打开。这个方法返回新窗口的window对象。
+`open()`：打开一个新的页面，格式为`open(页面的url,打开的方式)`，如果url为空则打开一个空白页面。如果打开方式为空，默认为新窗口方式打开。这个方法返回新窗口的window对象。
 
-close()：关闭一个页面，但是这个方法有点兼容性问题，firefox默认无法关闭，chrome默认直接关闭，ie：询问用户。
+`close()`：关闭一个页面，但是这个方法有点兼容性问题，firefox默认无法关闭，chrome默认直接关闭，ie：询问用户。
 
-navigator.userAgent：返回浏览器的名称和版本。
+`navigator.userAgent`：返回浏览器的名称和版本。
 
-location：浏览器地址信息，本身不是字符串，是object格式。
+`location`：浏览器地址信息，本身不是字符串，是object格式。
 
-location：就是url地址本身。
+`location.href`：就是url地址本身。
 
-location.search：url中?后面的内容。
+`location.search`：url中?后面的内容。
 
-location.hash：url中#后面的内容。
+`location.hash`：url中#后面的内容。
 
 ## 窗口尺寸与大小
 
@@ -27,29 +32,29 @@ location.hash：url中#后面的内容。
 
 ## 事件
 
-onscroll：当滚动条滚动的时候触发。
+`onscroll`：当滚动条滚动的时候触发。
 
-onresize：当浏览器尺寸改变的时候触发。
+`onresize`：当浏览器尺寸改变的时候触发。
 
-onfocus：当元素获取焦点时触发。
+`onfocus`：当元素获取焦点时触发。
 
-onblur：当元素失去焦点时触发。
+`onblur`：当元素失去焦点时触发。
 
-focus()：给元素设置焦点。
+`focus()`：给元素设置焦点。
 
-blur()：让元素失去焦点。
+`blur()`：让元素失去焦点。
 
-select()：选择指定元素里面的文本内容。只能选择用户可以输入的内容。
+`select()`：选择指定元素里面的文本内容。只能选择用户可以输入的内容。
 
-onmousemove：鼠标在一个元素上移动时触发。
+`onmousemove`：鼠标在一个元素上移动时触发。
 
-onkeydown：当键盘按键按下的时候触发。能够响应用户输入的元素才支持键盘事件，和焦点事件一样。如果按下不抬起来会连续触发。
+`onkeydown`：当键盘按键按下的时候触发。能够响应用户输入的元素才支持键盘事件，和焦点事件一样。如果按下不抬起来会连续触发。
 
-onkeyup：当键盘按键抬起时触发。
+`onkeyup`：当键盘按键抬起时触发。
 
-oncontextmenu：当右键菜单显示出来时触发。
+`oncontextmenu`：当右键菜单显示出来时触发。
 
-event事件对象：当一个事件发生时，这个对象发生的这个事件有关的一些详细的信息都会临时保存到event对象中，以便在需要时使用。
+`event`事件对象：当一个事件发生时，这个对象发生的这个事件有关的一些详细的信息都会临时保存到event对象中，以便在需要时使用。
 
 ## 事件绑定
 

@@ -1,3 +1,8 @@
+---
+title: wamp安装
+tags: wamp,服务器
+notebook: 后端相关
+---
 
 # wamp安装
 
@@ -56,3 +61,4 @@
 4. 通过ip地址访问会访问httpd-vhosts.conf的第一个地址。
 
 > 需要注意的是以上每项修改完之后都要重启一下Apache服务。
+

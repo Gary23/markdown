@@ -1,3 +1,8 @@
+---
+title: HTML5 新增API介绍
+tags: H5
+notebook: html
+---
 
 # 文件读取
 
@@ -486,5 +491,6 @@ chrome浏览器可以模拟网络，Network中右边的选项可以下拉选择�
     
     
     
+
 
 

@@ -1,3 +1,8 @@
+---
+title: Cookie基础
+tags: cookie
+notebook: 后端相关
+---
 
 # Cookie的原理
 
@@ -147,25 +152,5 @@ Cookie是保存在浏览器端的，因此浏览器具有操作Cookie的先决�
 由于JavaScript能够任意地读写Cookie，有些好事者便想使用JavaScript程序去窥探用户在其他网站的Cookie。不过这是徒劳的，W3C组织早就意识到JavaScript对Cookie的读写所带来的安全隐患并加以防备了，W3C标准的浏览器会阻止。
 
 JavaScript读写任何不属于自己网站的Cookie。换句话说，A网站的JavaScript程序读写B网站的Cookie不会有任何结果。
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

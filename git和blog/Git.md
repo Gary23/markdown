@@ -1,3 +1,8 @@
+---
+title: Git
+tags: git,版本控制
+notebook: git和blog 
+---
 
 # Git的三个区域介绍
 
@@ -307,6 +312,7 @@ gitLab也是一个可以通过Web界面管理仓库的网站程序，我们可�
 
 **git push origin --delete 分支名称**
 删除远程分支
+
 
 
 

@@ -1,3 +1,8 @@
+---
+title: 1、创建vue实例
+tags: vue,前端框架
+notebook: vue笔记
+---
 
 # 一个最简单的Vue的例子
 
@@ -47,3 +52,4 @@ app.message = '123'
 3. 根据渲染函数生成一个虚拟的DOM树对象。
 
 4. 将虚拟的DOM树编译为html中的DOM结构，在整个html的DOM结构中，只会改变虚拟DOM树对应的部分，DOM树的其他部分不受影响，但是如果是通过原生js修改的话，会导致整个DOM树重新加载。
+
