@@ -418,3 +418,45 @@ DOM的加载顺序：
 
 `document.documentElement.clientWidth` 和 `document.documentElement.clientHeight` 
 这个得到的是设备像素可见宽高，比如iPhone 5里为320和504。
+
+
+# 当图片路径有误加载失败则删除图片或父元素
+
+```js
+function imgIsError(img,parent) {
+	$(img).each(function() {
+		$(this).load(function(){
+			if (this.height === 0) {
+				removeElem(this, parent);
+			}
+		})
+		$(this).error(function(){
+			removeElem(this, parent)
+		})
+	})
+
+	function removeElem(self, elem) {
+		if (elem) {
+			$(self).closest(elem).remove();
+		} else {
+			$(self).remove();
+		}
+	}
+}
+
+imgIsError('img','div.item');
+```
+
+# 移动端调用手机通话
+
+```html
+<a href="tel:18661790878"></a>
+```
+
+# 移动端调用手机qq
+
+uin对应的是qq号，这个链接测试在微信中不好用。
+
+```html
+<a href="mqqwpa://im/chat?chat_type=wpa&uin=462845926&version=1&src_type=web&web_src=oicqzone.com"></a>
+```
