@@ -307,3 +307,24 @@ IE下的属性特别多，但是需要关注的只有这几个：
 `calc()` 可以使用百分比、em、px和rem单位值计算出一个值应用于元素上，这样一来你就不用考虑元素DIV的宽度值到底是多少，而把这个烦人的任务交由浏览器去计算。比如说“width:calc(50% + 2em)”。
 
 `calc()` 的表达式都写在括号里，支持四则运算，运算符前后要加空格，在IE浏览器只能兼容到IE9。这个属性最大的用处就不使用`box-sizing` 的情况下，元素的宽度如果设置为 100% 之后再设置 `margin` 、 `padding`、`border` 会导致元素实际宽度大于100%，而使用`clae()` 属性可以解决计算的麻烦，直接可以写为 `width: calc( 100% - margin * 2 - padding * 2 - border * 2 )`即可算出盒子的实际宽度并应用于元素。
+
+# vh和vw单位
+
+vh是相对于视口的高度。视口被均分为100单位的vh。
+vw是相对于视口的宽度。视口被均分为100单位的vw。
+
+这里视口指的是浏览器内部的可视区域大小，也就是 window.innerWidth/window.innerHeight。
+
+例如iphone6的宽高是375 * 667，那么：
+
+- 100vh = 667px;
+
+- 50vh = 333.5px;
+
+- 100vw = 375px;
+
+- 50vw = 187.5px;
+
+vh和vw的兼容性如下：
+
+![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/e809079b069369e94707ddb9855d0b6b64e05aa194a551d97d2cbd12e38662e6419a942100b1c0d05d8204ade1824b6e?pictype=scale&from=30113&version=2.0.0.2&uin=406490508&fname=20171219-6.PNG&size=1024)
