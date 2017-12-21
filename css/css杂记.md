@@ -328,3 +328,31 @@ vw是相对于视口的宽度。视口被均分为100单位的vw。
 vh和vw的兼容性如下：
 
 ![image](http://picabstract.preview.ftn.qq.com:8080/ftn_pic_abs_v2/e809079b069369e94707ddb9855d0b6b64e05aa194a551d97d2cbd12e38662e6419a942100b1c0d05d8204ade1824b6e?pictype=scale&from=30113&version=2.0.0.2&uin=406490508&fname=20171219-6.PNG&size=1024)
+
+# 任意元素垂直居中
+
+## table-cell 方法
+
+父元素：`text-align: center; display: table-cell; vertical-align: middle;`。
+
+居中子元素：`display: inline-block`。
+
+## flex 方法
+
+父元素：`display: flex; justify-content: center; align-items: center;`。
+
+居中子元素：不需要设置样式。
+
+## position，transform 方法
+
+父元素：`position: relative;`。
+
+居中子元素：`position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);`。
+
+## position，margin 方法
+
+父元素：`position: relative;`。
+
+居中子元素：`width: 100px; height: 100px; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto;`。
+
+这种方式不推荐，因为必须设置子元素的宽高，否则宽高就是100%了。
