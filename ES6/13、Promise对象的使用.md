@@ -4,6 +4,8 @@ tags: ES6,javascript
 notebook: ES6
 ---
 
+## Promise的基本使用
+
 在 es5 中，有一种回调地狱的比喻，指的就是层级特别深的回调函数，一层函数套着一层函数套了很多层，这样非常不便于后期维护代码。由此便有了 es6 中的 Promise。
 
 要是用 Promise 的函数要接收两个参数，resolve（成功时调用） 和 reject（失败时调用），调用时需要传递相应参数，参数可以是字符串、代码、业务逻辑等等。
@@ -39,15 +41,15 @@ function step3(resolve, reject) {
 }
 
 new Promise(step1)
-.then(function(val) {
+.then((val) => {
 	console.log(val);
 	return new Promise(step2);
 })
-.then(function(val) {
+.then((val) => {
 	console.log(val);
 	return new Promise(step3);
 })
-.then(function(val) {
+.then((val) => {
 	console.log(val);
 });
 ```
