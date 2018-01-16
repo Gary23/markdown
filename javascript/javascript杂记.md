@@ -460,3 +460,14 @@ uin对应的是qq号，这个链接测试在微信中不好用。
 ```html
 <a href="mqqwpa://im/chat?chat_type=wpa&uin=462845926&version=1&src_type=web&web_src=oicqzone.com"></a>
 ```
+
+# H5页面中尝试调起APP
+
+解决方案 URL scheme，优先使用iframe的方式
+
+```js
+const iframe = document.createElement('iframe');
+iframe.src ='URL scheme';// URL scheme的方式跳转
+iframe.style.display ='none';
+document.body.appendChild(iframe);
+```
